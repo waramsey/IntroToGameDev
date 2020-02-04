@@ -3,10 +3,8 @@ import GameObject from "./GameObject.js"
 import TileComponent from "./TileComponent.js"
 
 let startScene = new Scene();
-let billGameObject = new GameObject(200,200);
-startScene.gameObjects.push(billGameObject);
-let t = new TileComponent(50,"grey","silver");
-billGameObject.addComponent(t);
+
+
 
 let currentScene = startScene;
 

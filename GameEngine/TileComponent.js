@@ -1,15 +1,15 @@
 import Component from "./Component.js"
 
 class TileComponent extends Component {
-    edgeSize; //size of the outer edge of the tile
+    edgeSize = 50; //size of the outer edge of the tile
     innerTile; //size of the smaller tiles on the inside
+    gap = 3.5; //space between smaller tiles
     fill;
     stroke;
     
-    constructor(edgeSize, fill, stroke) {
+    constructor(fill, stroke) {
         super();
-        this.edgeSize = edgeSize;
-        this.innerTile = (edgeSize/2) - 3;
+        this.innerTile = (this.edgeSize/2) - this.gap;
         this.fill = fill;
         this.stroke = stroke;
     }
@@ -23,14 +23,14 @@ class TileComponent extends Component {
             ctx.fillRect(0, 0, this.innerTile, this.innerTile);
             ctx.strokeRect(0, 0, this.innerTile, this.innerTile);
 
-            ctx.fillRect(this.innerTile, 0, this.innerTile, this.innerTile);
-            ctx.strokeRect(this.innerTile, 0, this.innerTile, this.innerTile);
+            ctx.fillRect(this.innerTile + this.gap, 0, this.innerTile, this.innerTile);
+            ctx.strokeRect(this.innerTile + this.gap, 0, this.innerTile, this.innerTile);
 
-            ctx.fillRect(0, this.innerTile, this.innerTile, this.innerTile);
-            ctx.strokeRect(0, this.innerTile, this.innerTile, this.innerTile);
+            ctx.fillRect(0, this.innerTile + this.gap, this.innerTile, this.innerTile);
+            ctx.strokeRect(0, this.innerTile + this.gap, this.innerTile, this.innerTile);
 
-            ctx.fillRect(this.innerTile, this.innerTile, this.innerTile, this.innerTile);
-            ctx.strokeRect(this.innerTile, this.innerTile, this.innerTile, this.innerTile);
+            ctx.fillRect(this.innerTile + this.gap, this.innerTile + this.gap, this.innerTile, this.innerTile);
+            ctx.strokeRect(this.innerTile + this.gap, this.innerTile + this.gap, this.innerTile, this.innerTile);
         }
         ctx.restore();
     }
