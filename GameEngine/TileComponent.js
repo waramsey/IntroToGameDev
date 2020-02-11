@@ -14,23 +14,24 @@ class TileComponent extends Component {
         this.stroke = stroke;
     }
 
-    draw(ctx, x=0, y=0) {
+    draw(ctx) {
         ctx.save();
         {
+            ctx.translate(-this.edgeSize/2,-this.edgeSize/2)
             ctx.fillStyle = this.fill;
             ctx.strokeStyle = this.stroke;
 
-            ctx.fillRect(x, y, this.innerTile, this.innerTile);
-            ctx.strokeRect(x, y, this.innerTile, this.innerTile);
+            ctx.fillRect(0, 0, this.innerTile, this.innerTile);
+            ctx.strokeRect(0, 0, this.innerTile, this.innerTile);
 
-            ctx.fillRect(this.innerTile + this.gap + x, y, this.innerTile, this.innerTile);
-            ctx.strokeRect(this.innerTile + this.gap + x, y, this.innerTile, this.innerTile);
+            ctx.fillRect(this.innerTile + this.gap, 0, this.innerTile, this.innerTile);
+            ctx.strokeRect(this.innerTile + this.gap, 0, this.innerTile, this.innerTile);
 
-            ctx.fillRect(x, this.innerTile + this.gap + y, this.innerTile, this.innerTile);
-            ctx.strokeRect(x, this.innerTile + this.gap + y, this.innerTile, this.innerTile);
+            ctx.fillRect(0, this.innerTile + this.gap, this.innerTile, this.innerTile);
+            ctx.strokeRect(0, this.innerTile + this.gap, this.innerTile, this.innerTile);
 
-            ctx.fillRect(this.innerTile + this.gap + x, this.innerTile + this.gap + y, this.innerTile, this.innerTile);
-            ctx.strokeRect(this.innerTile + this.gap + x, this.innerTile + this.gap + y, this.innerTile, this.innerTile);
+            ctx.fillRect(this.innerTile + this.gap, this.innerTile + this.gap, this.innerTile, this.innerTile);
+            ctx.strokeRect(this.innerTile + this.gap, this.innerTile + this.gap, this.innerTile, this.innerTile);
         }
         ctx.restore();
     }
