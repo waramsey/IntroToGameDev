@@ -4,6 +4,8 @@ class GameObject {
     scaleX;
     scaleY;
     rotation;
+    velocityX;
+    velocityY;
     components = [];
 
     constructor(x=0, y=0, scaleX=1, scaleY=1, rotation=0) {
@@ -12,6 +14,8 @@ class GameObject {
         this.scaleX = scaleX;
         this.scaleY = scaleY;
         this.rotation = rotation;
+        this.velocityX = 0;
+        this.velocityY = 0;
     }
 
     addComponent(component) {
@@ -42,6 +46,19 @@ class GameObject {
                 component.update();
             }
         }
+
+        this.x += this.velocityX;
+        this.y += this.velocityY;
+    }
+
+    getComponent(type){
+        for(let i = 0; i < this.components.length; i++) {
+            let component = this.components[i];
+            if (component instanceof type) {
+                return component;
+            }
+        }
+        throw "Error, couldn't find type " + type;
     }
 }
 
