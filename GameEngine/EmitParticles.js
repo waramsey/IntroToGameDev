@@ -1,8 +1,9 @@
 import ParticleRenderer from "./ParticleRenderer.js"
 import GameObject from "./GameObject.js"
-import Behavior from "./Behavior.js";
+import Component from "./Component.js"
+import ParticleOut from "./ParticleOut.js"
 
-class EmitParticles extends Behavior {
+class EmitParticles extends Component {
     fill;
     stroke;
     particleSize;
@@ -18,7 +19,8 @@ class EmitParticles extends Behavior {
 
     update() {
         let particle = new GameObject(this.gameObject.x,this.gameObject.y);
-        particle.addComponent(new ParticleRenderer("blue","blue"));
+        particle.addComponent(new ParticleOut());
+        particle.addComponent(new ParticleRenderer(this.fill,this.stroke,this.particleSize));
         this.scene.gameObjects.push(particle);
     }
 }

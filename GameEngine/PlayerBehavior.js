@@ -1,4 +1,3 @@
-
 class PlayerBehavior {
 
     //will probably need components for:

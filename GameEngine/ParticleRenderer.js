@@ -1,16 +1,17 @@
 import Component from "./Component.js"
 
 class ParticleRenderer extends Component {
-    size = 10; //size of the outer edge of the tile
+    size;
     rotationSpeed = 0.01;
     lifespan = 100;
     fill;
     stroke;
     
-    constructor(fill, stroke) {
+    constructor(fill, stroke, size) {
         super();
         this.fill = fill;
         this.stroke = stroke;
+        this.size = size;
     }
 
     draw(ctx) {
@@ -30,7 +31,8 @@ class ParticleRenderer extends Component {
         this.lifespan--;
         if (this.lifespan < 0) {
             //delete object
-            this.stroke = "black";
+            this.fill = "black";
+            this.stroke = "black"
         }
     }
 }

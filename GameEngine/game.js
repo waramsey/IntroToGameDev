@@ -5,6 +5,7 @@ import PlayerComponent from "./PlayerComponent.js"
 import TextComponent from "./TextComponent.js"
 import PlayerBehavior from "./PlayerBehavior.js"
 import TextBehavior from "./TextBehavior.js";
+import EmitParticles from "./EmitParticles.js";
 
 let gameScene = new Scene();
 let startScene = new Scene();
@@ -12,10 +13,11 @@ let startScene = new Scene();
 
 let PlayerGameObject = new GameObject(100,100);
 gameScene.gameObjects.push(PlayerGameObject);
-let playerComponent = new PlayerComponent(100, 100, "white", "white");
+let playerComponent = new PlayerComponent(50, 50, "white", "white");
 let playerBehavior = new PlayerBehavior();
 PlayerGameObject.addComponent(playerComponent);
 PlayerGameObject.addComponent(playerBehavior);
+// PlayerGameObject.addComponent(new EmitParticles("black","white",6,gameScene));
 
 let textTimer = new GameObject(575,50);
 gameScene.gameObjects.push(textTimer);
