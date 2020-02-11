@@ -8,6 +8,8 @@ class EmitParticles extends Component {
     stroke;
     particleSize;
     scene;
+    pCount = 0;
+    colorArr = ["red","orange","yellow","green","blue","purple"];
 
     constructor(fill, stroke, particleSize, scene) {
         super();
@@ -20,8 +22,10 @@ class EmitParticles extends Component {
     update() {
         let particle = new GameObject(this.gameObject.x,this.gameObject.y);
         particle.addComponent(new ParticleOut());
-        particle.addComponent(new ParticleRenderer(this.fill,this.stroke,this.particleSize));
+        particle.addComponent(new ParticleRenderer(this.fill,this.colorArr[this.pCount%this.colorArr.length],this.particleSize));
         this.scene.gameObjects.push(particle);
+
+        this.pCount++;
     }
 }
 

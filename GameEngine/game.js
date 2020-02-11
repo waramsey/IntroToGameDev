@@ -6,10 +6,20 @@ import TextComponent from "./TextComponent.js"
 import PlayerBehavior from "./PlayerBehavior.js"
 import TextBehavior from "./TextBehavior.js";
 import EmitParticles from "./EmitParticles.js";
+import GrowShrink from "./GrowShrink.js"
 
 let gameScene = new Scene();
 let startScene = new Scene();
 
+
+
+// PlayerGameObject.addComponent(new EmitParticles("black","white",6,gameScene));
+
+let tile = new GameObject(200,200)
+gameScene.gameObjects.push(tile)
+tile.addComponent(new TileComponent("black","white"))
+tile.addComponent(new EmitParticles("black","red",6,gameScene))
+tile.addComponent(new GrowShrink());
 
 let PlayerGameObject = new GameObject(100,100);
 gameScene.gameObjects.push(PlayerGameObject);
@@ -17,7 +27,6 @@ let playerComponent = new PlayerComponent(50, 50, "white", "white");
 let playerBehavior = new PlayerBehavior();
 PlayerGameObject.addComponent(playerComponent);
 PlayerGameObject.addComponent(playerBehavior);
-// PlayerGameObject.addComponent(new EmitParticles("black","white",6,gameScene));
 
 let textTimer = new GameObject(575,50);
 gameScene.gameObjects.push(textTimer);

@@ -29,11 +29,7 @@ class ParticleRenderer extends Component {
     update() {
         this.gameObject.rotation += this.rotationSpeed;
         this.lifespan--;
-        if (this.lifespan < 0) {
-            //delete object
-            this.fill = "black";
-            this.stroke = "black"
-        }
+        //Delete Object
     }
 }
 
