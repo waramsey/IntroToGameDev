@@ -1,7 +1,7 @@
 import TextComponent from "./TextComponent.js"
 
 class TextBehavior {
-    time = 60;
+    time = 1800;
     
     start(){
 
@@ -13,7 +13,7 @@ class TextBehavior {
         if (this.time > 0)
         {           
             this.time -= 1;
-            this.gameObject.getComponent(TextComponent).text = this.time;
+            this.gameObject.getComponent(TextComponent).text = Math.trunc(this.time/30);
         }
         else
         {

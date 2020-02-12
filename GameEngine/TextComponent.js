@@ -16,7 +16,7 @@ class TextComponent extends Component{
         {
             ctx.fillStyle = this.fill;
             ctx.font = this.font;
-            ctx.fillText(this.text,0,0);
+            ctx.fillText(this.text,-ctx.measureText(this.text).width/2,0);
 
         }
         ctx.restore();
