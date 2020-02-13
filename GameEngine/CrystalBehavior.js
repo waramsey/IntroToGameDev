@@ -10,6 +10,7 @@ class CrystalBehavior {
         let g = Math.floor(Math.sin(this.time/2)*127+128)
         let b = Math.floor(Math.sin(this.time/3)*127+128)
         this.gameObject.getComponent(CrystalComponent).fill = 'rgb(' + r + ',' + g + ',' + b + ')'
+        this.gameObject.getComponent(CrystalComponent).stroke = 'rgb(' + r + ',' + g + ',' + b + ')'
     }
 }
 

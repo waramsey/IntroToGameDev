@@ -20,9 +20,6 @@ class TextComponent extends Component{
         }
         ctx.restore();
     }
-    update(){
-
-    }
 }
 
 export default TextComponent;

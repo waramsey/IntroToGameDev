@@ -35,10 +35,6 @@ class TileComponent extends Component {
         }
         ctx.restore();
     }
-
-    update() {
-
-    }
 }
 
 export default TileComponent;
