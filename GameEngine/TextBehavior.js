@@ -1,7 +1,7 @@
 import TextComponent from "./TextComponent.js"
 
 class TextBehavior {
-    time = 60;
+    time = 180;
     
     start(){
 
@@ -10,6 +10,9 @@ class TextBehavior {
     update()
     {
         // need to iterate this if statement once a second
+        
+        //let time = this.gameObject;
+        
         if (this.time > 0)
         {           
             this.time -= 1;
