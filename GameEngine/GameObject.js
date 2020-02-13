@@ -6,6 +6,7 @@ class GameObject {
     rotation;
     velocityX;
     velocityY;
+    delete = false;
     components = [];
 
     constructor(x=0, y=0, scaleX=1, scaleY=1, rotation=0) {
@@ -51,7 +52,7 @@ class GameObject {
         this.y += this.velocityY;
     }
 
-    getComponent(type){
+    getComponent(type) {
         for(let i = 0; i < this.components.length; i++) {
             let component = this.components[i];
             if (component instanceof type) {

@@ -5,16 +5,14 @@ import ParticleOut from "./ParticleOut.js"
 
 class EmitParticles extends Component {
     fill;
-    stroke;
     particleSize;
     scene;
     pCount = 0;
-    colorArr = ["red","orange","yellow","green","blue","purple"];
+    colorArr = ["white","grey"];
 
-    constructor(fill, stroke, particleSize, scene) {
+    constructor(fill, particleSize, scene) {
         super();
         this.fill = fill;
-        this.stroke = stroke;
         this.particleSize = particleSize;
         this.scene = scene;
     }
