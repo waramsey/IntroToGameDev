@@ -47,8 +47,13 @@ document.getElementById('button').onclick = function startGame() {
 
 
 function gameLoop() {
+    destroyObjects();
     update();
     draw(ctx);
+}
+
+function destroyObjects() {
+    currentScene.gameObjects = currentScene.gameObjects.filter(checkDelete => !checkDelete.delete)
 }
 
 function update() {
@@ -57,4 +62,8 @@ function update() {
 
 function draw(ctx) {
     currentScene.draw(ctx,canv.width,canv.height);
+}
+
+function checkDelete() {
+
 }

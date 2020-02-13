@@ -3,7 +3,7 @@ import Component from "./Component.js"
 class ParticleRenderer extends Component {
     size;
     rotationSpeed = 0.01;
-    lifespan = 100;
+    lifespan = 20;
     fill;
     stroke;
     
@@ -29,7 +29,10 @@ class ParticleRenderer extends Component {
     update() {
         this.gameObject.rotation += this.rotationSpeed;
         this.lifespan--;
-        //Delete Object
+        //Tag for Deletion
+        if (this.lifespan <= 0) {
+            this.gameObject.delete = true;
+        }
     }
 }
 
