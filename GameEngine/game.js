@@ -46,6 +46,13 @@ document.getElementById('button').onclick = function startGame() {
         textTimer.addComponent(new TextComponent(200,"small-caps 20px georgia","white"));
         textTimer.addComponent(new TextBehavior());
     }
+
+    //PAUSE SCENE
+    {
+        let pauseText = new GameObject(100, 100);
+        pauseScene.gameObjects.push(pauseText);
+        pauseText.addComponent(new TextComponent("PAUSED", "small-caps 20px georgia", "white"));
+    }
 }
 
 
@@ -60,6 +67,19 @@ function destroyObjects() {
 }
 
 function update() {
+    // PAUSES GAME, NEED TO GIVE THIS ITS OWN TIMER AS IT IS CURRENTLY TIED TO FRAMERATE
+    document.addEventListener('keydown', function(event) 
+    {  
+        if (event.keyCode == 80 && currentScene == gameScene)
+        {
+            currentScene = pauseScene;
+        }
+        else if (event.keyCode == 80 && currentScene == pauseScene)
+        {
+            currentScene = gameScene;
+        }
+    });
+    
     currentScene.update();
 }
 
