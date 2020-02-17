@@ -5,12 +5,10 @@ class CrystalComponent extends Component{
     height;
     fill;
     stroke;
-    constructor(width, height, fill, stroke){
+    constructor(width, height){
         super();
         this.width = width;
         this.height = height;
-        this.fill = fill;
-        this.stroke = stroke;
     }
     draw(ctx){
         ctx.save();

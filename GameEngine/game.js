@@ -4,12 +4,10 @@ import GameObject from "./GameObject.js";
 import TileComponent from "./TileComponent.js";
 import PlayerComponent from "./PlayerComponent.js";
 import TextComponent from "./TextComponent.js";
-import CrystalComponent from "./CrystalComponent.js";
 import PlayerBehavior from "./PlayerBehavior.js";
 import TextBehavior from "./TextBehavior.js";
-import CrystalBehavior from "./CrystalBehavior.js";
 import EmitParticles from "./EmitParticles.js";
-import GrowShrink from "./GrowShrink.js";
+import Crystal from "./Crystal.js";
 
 let gameScene = new Scene();
 let pauseScene = new Scene();
@@ -27,10 +25,9 @@ document.getElementById('button').onclick = function startGame() {
 
     //GAME SCENE
     {
-        let CrystalGameObject = new GameObject(500,200, 1.25, 1.25, .785398);
+        let CrystalGameObject = new GameObject(500,200);
         gameScene.gameObjects.push(CrystalGameObject);
-        CrystalGameObject.addComponent(new CrystalComponent(125, 125, "black", "white"));
-        CrystalGameObject.addComponent(new CrystalBehavior());
+        CrystalGameObject.addComponent(new Crystal(50));
 
         let tile = new GameObject(200,200)
         gameScene.gameObjects.push(tile)
@@ -72,27 +69,25 @@ function draw(ctx) {
 
 // PAUSES GAME
 document.addEventListener('keydown', function(event) 
-{      
-    if (event.keyCode == 80 && currentScene == gameScene)
-    {
+{  
+    if (event.keyCode == 80 && currentScene == gameScene) {
         currentScene = pauseScene;
-        /*
         screen.innerHTML = "<h1>PAUSE</h1><button id='unpause' onclick='unpause()'>CONTINUE</button>"
-    + "<button id='button' onclick='quit()'>QUIT</button>"
+        + "<button id='button' onclick='quit()'>QUIT</button>"
 
-    document.getElementById('unpause').onclick = function unpause()
-    {
-        currentScene = gameScene;
+        document.getElementById('unpause').onclick = function unpause() {
+            screen.innerHTML = "<canvas id='canv' width='640px' height='440px'></canvas>"
+            currentScene = gameScene;
+            canv = document.querySelector("#canv");
+            ctx = canv.getContext('2d');
+        }
     }
-    */
-    }
-    else if (event.keyCode == 80 && currentScene == pauseScene)
-    {
+
+    else if (event.keyCode == 80 && currentScene == pauseScene) {
         currentScene = gameScene;
     }
     /*
-    else if (event.keyCode == 27 && currentScene == pauseScene)
-    {
+    else if (event.keyCode == 27 && currentScene == pauseScene) {
         startGame();
     }
     */
