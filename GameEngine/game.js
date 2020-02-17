@@ -26,10 +26,9 @@ document.getElementById('button').onclick = function startGame() {
 
     //GAME SCENE
     {
-        let CrystalGameObject = new GameObject(500,200, 1.25, 1.25, .785398);
+        let CrystalGameObject = new GameObject(500,200);
         gameScene.gameObjects.push(CrystalGameObject);
-        CrystalGameObject.addComponent(new CrystalComponent(125, 125, "black", "white"));
-        CrystalGameObject.addComponent(new CrystalBehavior());
+        CrystalGameObject.addComponent(new Crystal(50));
 
         let tile = new GameObject(200,200)
         gameScene.gameObjects.push(tile)

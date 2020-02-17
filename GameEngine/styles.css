@@ -17,11 +17,11 @@ canvas {
 }
 
 button {
-    background-color: #FFFBFE;
-    border: 2px solid #FFFBFE;
+    background-color: rgb(230, 230, 230);
+    border: 2px solid rgb(230, 230, 230);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 50px;
-    transition-duration: 0s;
+    transition-duration: 0.5s;
     width: 500px;
     height: 100px;
     margin: 70px;
@@ -30,4 +30,5 @@ button {
 button:hover {
     background-color: #000000;
     color: #FFFBFE;
+    box-shadow: 0 0px 100px rgba(255,251,254,1);
 }
