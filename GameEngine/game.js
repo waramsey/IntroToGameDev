@@ -58,6 +58,7 @@ document.getElementById('button').onclick = function startGame() {
 
 function gameLoop() {
     destroyObjects();
+    events();
     update();
     draw(ctx);
 }
@@ -66,8 +67,8 @@ function destroyObjects() {
     currentScene.gameObjects = currentScene.gameObjects.filter(checkDelete => !checkDelete.delete)
 }
 
-function update() {
-    // PAUSES GAME, NEED TO GIVE THIS ITS OWN TIMER AS IT IS CURRENTLY TIED TO FRAMERATE
+function events() {
+    // PAUSES GAME, NEED TO SWITCH TO POLLING
     document.addEventListener('keydown', function(event) 
     {  
         if (event.keyCode == 80 && currentScene == gameScene)
@@ -79,7 +80,9 @@ function update() {
             currentScene = gameScene;
         }
     });
-    
+}
+
+function update() {    
     currentScene.update();
 }
 
