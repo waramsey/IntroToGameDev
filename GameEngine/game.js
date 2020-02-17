@@ -1,4 +1,5 @@
 import Scene from "./Scene.js";
+import Input from "./Input.js";
 import GameObject from "./GameObject.js";
 import TileComponent from "./TileComponent.js";
 import PlayerComponent from "./PlayerComponent.js";
@@ -71,7 +72,7 @@ function draw(ctx) {
 
 // PAUSES GAME
 document.addEventListener('keydown', function(event) 
-{  
+{      
     if (event.keyCode == 80 && currentScene == gameScene)
     {
         currentScene = pauseScene;
@@ -96,4 +97,6 @@ document.addEventListener('keydown', function(event)
     }
     */
 });
+
+
 

@@ -1,3 +1,5 @@
+//import Input from "./Input.js";
+
 class PlayerBehavior {
 
     //will probably need components for:
@@ -18,6 +20,43 @@ class PlayerBehavior {
         // better way to do this?
         // there is a way to reduce latency of
         // changes in movement, forgot how though
+        /*
+        if (Input.keys().dKeyDown)
+        {
+            this.gameObject.velocityX = 10;
+        }
+        if (Input.aKeyDown)
+        {
+            this.gameObject.velocityX = -10;
+        }
+        if (Input.wKeyDown)
+        {
+            this.gameObject.velocityY = -10;
+        }
+        if (Input.sKeyDown)
+        {
+            this.gameObject.velocityY = 10;
+        }
+        //
+        if (!Input.dKeyDown)
+        {
+            this.gameObject.velocityX = 0;
+        }
+        if (!Input.aKeyDown)
+        {
+            this.gameObject.velocityX = 0;
+        }
+        if (!Input.wKeyDown)
+        {
+            this.gameObject.velocityY = 0;
+        }
+        if (!Input.sKeyDown)
+        {
+            this.gameObject.velocityY = 0;
+        }
+        */
+
+        
         let player = this.gameObject;        
 
         document.addEventListener('keydown', function(event) 
@@ -60,7 +99,7 @@ class PlayerBehavior {
                 player.velocityY = 0;
             }        
         });
-
+        
     }
 }
 
