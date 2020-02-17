@@ -46,15 +46,6 @@ document.getElementById('button').onclick = function startGame() {
         textTimer.addComponent(new TextComponent(200,"small-caps 20px georgia","white"));
         textTimer.addComponent(new TextBehavior());
     }
-
-    //PAUSE SCENE
-    {
-        // change to HTML
-        let pauseText = new GameObject(100, 100);
-        pauseScene.gameObjects.push(pauseText);
-        pauseText.addComponent(new TextComponent("PAUSED", "small-caps 20px georgia", "white"));
-        //
-    }
 }
 
 
@@ -76,12 +67,23 @@ function draw(ctx) {
     currentScene.draw(ctx,canv.width,canv.height);
 }
 
+
+
 // PAUSES GAME
 document.addEventListener('keydown', function(event) 
 {  
     if (event.keyCode == 80 && currentScene == gameScene)
     {
         currentScene = pauseScene;
+        /*
+        screen.innerHTML = "<h1>PAUSE</h1><button id='unpause' onclick='unpause()'>CONTINUE</button>"
+    + "<button id='button' onclick='quit()'>QUIT</button>"
+
+    document.getElementById('unpause').onclick = function unpause()
+    {
+        currentScene = gameScene;
+    }
+    */
     }
     else if (event.keyCode == 80 && currentScene == pauseScene)
     {
@@ -94,3 +96,4 @@ document.addEventListener('keydown', function(event)
     }
     */
 });
+
