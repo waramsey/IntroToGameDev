@@ -18,7 +18,7 @@ let canv, ctx;
     
 
 document.getElementById('button').onclick = function startGame() {
-    screen.innerHTML = "<canvas id='canv' width='640px' height='480px'></canvas>"
+    screen.innerHTML = "<canvas id='canv' width='640px' height='440px'></canvas>"
     canv = document.querySelector("#canv");
     ctx = canv.getContext('2d');
     setInterval(gameLoop, 33);
@@ -49,37 +49,23 @@ document.getElementById('button').onclick = function startGame() {
 
     //PAUSE SCENE
     {
+        // change to HTML
         let pauseText = new GameObject(100, 100);
         pauseScene.gameObjects.push(pauseText);
         pauseText.addComponent(new TextComponent("PAUSED", "small-caps 20px georgia", "white"));
+        //
     }
 }
 
 
 function gameLoop() {
     destroyObjects();
-    events();
     update();
     draw(ctx);
 }
 
 function destroyObjects() {
     currentScene.gameObjects = currentScene.gameObjects.filter(checkDelete => !checkDelete.delete)
-}
-
-function events() {
-    // PAUSES GAME, NEED TO SWITCH TO POLLING
-    document.addEventListener('keydown', function(event) 
-    {  
-        if (event.keyCode == 80 && currentScene == gameScene)
-        {
-            currentScene = pauseScene;
-        }
-        else if (event.keyCode == 80 && currentScene == pauseScene)
-        {
-            currentScene = gameScene;
-        }
-    });
 }
 
 function update() {    
@@ -89,3 +75,22 @@ function update() {
 function draw(ctx) {
     currentScene.draw(ctx,canv.width,canv.height);
 }
+
+// PAUSES GAME
+document.addEventListener('keydown', function(event) 
+{  
+    if (event.keyCode == 80 && currentScene == gameScene)
+    {
+        currentScene = pauseScene;
+    }
+    else if (event.keyCode == 80 && currentScene == pauseScene)
+    {
+        currentScene = gameScene;
+    }
+    /*
+    else if (event.keyCode == 27 && currentScene == pauseScene)
+    {
+        startGame();
+    }
+    */
+});

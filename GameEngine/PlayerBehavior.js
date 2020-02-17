@@ -24,19 +24,19 @@ class PlayerBehavior {
         {  
             if (event.keyCode == 68)
             {
-                player.velocityX = 5;
+                player.velocityX = 10;
             }
             if (event.keyCode == 65)
             {
-                player.velocityX = -5;
+                player.velocityX = -10;
             }
             if (event.keyCode == 87)
             {
-                player.velocityY = -5;
+                player.velocityY = -10;
             }
             if (event.keyCode == 83)
             {
-                player.velocityY = 5;
+                player.velocityY = 10;
             }
 
         });
