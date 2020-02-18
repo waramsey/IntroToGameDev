@@ -16,7 +16,7 @@ let screen = document.getElementById('screen');
 let canv, ctx;
 let keys = [];
 
-document.getElementById('button').onclick = function startGame() {
+document.getElementById('play').onclick = function startGame() {
     screen.innerHTML = "<canvas id='canv' width='640px' height='440px'></canvas>"
     canv = document.querySelector("#canv");
     ctx = canv.getContext('2d');
@@ -28,6 +28,7 @@ document.getElementById('button').onclick = function startGame() {
         let CrystalGameObject = new GameObject(500,200);
         gameScene.gameObjects.push(CrystalGameObject);
         CrystalGameObject.addComponent(new Crystal(50));
+        CrystalGameObject.addComponent(new GrowShrink());
 
         let tile = new GameObject(200,200)
         gameScene.gameObjects.push(tile)
@@ -77,8 +78,8 @@ function keydown (event)
     //PAUSES GAME
     if (keys[80] && currentScene == gameScene) {
         currentScene = pauseScene;
-        screen.innerHTML = "<h1>PAUSE</h1><button id='unpause' onclick='unpause()'>CONTINUE</button>"
-        + "<button id='button' onclick='quit()'>QUIT</button>"
+        screen.innerHTML = "<h1>Paused</h1><button id='play' onclick='unpause()'>CONTINUE</button>"
+        + "<button id='quit' onclick='quit()'>QUIT</button>"
 
         document.getElementById('unpause').onclick = function unpause() {
             screen.innerHTML = "<canvas id='canv' width='640px' height='440px'></canvas>"
