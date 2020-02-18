@@ -76,7 +76,7 @@ document.addEventListener('keydown', function(event)
         screen.innerHTML = "<h1>Paused</h1><button id='play' onclick='unpause()'>CONTINUE</button>"
         + "<button id='quit' onclick='quit()'>QUIT</button>"
 
-        document.getElementById('unpause').onclick = function unpause() {
+        document.getElementById('play').onclick = function unpause() {
             screen.innerHTML = "<canvas id='canv' width='640px' height='440px'></canvas>"
             currentScene = gameScene;
             canv = document.querySelector("#canv");
