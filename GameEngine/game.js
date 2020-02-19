@@ -73,7 +73,7 @@ document.addEventListener('keydown', function(event)
     if (event.keyCode == 80 && currentScene == gameScene) {
         currentScene = pauseScene;
         screen.innerHTML = "<h1>PAUSE</h1><button id='unpause' onclick='unpause()'>CONTINUE</button>"
-        + "<button id='button' onclick='quit()'>QUIT</button>"
+        + "<button id='quit' onclick='quit()'>QUIT</button>"
 
         document.getElementById('unpause').onclick = function unpause() {
             screen.innerHTML = "<canvas id='canv' width='640px' height='440px'></canvas>"
@@ -81,16 +81,12 @@ document.addEventListener('keydown', function(event)
             canv = document.querySelector("#canv");
             ctx = canv.getContext('2d');
         }
-    }
+        /*
+        document.getElementById('quit').onclick = function quit() {
 
-    else if (event.keyCode == 80 && currentScene == pauseScene) {
-        currentScene = gameScene;
+        }
+        */
     }
-    /*
-    else if (event.keyCode == 27 && currentScene == pauseScene) {
-        startGame();
-    }
-    */
 });
 
 
