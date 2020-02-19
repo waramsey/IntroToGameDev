@@ -1,11 +1,10 @@
-//import Input from "./Input.js";
-
 class PlayerBehavior {
 
     //will probably need components for:
         //character model
         //user input (move & swing sword)
         //collision
+
     start() {
         this.gameObject.x = 0;
         this.gameObject.y = 0;
@@ -16,46 +15,6 @@ class PlayerBehavior {
     }
 
     update() {
-        
-        // better way to do this?
-        // there is a way to reduce latency of
-        // changes in movement, forgot how though
-        /*
-        if (Input.keys().dKeyDown)
-        {
-            this.gameObject.velocityX = 10;
-        }
-        if (Input.aKeyDown)
-        {
-            this.gameObject.velocityX = -10;
-        }
-        if (Input.wKeyDown)
-        {
-            this.gameObject.velocityY = -10;
-        }
-        if (Input.sKeyDown)
-        {
-            this.gameObject.velocityY = 10;
-        }
-        //
-        if (!Input.dKeyDown)
-        {
-            this.gameObject.velocityX = 0;
-        }
-        if (!Input.aKeyDown)
-        {
-            this.gameObject.velocityX = 0;
-        }
-        if (!Input.wKeyDown)
-        {
-            this.gameObject.velocityY = 0;
-        }
-        if (!Input.sKeyDown)
-        {
-            this.gameObject.velocityY = 0;
-        }
-        */
-
         
         let player = this.gameObject;        
 
