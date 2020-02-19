@@ -1,6 +1,6 @@
 import Component from "./Component.js"
 
-class PlayerComponent extends Component{
+class RectangleComponent extends Component{
     width;
     height;
     fill;
@@ -25,4 +25,4 @@ class PlayerComponent extends Component{
     }
 }
 
-export default PlayerComponent;
+export default RectangleComponent;

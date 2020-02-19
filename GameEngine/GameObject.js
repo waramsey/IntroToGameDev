@@ -6,6 +6,8 @@ class GameObject {
     rotation;
     velocityX;
     velocityY;
+    originPointX;
+    originPointY;
     delete = false;
     components = [];
 
@@ -17,6 +19,8 @@ class GameObject {
         this.rotation = rotation;
         this.velocityX = 0;
         this.velocityY = 0;
+        this.originPointX = this.x;
+        this.originPointY = this.y;
     }
 
     addComponent(component) {

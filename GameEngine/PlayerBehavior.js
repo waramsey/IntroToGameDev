@@ -8,45 +8,44 @@ class PlayerBehavior {
         //collision
 
     start() {
+        // just discovered the start function in Behaviors don't do anything. Need to initialize a game object here?
+        /*
         this.gameObject.x = 0;
         this.gameObject.y = 0;
         this.gameObject.rotation = 0;
         this.gameObject.velocityX = 0;
         this.gameObject.velocityY = 0;
-        
+        */
     }
 
     update() {
-        
-        let player = this.gameObject;        
-
          
         if (Input.keys[68])
         {
-            player.velocityX = 10;
+            this.gameObject.velocityX = 10;
         }
         if (Input.keys[65])
         {
-            player.velocityX = -10;
+            this.gameObject.velocityX = -10;
         }
         if (Input.keys[87])
         {
-            player.velocityY = -10;
+            this.gameObject.velocityY = -10;
         }
         if (Input.keys[83])
         {
-            player.velocityY = 10;
+            this.gameObject.velocityY = 10;
         }
 
         //
         
         if (!Input.keys[68] && !Input.keys[65])
         {
-            player.velocityX = 0;
+            this.gameObject.velocityX = 0;
         }
         if (!Input.keys[87] && !Input.keys[83])
         {
-            player.velocityY = 0;
+            this.gameObject.velocityY = 0;
         }   
     }
 }

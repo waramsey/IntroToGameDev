@@ -1,9 +1,10 @@
 import Scene from "./Scene.js";
 import GameObject from "./GameObject.js";
 import TileComponent from "./TileComponent.js";
-import PlayerComponent from "./PlayerComponent.js";
+import RectangleComponent from "./RectangleComponent.js";
 import TextComponent from "./TextComponent.js";
 import PlayerBehavior from "./PlayerBehavior.js";
+import BossBehavior from "./BossBehavior.js";
 import TextBehavior from "./TextBehavior.js";
 import EmitParticles from "./EmitParticles.js";
 import Crystal from "./Crystal.js";
@@ -35,9 +36,16 @@ document.getElementById('play').onclick = function startGame() {
         tile.addComponent(new TileComponent("black","white"))
         tile.addComponent(new EmitParticles("black",6,gameScene))
 
+        let BossGameObject = new GameObject(300,100);
+        gameScene.gameObjects.push(BossGameObject);
+        BossGameObject.addComponent(new RectangleComponent(100, 100, "red", "white"));
+        BossGameObject.addComponent(new BossBehavior());
+
+
+
         let PlayerGameObject = new GameObject(100,100);
         gameScene.gameObjects.push(PlayerGameObject);
-        PlayerGameObject.addComponent(new PlayerComponent(50, 50, "white", "white"));
+        PlayerGameObject.addComponent(new RectangleComponent(50, 50, "white", "white"));
         PlayerGameObject.addComponent(new PlayerBehavior());
 
         let textTimer = new GameObject(555,50);
