@@ -7,14 +7,14 @@ import PlayerBehavior from "./PlayerBehavior.js";
 import TextBehavior from "./TextBehavior.js";
 import EmitParticles from "./EmitParticles.js";
 import Crystal from "./Crystal.js";
-//import Input from "./Input.js";
+import GrowShrink from "./GrowShrink.js";
+import Input from "./Input.js";
 
 let gameScene = new Scene();
 let pauseScene = new Scene();
 let currentScene = gameScene;
 let screen = document.getElementById('screen');
 let canv, ctx;
-let keys = [];
 
 document.getElementById('play').onclick = function startGame() {
     screen.innerHTML = "<canvas id='canv' width='640px' height='440px'></canvas>"
@@ -69,14 +69,12 @@ function draw(ctx) {
 document.body.addEventListener('keydown', keydown);
 document.body.addEventListener('keyup', keyup);
 
-//let input = new Input;
-
 function keydown (event)
 {  
-    keys[event.keyCode] = true;
+    Input.keys[event.keyCode] = true;
     
     //PAUSES GAME
-    if (keys[80] && currentScene == gameScene) {
+    if (Input.keys[80] && currentScene == gameScene) {
         currentScene = pauseScene;
         screen.innerHTML = "<h1>Paused</h1><button id='play' onclick='unpause()'>CONTINUE</button>"
         + "<button id='quit' onclick='quit()'>QUIT</button>"
@@ -88,7 +86,7 @@ function keydown (event)
             ctx = canv.getContext('2d');
         }
     }
-    else if (keys[80] && currentScene == pauseScene) {
+    else if (Input.keys[80] && currentScene == pauseScene) {
         currentScene = gameScene;
     }
     
@@ -99,7 +97,7 @@ function keydown (event)
 
 function keyup(event)
 {
-    keys[event.key] = false;
+    Input.keys[event.keyCode] = false;
 }
 
 

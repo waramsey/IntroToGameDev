@@ -1,5 +1,5 @@
 class Input {
-    keys = [];
+    static keys = [];
 }
 
 export default Input;

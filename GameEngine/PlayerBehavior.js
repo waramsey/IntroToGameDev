@@ -1,3 +1,5 @@
+import Input from "./Input.js";
+
 class PlayerBehavior {
 
     //will probably need components for:
@@ -18,47 +20,34 @@ class PlayerBehavior {
         
         let player = this.gameObject;        
 
-        document.addEventListener('keydown', function(event) 
-        {  
-            if (event.keyCode == 68)
-            {
-                player.velocityX = 10;
-            }
-            if (event.keyCode == 65)
-            {
-                player.velocityX = -10;
-            }
-            if (event.keyCode == 87)
-            {
-                player.velocityY = -10;
-            }
-            if (event.keyCode == 83)
-            {
-                player.velocityY = 10;
-            }
+         
+        if (Input.keys[68])
+        {
+            player.velocityX = 10;
+        }
+        if (Input.keys[65])
+        {
+            player.velocityX = -10;
+        }
+        if (Input.keys[87])
+        {
+            player.velocityY = -10;
+        }
+        if (Input.keys[83])
+        {
+            player.velocityY = 10;
+        }
 
-        });
-
-        document.addEventListener('keyup', function(event) 
-        {  
-            if (event.keyCode == 68)
-            {
-                player.velocityX = 0;
-            }
-            if (event.keyCode == 65)
-            {
-                player.velocityX = 0;
-            }
-            if (event.keyCode == 87)
-            {
-                player.velocityY = 0;
-            }
-            if (event.keyCode == 83)
-            {
-                player.velocityY = 0;
-            }        
-        });
+        //
         
+        if (!Input.keys[68] && !Input.keys[65])
+        {
+            player.velocityX = 0;
+        }
+        if (!Input.keys[87] && !Input.keys[83])
+        {
+            player.velocityY = 0;
+        }   
     }
 }
 
