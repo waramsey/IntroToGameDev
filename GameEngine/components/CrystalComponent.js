@@ -1,16 +1,14 @@
-import Component from "./Component.js"
+import Component from ".././base/Component.js"
 
-class RectangleComponent extends Component{
+class CrystalComponent extends Component{
     width;
     height;
     fill;
     stroke;
-    constructor(width, height, fill, stroke){
+    constructor(width, height){
         super();
         this.width = width;
         this.height = height;
-        this.fill = fill;
-        this.stroke = stroke;
     }
     draw(ctx){
         ctx.save();
@@ -25,4 +23,4 @@ class RectangleComponent extends Component{
     }
 }
 
-export default RectangleComponent;
+export default CrystalComponent;

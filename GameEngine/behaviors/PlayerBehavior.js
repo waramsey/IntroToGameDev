@@ -1,4 +1,4 @@
-import Input from "./Input.js";
+import Input from "../base/Input.js";
 
 class PlayerBehavior {
 

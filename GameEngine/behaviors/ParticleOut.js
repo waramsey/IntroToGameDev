@@ -1,4 +1,4 @@
-import Component from "./Component.js"
+import Component from "../base/Component.js"
 
 class ParticleOut extends Component {
     maxSpeed = 10;

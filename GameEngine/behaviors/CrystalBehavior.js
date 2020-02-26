@@ -1,4 +1,4 @@
-import CrystalComponent from "./CrystalComponent.js";
+import CrystalComponent from "../components/CrystalComponent.js";
 
 class CrystalBehavior {
     time = 0;

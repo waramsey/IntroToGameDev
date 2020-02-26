@@ -1,4 +1,4 @@
-import TextComponent from "./TextComponent.js"
+import TextComponent from "../components/TextComponent.js"
 
 class TextBehavior {
     time = 1800;

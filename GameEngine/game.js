@@ -1,15 +1,15 @@
-import Scene from "./Scene.js";
-import GameObject from "./GameObject.js";
-import TileComponent from "./TileComponent.js";
-import RectangleComponent from "./RectangleComponent.js";
-import TextComponent from "./TextComponent.js";
-import PlayerBehavior from "./PlayerBehavior.js";
-import BossBehavior from "./BossBehavior.js";
-import TextBehavior from "./TextBehavior.js";
-import EmitParticles from "./EmitParticles.js";
-import Crystal from "./Crystal.js";
-import GrowShrink from "./GrowShrink.js";
-import Input from "./Input.js";
+import Scene from "./base/Scene.js";
+import GameObject from "./base/GameObject.js";
+import TileComponent from "./components/TileComponent.js";
+import RectangleComponent from "./components/RectangleComponent.js";
+import TextComponent from "./components/TextComponent.js";
+import PlayerBehavior from "./behaviors/PlayerBehavior.js";
+import BossBehavior from "./behaviors/BossBehavior.js";
+import TextBehavior from "./behaviors/TextBehavior.js";
+import EmitParticles from "./behaviors/EmitParticles.js";
+import Crystal from "./prefabs/Crystal.js";
+import GrowShrink from "./behaviors/GrowShrink.js";
+import Input from "./base/Input.js";
 
 let gameScene = new Scene();
 let pauseScene = new Scene();
@@ -40,8 +40,6 @@ document.getElementById('play').onclick = function startGame() {
         gameScene.gameObjects.push(BossGameObject);
         BossGameObject.addComponent(new RectangleComponent(100, 100, "red", "white"));
         BossGameObject.addComponent(new BossBehavior());
-
-
 
         let PlayerGameObject = new GameObject(100,100);
         gameScene.gameObjects.push(PlayerGameObject);
@@ -97,18 +95,9 @@ function keydown (event)
     else if (Input.keys[80] && currentScene == pauseScene) {
         currentScene = gameScene;
     }
-    
-    //else if (event.keyCode == 27 && currentScene == pauseScene) {
-        //startGame();
-    //}
 }
 
 function keyup(event)
 {
     Input.keys[event.keyCode] = false;
 }
-
-
-
-
-

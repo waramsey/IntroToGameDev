@@ -1,6 +1,6 @@
-import ParticleRenderer from "./ParticleRenderer.js"
-import GameObject from "./GameObject.js"
-import Component from "./Component.js"
+import ParticleRenderer from "../components/ParticleRenderer.js"
+import GameObject from "../base/GameObject.js"
+import Component from "../base/Component.js"
 import ParticleOut from "./ParticleOut.js"
 
 class EmitParticles extends Component {

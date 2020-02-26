@@ -1,7 +1,7 @@
-import Component from "./Component.js"
-import GameObject from "./GameObject.js"
-import CrystalComponent from "./CrystalComponent.js"
-import CrystalBehavior from "./CrystalBehavior.js"
+import Component from ".././base/Component.js"
+import GameObject from ".././base/GameObject.js"
+import CrystalComponent from ".././components/CrystalComponent.js"
+import CrystalBehavior from "../behaviors/CrystalBehavior.js"
 
 class Crystal extends Component{
     size;

@@ -1,4 +1,4 @@
-import Component from "./Component.js"
+import Component from "../base/Component.js"
 
 class TileComponent extends Component {
     edgeSize = 50; //size of the outer edge of the tile
