@@ -1,4 +1,4 @@
-import CrystalComponent from "../components/CrystalComponent.js";
+import CrystalComponent from "../../GameEngine/components/CrystalComponent.js";
 
 class CrystalBehavior {
     time = 0;

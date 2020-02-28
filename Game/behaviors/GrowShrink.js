@@ -1,4 +1,4 @@
-import Component from "../base/Component.js"
+import Component from "../../GameEngine/base/Component.js"
 
 class GrowShrink extends Component {
     time = 0;

@@ -1,32 +1,30 @@
 import NameableParent from "./NameableParent.js";
 
 export default class Scene extends NameableParent {
-    gameObjects = [];
 
-    constructor() {
-        super();
+    constructor(name) {
+        super(name);
         
     }
 
     draw(ctx, width, height) {
         ctx.fillStyle = "black";
         ctx.fillRect(0,0,width,height);
-        for (let i = 0; i < this.gameObjects.length; i++) {
-            let gameObject = this.gameObjects[i];
+        for (let i = 0; i < this.children.length; i++) {
+            let gameObject = this.children[i];
             gameObject.draw(ctx);
         }
     }
 
     update() {
-        for (let i = 0; i < this.gameObjects.length; i++) {
-            let gameObject = this.gameObjects[i];
+        for (let i = 0; i < this.children.length; i++) {
+            let gameObject = this.children[i];
             gameObject.update();
         }
 
         //collision behavior
         let collidableChildren = [];
         this.getCollidable(this.children, collidableChildren);
-        console.log(collidableChildren); //for debugging
     }
 
     getCollidable(children, collidableChildren) {

@@ -1,4 +1,4 @@
-import Input from "../base/Input.js";
+import Input from "../../GameEngine/base/Input.js";
 
 class PlayerBehavior {
 

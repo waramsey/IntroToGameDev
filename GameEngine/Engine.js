@@ -1,5 +1,5 @@
 import Base from "./Base.js"
-import Components from "./base/Components.js"
+import Components from "./Components.js"
 
 export default {
     Base,

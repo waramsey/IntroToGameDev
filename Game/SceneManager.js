@@ -1,4 +1,4 @@
-import Engine from "./Engine.js"
+import Engine from "../GameEngine/Engine.js"
 
 export default class SceneManager {
     static scenes = [];
