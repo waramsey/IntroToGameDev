@@ -1,4 +1,6 @@
-class GameObject {
+import NameableParent from "./NameableParent.js";
+
+export default class GameObject extends NameableParent {
     x;
     y;
     scaleX;
@@ -12,6 +14,8 @@ class GameObject {
     components = [];
 
     constructor(x=0, y=0, scaleX=1, scaleY=1, rotation=0) {
+        super();
+        
         this.x = x;
         this.y = y;
         this.scaleX = scaleX;
@@ -66,5 +70,3 @@ class GameObject {
         throw "Error, couldn't find type " + type;
     }
 }
-
-export default GameObject;
