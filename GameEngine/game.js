@@ -18,7 +18,7 @@ let screen = document.getElementById('screen');
 let canv, ctx;
 
 document.getElementById('play').onclick = function startGame() {
-    screen.innerHTML = "<canvas id='canv' width='640px' height='440px'></canvas>"
+    screen.innerHTML = "<canvas id='canv' width='650px' height='450px'></canvas>"
     canv = document.querySelector("#canv");
     ctx = canv.getContext('2d');
     setInterval(gameLoop, 33);
@@ -36,7 +36,7 @@ document.getElementById('play').onclick = function startGame() {
         tile.addComponent(new TileComponent("black","white"))
         tile.addComponent(new EmitParticles("black",6,gameScene))
 
-        let BossGameObject = new GameObject(300,100);
+        let BossGameObject = new GameObject(275,50);
         gameScene.gameObjects.push(BossGameObject);
         BossGameObject.addComponent(new RectangleComponent(100, 100, "red", "white"));
         BossGameObject.addComponent(new BossBehavior());
@@ -45,7 +45,7 @@ document.getElementById('play').onclick = function startGame() {
 
         let PlayerGameObject = new GameObject(100,100);
         gameScene.gameObjects.push(PlayerGameObject);
-        PlayerGameObject.addComponent(new RectangleComponent(50, 50, "white", "white"));
+        PlayerGameObject.addComponent(new RectangleComponent(50, 50, "rgba(255, 255, 255)", "white"));
         PlayerGameObject.addComponent(new PlayerBehavior());
 
         let textTimer = new GameObject(555,50);
