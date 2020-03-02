@@ -16,7 +16,7 @@ export default class Scene extends NameableParent {
         }
     }
 
-    update() {
+    update(collidableType, collisionHelper) {
         for (let i = 0; i < this.children.length; i++) {
             let gameObject = this.children[i];
             gameObject.update();
@@ -24,7 +24,11 @@ export default class Scene extends NameableParent {
 
         //collision behavior
         let collidableChildren = [];
-        this.getCollidable(this.children, collidableChildren);
+        this.getCollidable(this.children, collidableChildren, collidableType);
+
+        for (let i = 0; i < collidableChildren.length; i++) {
+            //TODO
+        }
     }
 
     getCollidable(children, collidableChildren) {
