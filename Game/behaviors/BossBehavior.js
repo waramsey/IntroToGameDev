@@ -1,5 +1,5 @@
 class BossBehavior {
-    
+
     start() {
         /*
         this.gameObject.x = 0;

@@ -1,9 +1,0 @@
-"Power Crystals"
-- break = reset a timer
-- boss has better stats for each crystal remaining
-- if timer hits 0, you are summoned to the boss room instantly
-
-
-Summoned by progressively tougher bosses.  The boss is NOT a part of the floor layout.
- - if power crystals are all broken, summoned to boss of floor (at weakest state)
- - if time runs out, summoned to boss
