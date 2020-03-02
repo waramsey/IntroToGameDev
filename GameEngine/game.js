@@ -10,6 +10,7 @@ import EmitParticles from "./EmitParticles.js";
 import Crystal from "./Crystal.js";
 import GrowShrink from "./GrowShrink.js";
 import Input from "./Input.js";
+import CircleComponent from "./CircleComponent.js";
 
 let gameScene = new Scene();
 let pauseScene = new Scene();
@@ -45,7 +46,7 @@ document.getElementById('play').onclick = function startGame() {
 
         let PlayerGameObject = new GameObject(100,100);
         gameScene.gameObjects.push(PlayerGameObject);
-        PlayerGameObject.addComponent(new RectangleComponent(50, 50, "rgba(255, 255, 255)", "white"));
+        PlayerGameObject.addComponent(new CircleComponent(25, "rgba(255, 255, 255)", "white"));
         PlayerGameObject.addComponent(new PlayerBehavior());
 
         let textTimer = new GameObject(555,50);
