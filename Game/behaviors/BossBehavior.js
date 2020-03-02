@@ -14,19 +14,13 @@ class BossBehavior {
         // would prefer to initialize this in start()
         if (this.gameObject.velocityX == 0)
         {
-            this.gameObject.velocityX = 1;
+            this.gameObject.velocityX = 5;
         }
 
-        if (this.gameObject.x >= this.gameObject.originPointX + 50 || this.gameObject.x <= this.gameObject.originPointX - 50)
+        if (this.gameObject.x >= this.gameObject.originPointX + 100 || this.gameObject.x <= this.gameObject.originPointX - 100)
         {
             this.gameObject.velocityX *= -1;
         }
-
-        // what kind of behaviors to give him? 
-        // bump forward if player is in front of him? 
-        // orbiting circles that shoot at player and return? 
-        // breath attack?
-        // slash attack?
     }
 }
 

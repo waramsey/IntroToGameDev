@@ -22,7 +22,7 @@ export default class GameScene extends Engine.Base.Scene {
 
         let PlayerGameObject = new GameObject(100,100);
         this.children.push(PlayerGameObject);
-        PlayerGameObject.addComponent(new Components.RectangleComponent(50, 50, "white", "white"));
+        PlayerGameObject.addComponent(new Components.CircleComponent(25, "white", "white"));
         PlayerGameObject.addComponent(new GameBehaviors.PlayerBehavior());
 
         let textTimer = new GameObject(555,50);
