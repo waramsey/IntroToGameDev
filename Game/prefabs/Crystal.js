@@ -5,7 +5,8 @@ import GameObject from "../../GameEngine/base/GameObject.js";
 
 
 class Crystal extends Base.GameObject {
-    size = 50;
+    size = 20;
+    scale = 2.5;
     parts = [6];
 
     constructor(x, y){
@@ -17,9 +18,9 @@ class Crystal extends Base.GameObject {
         // this.CrystalGameObject.addComponent(new GameBehaviors.GrowShrink());
         for (let i = 0; i < 6; i++) {
             if (i % 2 == 0) {
-                this.parts[i] = new GameObject(this.x, this.y, 1, 1, 0);
+                this.parts[i] = new GameObject(this.x, this.y, this.scale, this.scale, 0);
             } else {
-                this.parts[i] = new GameObject(this.x, this.y, 1, 1, 0.785398);
+                this.parts[i] = new GameObject(this.x, this.y, this.scale, this.scale, 0.785398);
             }
 
             //push it onto the scene?
