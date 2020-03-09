@@ -76,8 +76,8 @@ function destroyObjects() {
 
 function update() {    
     SceneManager.currentScene.update();
-    console.log(SceneManager.currentScene.name)
-    console.log(SceneManager.currentScene.children)
+    //console.log(SceneManager.currentScene.name)
+    //console.log(SceneManager.currentScene.children)
 }
 
 function draw(ctx) {

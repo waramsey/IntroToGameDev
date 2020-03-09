@@ -4,6 +4,10 @@ import RectangleComponent from "./components/RectangleComponent.js";
 import CircleComponent from "./components/CircleComponent.js";
 import TextComponent from "./components/TextComponent.js";
 import TileComponent from "./components/TileComponent.js";
+import CircleCollider from "./components/CircleCollider.js";
+import RectangleCollider from "./components/RectangleCollider.js";
+import Collider from "./components/Collider.js";
+import CollisionHelper from "./components/CollisionHelper.js";
 
 export default {
     CrystalComponent,
@@ -11,5 +15,9 @@ export default {
     RectangleComponent,
     CircleComponent,
     TextComponent,
-    TileComponent
+    TileComponent,
+    RectangleCollider,
+    CircleCollider,
+    Collider,
+    CollisionHelper
 }

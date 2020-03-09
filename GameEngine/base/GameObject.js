@@ -69,4 +69,18 @@ export default class GameObject extends NameableParent {
         }
         throw "Error, couldn't find type " + type;
     }
+
+    recursiveCall(functionName){
+        for(let i = 0; i < this.components.length; i++){
+            let component = this.components[i];
+            if(component[functionName]){
+                component[functionName]();
+            }
+        }
+        //Now call the function on the children
+        for(let i = 0; i < this.children.length; i++){
+            let child = this.children[i];
+            child.recursiveCall(functionName);
+        }
+    }
 }
