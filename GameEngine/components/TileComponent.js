@@ -1,17 +1,14 @@
-import Component from "../base/Component.js"
+import Base from "../Base.js";
 
-class TileComponent extends Component {
+export default class TileComponent extends Base.Component {
     edgeSize = 50; //size of the outer edge of the tile
-    innerTile; //size of the smaller tiles on the inside
     gap = 3.5; //space between smaller tiles
+    innerTile = (this.edgeSize/2) - this.gap; //size of the smaller tiles on the inside
     fill;
     stroke;
     
-    constructor(fill, stroke) {
+    constructor() {
         super();
-        this.innerTile = (this.edgeSize/2) - this.gap;
-        this.fill = fill;
-        this.stroke = stroke;
     }
 
     draw(ctx) {
@@ -36,5 +33,3 @@ class TileComponent extends Component {
         ctx.restore();
     }
 }
-
-export default TileComponent;

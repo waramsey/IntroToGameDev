@@ -1,3 +1,5 @@
+//UPDATE TO DECLARATIVE
+
 import Room from "../../GameEngine/base/Room.js";
 import GameObjects from "../GameObjects.js";
 import Base from "../../GameEngine/Base.js";

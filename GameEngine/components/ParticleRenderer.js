@@ -1,17 +1,14 @@
-import Component from "../base/Component.js"
+import Base from "../Base.js";
 
-class ParticleRenderer extends Component {
+export default class ParticleRenderer extends Base.Component {
     size;
-    rotationSpeed = 0.01;
-    lifespan = 20;
     fill;
     stroke;
+    rotationSpeed = 0.01;
+    lifespan = 20;
     
-    constructor(fill, stroke, size) {
+    constructor() {
         super();
-        this.fill = fill;
-        this.stroke = stroke;
-        this.size = size;
     }
 
     draw(ctx) {
@@ -35,5 +32,3 @@ class ParticleRenderer extends Component {
         }
     }
 }
-
-export default ParticleRenderer;

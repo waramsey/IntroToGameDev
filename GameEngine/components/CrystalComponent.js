@@ -1,14 +1,13 @@
-import Component from ".././base/Component.js"
+import Base from "../Base.js";
 
-class CrystalComponent extends Component{
+export default class CrystalComponent extends Base.Component{
     width;
     height;
     fill;
     stroke;
-    constructor(width, height){
+
+    constructor(){
         super();
-        this.width = width;
-        this.height = height;
     }
     draw(ctx){
         ctx.save();
@@ -22,5 +21,3 @@ class CrystalComponent extends Component{
         ctx.restore();
     }
 }
-
-export default CrystalComponent;

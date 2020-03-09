@@ -1,3 +1,5 @@
+//UPDATE TO DECLARATIVE
+
 import Base from "../../GameEngine/Base.js";
 import Components from "../../GameEngine/Components.js";
 import GameBehaviors from "../GameBehaviors.js";

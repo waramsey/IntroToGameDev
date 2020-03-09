@@ -1,16 +1,42 @@
-import Engine from "../../GameEngine/Engine.js";
-import CollisionRectangleBehavior from "../behaviors/CollisionRectangleBehavior.js";
-
-export default class Wall extends Engine.Base.GameObject{
-  constructor(x,y) {
-    super(x, y)
-    let RectangleComponent = new Engine.Components.RectangleComponent(50, 50, "black", "white");
-    this.addComponent(RectangleComponent)
-    let RectangleCollider = new Engine.Components.RectangleCollider(50, 50);
-    this.addComponent(RectangleCollider);
-    let collisionRectangleBehavior = new CollisionRectangleBehavior();
-    this.addComponent(collisionRectangleBehavior);
-
-  }
-
+export default {
+  name: "Wall",
+  components: [
+    {
+      type: "RectangleComponent",
+      values: [
+        {
+          key: "width",
+          value: "50"
+        },
+        {
+          key: "height",
+          value: "50"
+        },
+        {
+          key: "fill",
+          value: "black"
+        },
+        {
+          key: "stroke",
+          value: "white"
+        }
+      ]
+    },
+    {
+      type: "RectangleCollider",
+      values: [
+        {
+          key: "width",
+          value: "50"
+        },
+        {
+          key: "length",
+          value: "50"
+        }
+      ]
+    },
+    {
+      type: "CollisionRectangleBehavior"
+    }
+  ]
 }

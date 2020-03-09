@@ -1,16 +1,12 @@
-import Component from ".././base/Component.js"
+import Base from "../Base.js";
 
-class RectangleComponent extends Component{
+export default class RectangleComponent extends Base.Component{
     width;
     height;
     fill;
     stroke;
-    constructor(width, height, fill, stroke){
+    constructor(){
         super();
-        this.width = width;
-        this.height = height;
-        this.fill = fill;
-        this.stroke = stroke;
     }
     draw(ctx){
         ctx.save();
@@ -23,6 +19,7 @@ class RectangleComponent extends Component{
         }
         ctx.restore();
     }
-}
+    update() {
 
-export default RectangleComponent;
+    }
+}

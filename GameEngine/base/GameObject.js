@@ -7,23 +7,21 @@ export default class GameObject extends NameableParent {
     scaleX;
     scaleY;
     rotation;
-    velocityX;
-    velocityY;
+    velocityX = 0;
+    velocityY = 0;
     originPointX;
     originPointY;
     delete = false;
     components = [];
 
+    get location() {
+        return new Point(this.x, this.y);
+    }
+
     constructor(x=0, y=0, scaleX=1, scaleY=1, rotation=0) {
         super();
         
-        this.x = x;
-        this.y = y;
-        this.scaleX = scaleX;
-        this.scaleY = scaleY;
-        this.rotation = rotation;
-        this.velocityX = 0;
-        this.velocityY = 0;
+        [this.x, this.y, this.scaleX, this.scaleY, this.rotation] = [x, y, scaleX, scaleY, rotation];
         this.originPointX = this.x;
         this.originPointY = this.y;
     }
@@ -39,36 +37,32 @@ export default class GameObject extends NameableParent {
         ctx.scale(this.scaleX, this.scaleY);
         ctx.rotate(this.rotation);
 
-        for (let i = 0; i < this.components.length; i++) {
-            let component = this.components[i];
-            if (component.draw) {
-                component.draw(ctx);
-            }
-        }
+        this.components.filter(i => i.draw).forEach(i => i.draw(ctx));
+        
+        this.children.filter(i => i.draw).forEach(i => i.draw(ctx));
 
         ctx.restore();
     }
 
     update() {
-        for (let i = 0; i < this.components.length; i++) {
-            let component = this.components[i];
-            if (component.update) {
-                component.update();
-            }
-        }
+        this.components.filter(i => i.update).forEach(i => i.update());
+
+        this.children.forEach(i => i.update());
 
         this.x += this.velocityX;
         this.y += this.velocityY;
     }
 
     getComponent(type) {
-        for(let i = 0; i < this.components.length; i++) {
-            let component = this.components[i];
-            if (component instanceof type) {
-                return component;
-            }
+        if (typeof (type) === 'string' || type instanceof String) {
+            let component = this.components.find(i => i.constructor.name === type);
+            if (component) return component;
+            throw "Error, couldn't find type " + type;
+        } else {
+            let component = this.components.find(i => i instanceof type);
+            if (component) return component;
+            throw "Error, couldn't find type " + type;
         }
-        throw "Error, couldn't find type " + type;
     }
 
     recursiveCall(functionName){

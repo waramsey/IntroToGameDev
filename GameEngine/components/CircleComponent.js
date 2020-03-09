@@ -1,19 +1,15 @@
-import Component from ".././base/Component.js"
+import Base from "../Base.js";
 
-class CircleComponent extends Component{
+export default class CircleComponent extends Base.Component{
     radius;
     fill;
     stroke;
-    constructor(radius, fill, stroke){
+    constructor(){
         super();
-        this.radius = radius;
-        this.fill = fill;
-        this.stroke = stroke;
     }
     draw(ctx){
         ctx.save();
         {
-            //ctx.translate(-this.width/2, -this.height/2);
             ctx.fillStyle = this.fill;
             ctx.strokeStyle = this.stroke;
             ctx.beginPath();
@@ -23,6 +19,7 @@ class CircleComponent extends Component{
         }
         ctx.restore();
     }
-}
+    update() {
 
-export default CircleComponent;
+    }
+}

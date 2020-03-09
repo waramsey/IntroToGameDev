@@ -1,4 +1,6 @@
 import Engine from "../GameEngine/Engine.js"
+import GameBehaviors from "./GameBehaviors.js";
+import GameObjects from "./GameObjects.js";
 
 export default class SceneManager {
     static scenes = [];
@@ -32,9 +34,16 @@ export default class SceneManager {
                 this._currentSceneIndex = +argument;
             }
         }
+        this.scenes[this._currentSceneIndex].start2(GameBehaviors, GameObjects, Engine.Components);
     }
 
     static addScene(scene) {
         this.scenes.push(scene);
+    }
+    static destroy(gameObject) {
+        this.currentScene.destroy(gameObject);
+    }
+    static instantiate(gameObjectType, location, rotation) {
+        return this.currentScene.instantiate(gameObjectType, location, rotation, this.currentScene.children);
     }
 }

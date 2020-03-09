@@ -1,12 +1,17 @@
 import Scenes from "./Game/Scenes.js";
 import SceneManager from "./Game/SceneManager.js";
 import Engine from "./GameEngine/Engine.js";
+import GameBehaviors from "./Game/GameBehaviors.js";
+import GameObjects from "./Game/GameObjects.js";
 
+Engine.Base.Scene.gameObjects = GameObjects;
+Engine.Base.Scene.components = Engine.Components;
+Engine.Base.Scene.gameBehaviors = GameBehaviors;
 
 //Scene Management
-let gameScene = new Scenes.GameScene();
-let pauseScene = new Scenes.PauseScene();
-let startScene = new Scenes.StartScene();
+let gameScene = Engine.Base.Scene.parse(Scenes.GameScene);
+let pauseScene = Engine.Base.Scene.parse(Scenes.PauseScene);
+let startScene = Engine.Base.Scene.parse(Scenes.StartScene);
 
 SceneManager.addScene(gameScene);
 SceneManager.addScene(pauseScene);

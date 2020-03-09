@@ -1,15 +1,12 @@
-import Component from ".././base/Component.js"
+import Base from "../Base.js";
 
-class TextComponent extends Component{
+export default class TextComponent extends Base.Component{
     text;
     font;
     fill;
 
-    constructor(text, font, fill){
+    constructor(){
         super();
-        this.text = text;
-        this.font = font;
-        this.fill = fill;
     }
     draw(ctx){
         ctx.save();
@@ -20,6 +17,7 @@ class TextComponent extends Component{
         }
         ctx.restore();
     }
+    update() {
+        
+    }
 }
-
-export default TextComponent;

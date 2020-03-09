@@ -4,7 +4,4 @@ export default class Collider extends Base.Component{
     constructor(){
         super();
     }
-
-    
-    
 }

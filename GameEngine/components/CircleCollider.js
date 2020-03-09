@@ -2,9 +2,9 @@ import Collider from "./Collider.js"
 
 
 export default class CircleCollider extends Collider{
-    constructor(radius){
+    radius = 0;
+    constructor(){
         super();
-        this.radius = radius;
     }
 
 }
