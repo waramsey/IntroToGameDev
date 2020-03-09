@@ -1,4 +1,5 @@
 import NameableParent from "./NameableParent.js";
+import Point from "./Point.js";
 
 export default class GameObject extends NameableParent {
     x;

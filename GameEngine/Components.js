@@ -8,6 +8,7 @@ import CircleCollider from "./components/CircleCollider.js";
 import RectangleCollider from "./components/RectangleCollider.js";
 import Collider from "./components/Collider.js";
 import CollisionHelper from "./components/CollisionHelper.js";
+import Point from "./components/PointCollider.js";
 
 export default {
     CrystalComponent,
@@ -18,6 +19,7 @@ export default {
     TileComponent,
     RectangleCollider,
     CircleCollider,
+    Point,
     Collider,
     CollisionHelper
 }

@@ -1,12 +1,12 @@
 import Base from "../../GameEngine/Base.js"
 import SceneManager from "../SceneManager.js"
 import Point from "../../GameEngine/base/Point.js";
-import CollisionCircle from "../prefabs/CollisionCircle.js"
+import CollisionRectangle from "../prefabs/CollisionRectangle.js"
 
-export default class CollisionCircleBehavior {
+export default class CollisionRectangleBehavior {
     
     start() {
-        console.log("Collision circle started");
+        console.log("Collision rectangle started");
 
     }
     update() {

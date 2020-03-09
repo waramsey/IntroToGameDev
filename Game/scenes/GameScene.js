@@ -11,10 +11,16 @@ export default class GameScene extends Engine.Base.Scene {
         let TestRoom = new GameObjects.TestRoom();
         this.children.push(TestRoom)
 
-        let PlayerGameObject = new GameObject(100,100);
+        // TEST
+        let sampleWall = new GameObjects.Wall(50, 50);
+        this.children.push(sampleWall);
+        // TEST
+        let PlayerGameObject = new GameObjects.Player(100,100);
         this.children.push(PlayerGameObject);
-        PlayerGameObject.addComponent(new Components.CircleComponent(25, "white", "white"));
-        PlayerGameObject.addComponent(new GameBehaviors.PlayerBehavior());
+        //PlayerGameObject.addComponent(new Components.CircleComponent(25, "white", "white"));
+        //PlayerGameObject.addComponent(new GameBehaviors.PlayerBehavior());
+        // TEST
+        
 
         let textTimer = new GameObject(555,50);
         this.children.push(textTimer);

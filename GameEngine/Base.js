@@ -6,6 +6,7 @@ import Scene from "./base/Scene.js"
 import Time from "./base/Time.js"
 import Input from "./base/Input.js"
 import NameableParent from "./base/NameableParent.js"
+import Point from "./base/Point.js";
 
 export default {
     Behavior,
@@ -15,5 +16,6 @@ export default {
     Scene,
     Time,
     Input,
-    NameableParent
+    NameableParent,
+    Point,
 }

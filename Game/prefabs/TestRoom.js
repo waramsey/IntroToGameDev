@@ -12,9 +12,9 @@ export default class TestRoom extends Room {
         let CrystalGameObject = new GameObjects.Crystal(500,200);
         this.children.push(CrystalGameObject);
     
-        let tile = new Base.GameObject(200,200)
-        this.children.push(tile)
-        tile.addComponent(new Components.TileComponent("black","white"))
+        //let tile = new Base.GameObject(200,200)
+        //this.children.push(tile)
+        //tile.addComponent(new Components.TileComponent("black","white"))
     
         let BossGameObject = new Base.GameObject(300,100);
         this.children.push(BossGameObject);
