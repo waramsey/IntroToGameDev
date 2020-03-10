@@ -66,8 +66,6 @@ export default {
         {
             name: "c1",
             location: {x:0,y:0},
-            rotation: 40,
-            //how to rotate and scale?
             type: "EmptyGameObject",
             components: [
                 {
@@ -75,11 +73,11 @@ export default {
                     values: [
                         {
                             key: "width",
-                            value: "2"
+                            value: "50"
                         },
                         {
                             key: "height",
-                            value: "100"
+                            value: "50"
                         }
                     ]
                 },
@@ -88,5 +86,124 @@ export default {
                 }
             ]
         },
+        {
+            name: "c2",
+            location: {x:0,y:0},
+            rotation: 0.785398,
+            type: "EmptyGameObject",
+            components: [
+                {
+                    type: "CrystalComponent",
+                    values: [
+                        {
+                            key: "width",
+                            value: "50"
+                        },
+                        {
+                            key: "height",
+                            value: "50"
+                        }
+                    ]
+                },
+                {
+                    type: "CrystalBehavior"
+                }
+            ]
+        },
+        {
+            name: "c3",
+            location: {x:0,y:0},
+            type: "EmptyGameObject",
+            components: [
+                {
+                    type: "CrystalComponent",
+                    values: [
+                        {
+                            key: "width",
+                            value: "35"
+                        },
+                        {
+                            key: "height",
+                            value: "35"
+                        }
+                    ]
+                },
+                {
+                    type: "CrystalBehavior"
+                }
+            ]
+        },
+        {
+            name: "c4",
+            location: {x:0,y:0},
+            rotation: 0.785398,
+            type: "EmptyGameObject",
+            components: [
+                {
+                    type: "CrystalComponent",
+                    values: [
+                        {
+                            key: "width",
+                            value: "35"
+                        },
+                        {
+                            key: "height",
+                            value: "35"
+                        }
+                    ]
+                },
+                {
+                    type: "CrystalBehavior"
+                }
+            ]
+        },
+        {
+            name: "c5",
+            location: {x:0,y:0},
+            type: "EmptyGameObject",
+            components: [
+                {
+                    type: "CrystalComponent",
+                    values: [
+                        {
+                            key: "width",
+                            value: "24"
+                        },
+                        {
+                            key: "height",
+                            value: "24"
+                        }
+                    ]
+                },
+                {
+                    type: "CrystalBehavior"
+                }
+            ]
+        },
+        {
+            name: "c6",
+            location: {x:0,y:0},
+            rotation: 0.785398,
+            type: "EmptyGameObject",
+            components: [
+                {
+                    type: "CrystalComponent",
+                    values: [
+                        {
+                            key: "width",
+                            value: "24"
+                        },
+                        {
+                            key: "height",
+                            value: "24"
+                        }
+                    ]
+                },
+                {
+                    type: "CrystalBehavior"
+                }
+            ]
+        },
+        //other crystal gameobjects, rotated and scaled 0.785398
     ]
 }
