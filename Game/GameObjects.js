@@ -1,4 +1,5 @@
 //KEEP ALPHABETIZED
+import Boss from "./prefabs/Boss.js";
 import CollisionCircle from "./prefabs/CollisionCircle.js";
 import CollisionDot from "./prefabs/CollisionDot.js";
 import CollisionRectangle from "./prefabs/CollisionRectangle.js";
@@ -10,6 +11,7 @@ import Tile from "./prefabs/Tile.js";
 import Wall from "./prefabs/Wall.js";
 
 export default {
+    Boss,
     CollisionCircle,
     CollisionDot,
     CollisionRectangle,
