@@ -1,17 +1,22 @@
-import Crystal from "./prefabs/Crystal.js";
-import TestRoom from "./prefabs/TestRoom.js";
+//KEEP ALPHABETIZED
 import CollisionCircle from "./prefabs/CollisionCircle.js";
-import CollisionRectangle from "./prefabs/CollisionRectangle.js";
 import CollisionDot from "./prefabs/CollisionDot.js";
+import CollisionRectangle from "./prefabs/CollisionRectangle.js";
+import Crystal from "./prefabs/Crystal.js";
+import EmptyGameObject from "./prefabs/EmptyGameObject.js";
 import Player from "./prefabs/Player.js";
+import TestRoom from "./prefabs/TestRoom.js";
+import Tile from "./prefabs/Tile.js";
 import Wall from "./prefabs/Wall.js";
 
 export default {
-    Crystal,
-    TestRoom,
     CollisionCircle,
-    CollisionRectangle,
     CollisionDot,
+    CollisionRectangle,
+    Crystal,
+    EmptyGameObject,
     Player,
-    Wall,
+    TestRoom,
+    Tile,
+    Wall
 }

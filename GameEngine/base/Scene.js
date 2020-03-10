@@ -19,7 +19,7 @@ export default class Scene extends NameableParent {
   }
 
   start2() {
-    
+
     this.children = [];
 
     //Load a scene from a declarative syntax
@@ -221,7 +221,7 @@ export default class Scene extends NameableParent {
   destroy(gameObject) {
     this.children = this.children.filter(i => i != gameObject);
   }
-  
+
   instantiate(gameObjectType, location, rotation, parent) {
     let gameObject = new GameObject(location.x, location.y, 1, 1, rotation);
     parent.push(gameObject);
