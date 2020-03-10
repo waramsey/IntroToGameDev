@@ -19,6 +19,13 @@ export default {
       ]
     },
     {
+      type: "DotBehavior",
+    },
+    {
+      type: "Point",
+    },
+    /*
+    {
       type: "CircleCollider",
       values: [
         {
@@ -30,6 +37,8 @@ export default {
     {
       type: "CollisionCircleBehavior"
     },
+    */
+    
     {
       type: "PlayerBehavior"
     }

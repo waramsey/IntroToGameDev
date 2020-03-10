@@ -17,5 +17,5 @@ export default {
     Time,
     Input,
     NameableParent,
-    Point
+    Point,
 }

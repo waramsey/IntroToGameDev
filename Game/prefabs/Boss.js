@@ -2,25 +2,33 @@ export default {
     name: "Boss",
     components: [
         {
-            type: "RectangleComponent",
+            type: "CircleComponent",
             values: [
                 {
-                    key: "width",
-                    value: "100"
-                  },
-                  {
-                    key: "height",
-                    value: "100"
+                    key: "radius",
+                    value: "50"
                   },
                   {
                     key: "fill",
-                    value: "black"
+                    value: "red"
                   },
                   {
                     key: "stroke",
                     value: "red"
                   }
             ]
+        },
+        {
+          type: "CircleCollider",
+          values: [
+            {
+              key: "radius",
+              value: "50"
+            }
+          ]
+        },
+        {
+          type: "CollisionCircleBehavior"
         },
         {
             type: "BossBehavior"
