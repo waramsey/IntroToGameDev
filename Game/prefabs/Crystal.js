@@ -16,11 +16,15 @@ export default {
                         {
                             key: "height",
                             value: "50"
+                        },
+                        {
+                            key: "stroke",
+                            value: "white"
                         }
                     ]
                 },
                 {
-                    type: "CrystalBehavior"
+                    type: "RGBStroke"
                 },
                 {
                     type: "GrowShrink"
@@ -43,11 +47,15 @@ export default {
                         {
                             key: "height",
                             value: "50"
+                        },
+                        {
+                            key: "stroke",
+                            value: "white"
                         }
                     ]
                 },
                 {
-                    type: "CrystalBehavior"
+                    type: "RGBStroke"
                 },
                 {
                     type: "GrowShrink"
@@ -69,11 +77,15 @@ export default {
                         {
                             key: "height",
                             value: "35"
+                        },
+                        {
+                            key: "stroke",
+                            value: "white"
                         }
                     ]
                 },
                 {
-                    type: "CrystalBehavior"
+                    type: "RGBStroke"
                 },
                 {
                     type: "GrowShrink"
@@ -96,11 +108,15 @@ export default {
                         {
                             key: "height",
                             value: "35"
+                        },
+                        {
+                            key: "stroke",
+                            value: "white"
                         }
                     ]
                 },
                 {
-                    type: "CrystalBehavior"
+                    type: "RGBStroke"
                 },
                 {
                     type: "GrowShrink"
@@ -122,11 +138,15 @@ export default {
                         {
                             key: "height",
                             value: "24"
+                        },
+                        {
+                            key: "stroke",
+                            value: "white"
                         }
                     ]
                 },
                 {
-                    type: "CrystalBehavior"
+                    type: "RGBStroke"
                 },
                 {
                     type: "GrowShrink"
@@ -149,11 +169,15 @@ export default {
                         {
                             key: "height",
                             value: "24"
+                        },
+                        {
+                            key: "stroke",
+                            value: "white"
                         }
                     ]
                 },
                 {
-                    type: "CrystalBehavior"
+                    type: "RGBStroke"
                 },
                 {
                     type: "GrowShrink"
