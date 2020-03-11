@@ -1,7 +1,7 @@
 import Base from "../../GameEngine/Base.js";
 
 export default class testblackcircle extends Base.Component {
-    maxSize = 260;
+    maxSize = 24;
     currentSize = 0;
 
     constructor() {

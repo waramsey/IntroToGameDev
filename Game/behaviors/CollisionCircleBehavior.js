@@ -19,6 +19,7 @@ export default class CollisionCircleBehavior {
 
     onCollisionStay(collisionObject){
         console.log("on collision stay");
+        collisionObject.gameObject.components.filter(i => i.stroke).forEach(i => i.stroke = "red");
     }
 
 
