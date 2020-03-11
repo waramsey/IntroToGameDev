@@ -1,3 +1,5 @@
+//KEEP ALPHABETIZED
+
 import BossBehavior from "./behaviors/BossBehavior.js";
 import CollisionCircleBehavior from "./behaviors/CollisionCircleBehavior.js";
 import CollisionRectangleBehavior from "./behaviors/CollisionRectangleBehavior.js";
