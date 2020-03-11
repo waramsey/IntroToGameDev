@@ -15,6 +15,6 @@ export default {
             name: "Player",
             location: {x:100,y:100},
             type: "Player"
-        }        
+        },      
     ]
 }

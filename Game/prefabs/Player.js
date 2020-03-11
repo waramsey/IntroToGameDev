@@ -137,12 +137,6 @@ export default {
         }
       ]
     },
-    {
-      type: "DotBehavior",
-    },
-    {
-      type: "Point",
-    },
     /*
     {
       type: "CircleCollider",
@@ -159,6 +153,12 @@ export default {
     */
     {
       type: "PlayerBehavior"
+    },
+    {
+      type: "DotBehavior",
+    },
+    {
+      type: "Point",
     },
   ]
 }
