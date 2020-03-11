@@ -10,22 +10,19 @@ export default {
         },
         {
           key:"fill",
-          value:"black"
+          value:"white"
         },
         {
           key:"stroke",
-          value:"black"
+          value:"white"
         },
       ]
-    },
-    {
-      type:"MovementBehavior",
     },
     {
       type:"DotBehavior",
     },
     {
-      type:"Point",
-    },
+      type:"PointCollider"
+    }
   ]
 }
