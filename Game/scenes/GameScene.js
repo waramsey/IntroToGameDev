@@ -15,6 +15,11 @@ export default {
             name: "Player",
             location: {x:100,y:100},
             type: "Player"
-        },      
+        },
+        {
+            name: "CollisionDot",
+            location: {x:500,y:100},
+            type: "CollisionDot"
+        }   
     ]
 }

@@ -9,6 +9,7 @@ import ParticleOut from "./behaviors/ParticleOut.js";
 import PlayerBehavior from "./behaviors/PlayerBehavior.js";
 import RGBFill from "./behaviors/RGBFill.js";
 import RGBStroke from "./behaviors/RGBStroke.js";
+import testblackcircle from "./behaviors/testblackcircle.js";
 import TextBehavior from "./behaviors/TextBehavior.js";
 
 export default {
@@ -23,5 +24,6 @@ export default {
     PlayerBehavior,
     RGBFill,
     RGBStroke,
+    testblackcircle,
     TextBehavior
 }

@@ -80,7 +80,7 @@ function destroyObjects() {
 }
 
 function update() {    
-    SceneManager.currentScene.update();
+    SceneManager.currentScene.update(Engine.Components.Collider, Engine.Components.CollisionHelper);
     //console.log(SceneManager.currentScene.name)
     //console.log(SceneManager.currentScene.children)
 }
