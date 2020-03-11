@@ -2,7 +2,7 @@ export default {
   name: "Player",
   children: [
     {
-      name: "hp1",
+      name: "hp",
       location: {x:0,y:0},
       type: "EmptyGameObject",
       components: [
@@ -11,11 +11,11 @@ export default {
           values: [
             {
               key: "radius",
-              value: "5"
+              value: "25"
             },
             {
               key: "fill",
-              value: "white"
+              value: "black"
             },
             {
               key: "stroke",
@@ -24,97 +24,7 @@ export default {
           ]
         },
         {
-          type: "OrbitBehavior",
-          values: [
-            {
-              key: "id",
-              value: "1"
-            }
-          ]
-        },
-        {
-          type: "RGBStroke"
-        },
-        {
-          type: "RGBFill"
-        }
-      ]
-    },
-    {
-      name: "hp2",
-      location: {x:0,y:0},
-      type: "EmptyGameObject",
-      components: [
-        {
-          type: "CircleComponent",
-          values: [
-            {
-              key: "radius",
-              value: "5"
-            },
-            {
-              key: "fill",
-              value: "white"
-            },
-            {
-              key: "stroke",
-              value: "black"
-            }
-          ]
-        },
-        {
-          type: "OrbitBehavior",
-          values: [
-            {
-              key: "id",
-              value: "2"
-            }
-          ]
-        },
-        {
-          type: "RGBStroke"
-        },
-        {
-          type: "RGBFill"
-        }
-      ]
-    },
-    {
-      name: "hp3",
-      location: {x:0,y:0},
-      type: "EmptyGameObject",
-      components: [
-        {
-          type: "CircleComponent",
-          values: [
-            {
-              key: "radius",
-              value: "5"
-            },
-            {
-              key: "fill",
-              value: "white"
-            },
-            {
-              key: "stroke",
-              value: "black"
-            }
-          ]
-        },
-        {
-          type: "OrbitBehavior",
-          values: [
-            {
-              key: "id",
-              value: "3"
-            }
-          ]
-        },
-        {
-          type: "RGBStroke"
-        },
-        {
-          type: "RGBFill"
+          type: "testblackcircle",
         }
       ]
     }
@@ -143,6 +53,7 @@ export default {
     {
       type: "Point",
     },
+    
     /*
     {
       type: "CircleCollider",
