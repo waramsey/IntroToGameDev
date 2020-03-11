@@ -15,7 +15,7 @@ export default {
             },
             {
               key: "fill",
-              value: "black"
+              value: "white"
             },
             {
               key: "stroke",
@@ -23,9 +23,11 @@ export default {
             }
           ]
         },
+        /*
         {
           type: "testblackcircle",
         }
+        */
       ]
     }
   ],
@@ -56,19 +58,15 @@ export default {
         }
       ]
     },
-    /*
     {
       type: "CollisionCircleBehavior"
     },
-    */
+    
     {
       type: "PlayerBehavior"
     },
     {
-      type: "DotBehavior",
-    },
-    {
-      type: "Point",
+      type: "Point"
     },
   ]
 }

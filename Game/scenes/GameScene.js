@@ -20,6 +20,6 @@ export default {
             name: "CollisionDot",
             location: {x:500,y:100},
             type: "CollisionDot"
-        }   
+        }  
     ]
 }
