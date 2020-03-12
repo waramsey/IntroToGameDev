@@ -3,7 +3,7 @@ export default {
     children: [
         {
             name: "tile",
-            location: {x:100,y:100},
+            location: {x:500,y:300},
             type: "Tile"
         },
         {
@@ -15,6 +15,11 @@ export default {
             name: "Boss",
             location: {x:300,y:100},
             type: "Boss"
+        },
+        {
+            name: "Walls",
+            location: {x:0,y:0},
+            type: "R"
         }
     ]
 }

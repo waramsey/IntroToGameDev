@@ -2,11 +2,6 @@ export default {
     name: "GameScene",
     objects: [
         {
-            name: "sampleWall",
-            location: {x:50,y:50},
-            type: "Wall"
-        },
-        {
             name: "testroom",
             location: {x:0,y:0},
             type: "TestRoom",

@@ -6,11 +6,11 @@ export default {
       values: [
         {
           key: "width",
-          value: "50"
+          value: "45"
         },
         {
           key: "height",
-          value: "50"
+          value: "45"
         },
         {
           key: "fill",
@@ -27,16 +27,16 @@ export default {
       values: [
         {
           key: "width",
-          value: "50"
+          value: "45"
         },
         {
           key: "length",
-          value: "50"
+          value: "45"
         }
       ]
     },
     {
       type: "CollisionRectangleBehavior"
-    },
+    }
   ]
 }

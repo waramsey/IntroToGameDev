@@ -19,7 +19,6 @@ class PlayerBehavior {
     }
 
     update() {
-         
         if (Input.keys[68])
         {
             this.gameObject.velocityX = 10;

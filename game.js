@@ -30,7 +30,7 @@ let canv, ctx;
 
 
 document.getElementById('play').onclick = function startGame() {
-    screen.innerHTML = "<canvas id='canv' width='640px' height='440px'></canvas>"
+    screen.innerHTML = "<canvas id='canv' width='650px' height='450px'></canvas>"
     canv = document.querySelector("#canv");
     ctx = canv.getContext('2d');
     setInterval(gameLoop, 33);
@@ -52,7 +52,7 @@ function keydown (event)
         + "<button id='quit' onclick='quit()'>QUIT</button>"
 
         document.getElementById('play').onclick = function unpause() {
-            screen.innerHTML = "<canvas id='canv' width='640px' height='440px'></canvas>"
+            screen.innerHTML = "<canvas id='canv' width='650px' height='450px'></canvas>"
             SceneManager.currentScene = "GameScene";
             canv = document.querySelector("#canv");
             ctx = canv.getContext('2d');
