@@ -48,6 +48,7 @@ export default {
     Vertical,
     VerticalDoor,
     Wall,
+    
     TRBL,
     TRB,
     TRL,
