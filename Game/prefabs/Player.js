@@ -56,7 +56,6 @@ export default {
     {
       type: "CollisionCircleBehavior"
     },
-    
     {
       type: "PlayerBehavior",
       values: [
@@ -65,9 +64,6 @@ export default {
           value: "10"
         }
       ]
-    },
-    {
-      type: "PointCollider"
     }
   ]
 }
