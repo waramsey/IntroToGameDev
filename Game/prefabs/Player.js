@@ -23,11 +23,6 @@ export default {
             }
           ]
         },
-        /*
-        {
-          type: "testblackcircle",
-        }
-        */
       ]
     }
   ],
@@ -63,10 +58,16 @@ export default {
     },
     
     {
-      type: "PlayerBehavior"
+      type: "PlayerBehavior",
+      values: [
+        {
+          key: "playerSpeed",
+          value: "10"
+        }
+      ]
     },
     {
       type: "PointCollider"
-    },
+    }
   ]
 }

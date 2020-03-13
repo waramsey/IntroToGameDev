@@ -16,12 +16,12 @@ export default class CollisionHelper{
                 //
             }
             else if(one.collider instanceof CircleCollider && two.collider instanceof RectangleCollider){
-                //
+                // 
             }
             else if(one.collider instanceof CircleCollider && two.collider instanceof CircleCollider){
                 let distance = one.gameObject.location.distance(two.gameObject.location);
 
-                if(distance < one.collider.radius + two.collider.radius)
+                if(distance < parseInt(one.collider.radius) + parseInt(two.collider.radius))
                     return true;
                 return false;
             }

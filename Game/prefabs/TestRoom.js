@@ -12,14 +12,9 @@ export default {
             type: "Crystal"
         },
         {
-            name: "Boss",
-            location: {x:300,y:100},
-            type: "Boss"
-        },
-        {
             name: "Walls",
             location: {x:0,y:0},
-            type: "RL" //Change this to any combination of TRBL (in that order) to change walls
+            type: "TRBL" //Change this to any combination of TRBL (in that order) to change walls
         }
     ]
 }
