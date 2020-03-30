@@ -30,7 +30,23 @@ export default class CollisionHelper{
                 return false;
             }
             else if(one.collider instanceof CircleCollider && two.collider instanceof RectangleCollider){
-                //TODO
+                //Deflate circle to point
+                let w;
+                let h;
+                let r = parseInt(one.collider.radius);
+                two.gameObject.components.filter(i => i.width).forEach(i => w = i.width);
+                two.gameObject.components.filter(i => i.height).forEach(i => h = i.height);
+                
+                let TLx = two.gameObject.location.x - 0.5 * w - r;
+                let TLy = two.gameObject.location.y - 0.5 * h - r;
+                let BRx = two.gameObject.location.x + 0.5 * w + r;
+                let BRy = two.gameObject.location.y + 0.5 * h + r;
+                let Px = one.gameObject.location.x;
+                let Py = one.gameObject.location.y;
+
+                if(TLx < Px && Px < BRx && TLy < Py && Py < BRy)
+                    return true;
+                return false;
             }
             else if(one.collider instanceof CircleCollider && two.collider instanceof CircleCollider){
                 let distance = one.gameObject.location.distance(two.gameObject.location);
@@ -41,7 +57,7 @@ export default class CollisionHelper{
             }
             else if(one.collider instanceof RectangleCollider && two.collider instanceof RectangleCollider){
                 if (one.gameObject.x < two.gameObject.x + two.collider.width && one.gameObject.x + one.collider.width > two.gameObject.x &&
-                    one.gameObject.y < two.gameObject.y + two.collider.height && one.gameObject.y + one.collider.height > two.gameObect.y)
+                    one.gameObject.y < two.gameObject.y + two.collider.height && one.gameObject.y + one.collider.height > two.gameObject.y)
                     return true;
                 return false;
             }   

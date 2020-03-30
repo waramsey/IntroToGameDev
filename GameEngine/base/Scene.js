@@ -1,6 +1,7 @@
 import NameableParent from "./NameableParent.js"
 import Point from "./Point.js"
 import GameObject from "./GameObject.js";
+import Engine from "../Engine.js";
 
 export default class Scene extends NameableParent {
   static gameObjects = [];
@@ -193,7 +194,6 @@ export default class Scene extends NameableParent {
             if (component.onCollisionStay)
               component.onCollisionStay(collidableChildren[i]);
           }
-
         }
       }
     }
@@ -213,7 +213,7 @@ export default class Scene extends NameableParent {
         let x = 1;//no-op
       }
       for (let j = 0; j < child.children.length; j++) {
-        this.getCollidable(child.children[j], collidableChildren);
+        this.getCollidable(child.children[j], collidableChildren, type);
       }
     }
   }
