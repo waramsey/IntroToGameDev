@@ -12,6 +12,35 @@ export default {
             type: "Canvas",
             children: [
                 //GUI elements go in here
+                {
+                    name: "TestText",
+                    location: {x:70,y:70},
+                    type: "ScreenText",
+                    componentValues: [
+                        {
+                            type: "RectTransform",
+                            values: [
+                                {
+                                    key: "anchorHorizontal",
+                                    value:"left"
+                                },
+                                {
+                                    key: "anchorVertical",
+                                    value:"top"
+                                }
+                            ]
+                        },
+                        {
+                            type: "TextComponent",
+                            values: [
+                                {
+                                    key: "text",
+                                    value: "Test UI"
+                                }
+                            ]
+                        }
+                    ]
+                }
             ]
         },
         {

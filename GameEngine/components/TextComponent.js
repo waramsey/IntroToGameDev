@@ -2,8 +2,8 @@ import Base from "../Base.js";
 
 export default class TextComponent extends Base.Component{
     text;
-    font;
-    fill;
+    font = "white";
+    fill = "white";
 
     constructor(){
         super();
