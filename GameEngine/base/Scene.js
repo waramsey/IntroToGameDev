@@ -1,7 +1,6 @@
 import NameableParent from "./NameableParent.js"
 import Point from "./Point.js"
 import GameObject from "./GameObject.js";
-import Engine from "../Engine.js";
 
 export default class Scene extends NameableParent {
   static gameObjects = [];
@@ -99,7 +98,7 @@ export default class Scene extends NameableParent {
           let key = componentKeys[i];
           if (key == componentString) {
             componentType = Scene.components[key];
-            break
+            break;
           }
         }
         if (componentType == null) {
@@ -164,10 +163,57 @@ export default class Scene extends NameableParent {
   }
 
   draw(ctx, width, height) {
-    ctx.fillStyle = "black";
-    ctx.fillRect(0, 0, width, height)
+    ctx.save();
+    let tx, ty, sx, sy, r, hx, hy;
+    let cameras = this.children.filter(i => i.hasComponent("CameraComponent"));
+    if (cameras.length == 0) {
+      console.log ("You should add a camera to the scene.")
+      ctx.fillStyle = "cyan";
+      ctx.fillRect(0,0,width,height);
+      tx = 0;
+      ty = 0;
+      sx = 1;
+      sy = 1;
+      r = 0;
+      hx = 0;
+      hy = 0;
+    } else {
+      if (cameras.length > 1)
+        console.log("More than 1 camera detected in the scene.  You should only have exactly one root game object with a camera component attached.");
+      let camera = cameras[0];
+      let CameraComponent = camera.getComponent("CameraComponent");
+      ctx.fillStyle = CameraComponent.backgroundColor;
+      ctx.fillRect(0,0,width,height);
+      tx = camera.x;
+      ty = camera.y;
+      sx = camera.scaleX;
+      sy = camera.scaleY;
+      r = camera.rotation;
+      hx = width / 2;
+      hy = height / 2;
+    }
 
-    this.children.filter(i => i.draw).forEach(i => i.draw(ctx));
+    ctx.translate(hx,hy);
+    ctx.rotate(r);
+    ctx.scale(sx,sy);
+    ctx.translate(-tx,-ty);
+
+    this.children.filter(i => i.draw && !i.hasComponent("CanvasComponent")).forEach(i => i.draw(ctx));
+
+    ctx.restore();
+
+    ctx.save();
+    let canvases = this.children.filter(i=>i.draw && i.hasComponent("CanvasComponent"));
+    if (canvases.length == 0) {
+      console.log("Can't draw to the canvas, because you dont have one")
+    } else {
+      if (canvases.length > 2) {
+        console.log("You have too many canvas components, you should only have one.");
+      }
+      let canvas = canvases[0];
+      canvas.draw(ctx);
+    }
+    ctx.restore();
   }
 
   update(collidableType, collisionHelper) {
@@ -175,7 +221,7 @@ export default class Scene extends NameableParent {
 
     //Add collision behavior
     let collidableChildren = [];
-    this.getCollidable(this.children, collidableChildren, collidableType);
+    this.getCollidable(this, collidableChildren, collidableType);
 
     for (let i = 0; i < collidableChildren.length; i++) {
       for (let j = i + 1; j < collidableChildren.length; j++) {
@@ -199,22 +245,22 @@ export default class Scene extends NameableParent {
     }
   }
 
-  getCollidable(children, collidableChildren, type) {
+  getCollidable(gameObject, collidableChildren, type) {
 
-
-    for (let i = 0; i < children.length; i++) {
-      let child = children[i];
+    if (gameObject.getComponent) {
       try {
-        let collidableComponent = child.getComponent(type);
+        let collidableComponent = gameObject.getComponent(type);
         if (collidableComponent) {
-          collidableChildren.push({ collider: collidableComponent, gameObject: child });
+          collidableChildren.push({ collider: collidableComponent, gameObject });
         }
       } catch (e) {
-        let x = 1;//no-op
+        //no-op
       }
-      for (let j = 0; j < child.children.length; j++) {
-        this.getCollidable(child.children[j], collidableChildren, type);
-      }
+    }
+    for (let i = 0; i < gameObject.children.length; i++) {
+      let child = gameObject.children[i];
+      
+      this.getCollidable(child, collidableChildren, type);
     }
   }
 
@@ -227,6 +273,7 @@ export default class Scene extends NameableParent {
     parent.push(gameObject);
     let prefab = Scene.gameObjects[gameObjectType.name];
     this.buildIt(prefab, gameObject);
+    gameObject.name = prefab.name;
     gameObject.recursiveCall("start");
     return gameObject;
   }

@@ -2,6 +2,19 @@ export default {
     name: "GameScene",
     objects: [
         {
+            name: "Main Camera",
+            location: {x:325,y:225},
+            type: "Camera"
+        },
+        {
+            name: "GUI Canvas",
+            location: {x:0,y:0},
+            type: "Canvas",
+            children: [
+                //GUI elements go in here
+            ]
+        },
+        {
             name: "CollisionDot",
             location: {x:500,y:100},
             type: "CollisionDot"
@@ -12,9 +25,9 @@ export default {
             type: "Boss"
         },
         {
-            name: "tile",
+            name: "Wallbit",
             location: {x:500,y:300},
-            type: "Tile"
+            type: "Wall"
         },
         {
             name: "Crystal",

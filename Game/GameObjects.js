@@ -1,6 +1,8 @@
 //KEEP ALPHABETIZED
 
 import Boss from "./prefabs/Boss.js";
+import Camera from "./prefabs/Camera.js";
+import Canvas from "./prefabs/Canvas.js";
 import CollisionCircle from "./prefabs/CollisionCircle.js";
 import CollisionDot from "./prefabs/CollisionDot.js";
 import CollisionRectangle from "./prefabs/CollisionRectangle.js";
@@ -9,6 +11,7 @@ import EmptyGameObject from "./prefabs/EmptyGameObject.js";
 import Horizontal from "./prefabs/walls/Horizontal.js";
 import HorizontalDoor from "./prefabs/walls/HorizontalDoor.js";
 import Player from "./prefabs/Player.js";
+import ScreenText from "./prefabs/ScreenText.js";
 import TestRoom from "./prefabs/TestRoom.js";
 import Tile from "./prefabs/Tile.js";
 import Vertical from "./prefabs/walls/Vertical.js";
@@ -35,6 +38,8 @@ import L from "./prefabs/walls/L.js";
 
 export default {
     Boss,
+    Camera,
+    Canvas,
     CollisionCircle,
     CollisionDot,
     CollisionRectangle,
@@ -43,6 +48,7 @@ export default {
     Horizontal,
     HorizontalDoor,
     Player,
+    ScreenText,
     TestRoom,
     Tile,
     Vertical,
