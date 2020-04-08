@@ -167,7 +167,7 @@ export default class Scene extends NameableParent {
     let tx, ty, sx, sy, r, hx, hy;
     let cameras = this.children.filter(i => i.hasComponent("CameraComponent"));
     if (cameras.length == 0) {
-      console.log ("You should add a camera to the scene.")
+      console.log("You should add a camera to the scene.")
       ctx.fillStyle = "cyan";
       ctx.fillRect(0,0,width,height);
       tx = 0;
@@ -269,7 +269,7 @@ export default class Scene extends NameableParent {
   }
 
   instantiate(gameObjectType, location, rotation, parent) {
-    let gameObject = new GameObject(location.x, location.y, 1, 1, rotation); //SCALE AND ROTATION?
+    let gameObject = new GameObject(location.x, location.y, 1, 1, rotation); //SCALE AND ROTATION? !!!
     parent.push(gameObject);
     let prefab = Scene.gameObjects[gameObjectType.name];
     this.buildIt(prefab, gameObject);
