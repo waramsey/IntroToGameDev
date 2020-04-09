@@ -37,10 +37,10 @@ export default class CollisionHelper{
                 two.gameObject.components.filter(i => i.width).forEach(i => w = i.width);
                 two.gameObject.components.filter(i => i.height).forEach(i => h = i.height);
                 
-                let TLx = two.gameObject.location.x - 0.5 * w - r;
-                let TLy = two.gameObject.location.y - 0.5 * h - r;
-                let BRx = two.gameObject.location.x + 0.5 * w + r;
-                let BRy = two.gameObject.location.y + 0.5 * h + r;
+                let TLx = two.gameObject.pX + two.gameObject.location.x - 0.5 * w - r;
+                let TLy = two.gameObject.pY + two.gameObject.location.y - 0.5 * h - r;
+                let BRx = two.gameObject.pX + two.gameObject.location.x + 0.5 * w + r;
+                let BRy = two.gameObject.pY + two.gameObject.location.y + 0.5 * h + r;
                 let Px = one.gameObject.location.x;
                 let Py = one.gameObject.location.y;
 

@@ -56,7 +56,7 @@ export default {
         {
             name: "Wallbit",
             location: {x:500,y:300},
-            type: "Wall"
+            type: "Wall",
         },
         {
             name: "Crystal",
@@ -66,7 +66,7 @@ export default {
         {
             name: "Walls",
             location: {x:0,y:0},
-            type: "TL" //Change this to any combination of TRBL (in that order) to change walls
+            type: "TRBL" //Change this to any combination of TRBL (in that order) to change walls
         },
         {
             name: "Player",

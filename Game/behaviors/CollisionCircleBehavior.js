@@ -19,8 +19,6 @@ export default class CollisionCircleBehavior {
 
     onCollisionStay(collisionObject){
         collisionObject.gameObject.components.filter(i => i.stroke).forEach(i => i.stroke = "green");
-        console.log("My location is " + this.gameObject.x + "," + this.gameObject.y);
-        console.log("Wall location is " + collisionObject.gameObject.x + "," + collisionObject.gameObject.y);
     }
 
 
