@@ -19,10 +19,13 @@ export default class CollisionWallBehavior extends Base.Component {
 
     onCollisionStay(collisionObject) {
         
-        
-        
-        collisionObject.gameObject.x = collisionObject.gameObject.previousX;
-        collisionObject.gameObject.y = collisionObject.gameObject.previousY;
-
+        if (this.gameObject.x - collisionObject.gameObject.x > 48 || this.gameObject.x - collisionObject.gameObject.x < -48)
+        {
+            collisionObject.gameObject.x = collisionObject.gameObject.previousX;
+        }
+        else if (this.gameObject.y - collisionObject.gameObject.y > 48 || this.gameObject.y - collisionObject.gameObject.y < -48)
+        {
+            collisionObject.gameObject.y = collisionObject.gameObject.previousY;
+        }
     }
 }

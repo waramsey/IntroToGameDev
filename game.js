@@ -72,7 +72,7 @@ function keyup(event)
 
 function gameLoop() {
     if (!SceneManager.currentScene.findByName("Player"))
-        window.location.reload();    
+        //window.parent.location = window.parent.location.href;    
     destroyObjects();
     update();
     draw(ctx);
