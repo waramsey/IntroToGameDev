@@ -1,7 +1,4 @@
 import Base from "../../GameEngine/Base.js"
-import SceneManager from "../SceneManager.js"
-import Point from "../../GameEngine/base/Point.js";
-import CollisionRectangle from "../prefabs/CollisionRectangle.js"
 
 export default class CollisionWallBehavior extends Base.Component {
     
@@ -18,13 +15,9 @@ export default class CollisionWallBehavior extends Base.Component {
     }
 
     onCollisionStay(collisionObject) {
-        
-        if (this.gameObject.x - collisionObject.gameObject.x > 48 || this.gameObject.x - collisionObject.gameObject.x < -48)
-        {
+        if (this.gameObject.x - collisionObject.gameObject.x > 48 || this.gameObject.x - collisionObject.gameObject.x < -48) {
             collisionObject.gameObject.x = collisionObject.gameObject.previousX;
-        }
-        else if (this.gameObject.y - collisionObject.gameObject.y > 48 || this.gameObject.y - collisionObject.gameObject.y < -48)
-        {
+        } else {
             collisionObject.gameObject.y = collisionObject.gameObject.previousY;
         }
     }
