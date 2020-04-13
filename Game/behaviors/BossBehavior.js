@@ -1,4 +1,4 @@
-class BossBehavior {
+export default class BossBehavior {
 
     start() {
         /*
@@ -23,5 +23,3 @@ class BossBehavior {
         }
     }
 }
-
-export default BossBehavior;
