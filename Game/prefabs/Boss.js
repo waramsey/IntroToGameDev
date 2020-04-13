@@ -28,10 +28,19 @@ export default {
           ]
         },
         {
-          type: "CollisionCircleBehavior"
+          type: "CollisionEnemyBehavior"
         },
         {
             type: "BossBehavior"
-        }
+        },
+        {
+          type: "HealthBehavior",
+          values: [
+            {
+              key: "health",
+              value: "100"
+            }
+          ]
+        },
     ]
 }

@@ -36,7 +36,7 @@ export default {
       ]
     },
     {
-      type: "CollisionRectangleBehavior"
+      type: "CollisionWallBehavior"
     }
   ]
 }

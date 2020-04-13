@@ -3,10 +3,10 @@ import SceneManager from "../SceneManager.js"
 import Point from "../../GameEngine/base/Point.js";
 import CollisionRectangle from "../prefabs/CollisionRectangle.js"
 
-export default class CollisionRectangleBehavior extends Base.Component {
+export default class CollisionWallBehavior extends Base.Component {
     
     start() {
-        console.log("Collision rectangle started");
+        console.log("Collision Wall started");
 
     }
     update() {
@@ -18,7 +18,7 @@ export default class CollisionRectangleBehavior extends Base.Component {
     }
 
     onCollisionStay(collisionObject){
-        // console.log("on collision stay: rectangle");
+   
     }
 
 

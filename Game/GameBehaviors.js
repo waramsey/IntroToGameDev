@@ -1,12 +1,14 @@
 //KEEP ALPHABETIZED
 
 import BossBehavior from "./behaviors/BossBehavior.js";
-import CollisionCircleBehavior from "./behaviors/CollisionCircleBehavior.js";
+import CollisionPlayerBehavior from "./behaviors/CollisionPlayerBehavior.js";
 import CollisionRainbowBehavior from "./behaviors/CollisionRainbowBehavior.js";
-import CollisionRectangleBehavior from "./behaviors/CollisionRectangleBehavior.js";
+import CollisionEnemyBehavior from "./behaviors/CollisionEnemyBehavior.js";
+import CollisionWallBehavior from "./behaviors/CollisionWallBehavior.js";
 import DotBehavior from "./behaviors/DotBehavior.js";
 import EmitParticles from "./behaviors/EmitParticles.js";
 import GrowShrink from "./behaviors/GrowShrink.js";
+import HealthBehavior from "./behaviors/HealthBehavior.js";
 import OrbitBehavior from "./behaviors/OrbitBehavior.js";
 import ParticleOut from "./behaviors/ParticleOut.js";
 import PlayerBehavior from "./behaviors/PlayerBehavior.js";
@@ -17,12 +19,14 @@ import TextBehavior from "./behaviors/TextBehavior.js";
 
 export default {
     BossBehavior,
-    CollisionCircleBehavior,
+    CollisionPlayerBehavior,
     CollisionRainbowBehavior,
-    CollisionRectangleBehavior,
+    CollisionEnemyBehavior,
+    CollisionWallBehavior,
     DotBehavior,
     EmitParticles,
     GrowShrink,
+    HealthBehavior,
     OrbitBehavior,
     ParticleOut,
     PlayerBehavior,

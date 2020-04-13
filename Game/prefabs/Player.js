@@ -56,10 +56,15 @@ export default {
     {
       type: "CollisionPlayerBehavior",
       values: [
+      ]
+    },
+    {
+      type: "HealthBehavior",
+      values: [
         {
-          key: "playerHealth",
-          value: "10"
-        },
+          key: "health",
+          value: "100"
+        }
       ]
     },
     {
