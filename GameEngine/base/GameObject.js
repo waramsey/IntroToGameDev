@@ -99,8 +99,11 @@ export default class GameObject extends NameableParent {
         this.previousX = this.x;
         this.previousY = this.y;
         
-        this.components.filter(i => i.update).forEach(i => i.update());
-
+        this.components.filter(i => i.update).forEach(i => {
+            // console.log(i.enabled)
+            // if(!i.enabled)
+                i.update()
+        });
         this.children.forEach(i => i.update());
 
         this.x += this.velocityX;

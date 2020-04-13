@@ -1,5 +1,6 @@
-class Component {
+export default class Component {
     gameObject;
+    // enabled = true;
 
     setVelX(velocityX)
     {
@@ -11,5 +12,3 @@ class Component {
     }
 
 }
-
-export default Component;

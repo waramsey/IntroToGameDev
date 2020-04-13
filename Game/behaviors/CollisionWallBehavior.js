@@ -19,7 +19,7 @@ export default class CollisionWallBehavior extends Base.Component {
 
     onCollisionStay(collisionObject) {
         
-        
+        console.log("Collided")
         
         collisionObject.gameObject.x = collisionObject.gameObject.previousX;
         collisionObject.gameObject.y = collisionObject.gameObject.previousY;

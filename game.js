@@ -10,12 +10,12 @@ Engine.Base.Scene.gameBehaviors = GameBehaviors;
 
 //Scene Management
 let gameScene = Engine.Base.Scene.parse(Scenes.GameScene);
-let pauseScene = Engine.Base.Scene.parse(Scenes.PauseScene);
+// let pauseScene = Engine.Base.Scene.parse(Scenes.PauseScene);
 let startScene = Engine.Base.Scene.parse(Scenes.StartScene);
 let rainbowScene = Engine.Base.Scene.parse(Scenes.RainbowScene);
 
 SceneManager.addScene(gameScene);
-SceneManager.addScene(pauseScene);
+// SceneManager.addScene(pauseScene);
 SceneManager.addScene(startScene);
 SceneManager.addScene(rainbowScene);
 SceneManager.currentScene = "StartScene";
@@ -72,7 +72,7 @@ function keyup(event)
 
 function gameLoop() {
     if (!SceneManager.currentScene.findByName("Player"))
-        window.location.reload();    
+        window.location.reload();
     destroyObjects();
     update();
     draw(ctx);
