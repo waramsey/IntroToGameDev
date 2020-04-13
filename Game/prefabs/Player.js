@@ -68,7 +68,7 @@ export default {
       ]
     },
     {
-      type: "PlayerBehavior",
+      type: "MovementBehavior",
       values: [
         {
           key: "playerSpeed",

@@ -6,20 +6,23 @@ import CollisionRectangle from "../prefabs/CollisionRectangle.js"
 export default class CollisionWallBehavior extends Base.Component {
     
     start() {
-        console.log("Collision Wall started");
+        //console.log("Collision Wall started");
 
     }
     update() {
 
         
     }
-    onCollisionEnter(otherGameObject){
+    onCollisionEnter(otherGameObject) {
         console.log("in collision");
     }
 
-    onCollisionStay(collisionObject){
-   
+    onCollisionStay(collisionObject) {
+        
+        
+        
+        collisionObject.gameObject.x = collisionObject.gameObject.previousX;
+        collisionObject.gameObject.y = collisionObject.gameObject.previousY;
+
     }
-
-
 }

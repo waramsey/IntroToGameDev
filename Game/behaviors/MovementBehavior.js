@@ -1,6 +1,6 @@
 import Input from "../../GameEngine/base/Input.js";
 
-export default class PlayerBehavior {
+export default class MovementBehavior {
     playerSpeed;
 
     update() {

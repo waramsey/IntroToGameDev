@@ -46,14 +46,11 @@ export default {
             ]
         },
         {
-            name: "CollisionDot",
-            location: {x:500,y:100},
-            type: "CollisionDot"
-        },
-        {
             name: "Boss",
             location: {x:300,y:100},
-            type: "Boss"
+            tag: "Enemy",
+            type: "Boss",
+            
         },
         {
             name: "Wallbit",

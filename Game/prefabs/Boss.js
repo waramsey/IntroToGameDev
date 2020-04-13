@@ -1,5 +1,6 @@
 export default {
     name: "Boss",
+    tag: "Enemy",
     components: [
         {
             type: "CircleComponent",

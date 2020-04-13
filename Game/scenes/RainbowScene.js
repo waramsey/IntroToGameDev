@@ -631,7 +631,7 @@ export default {
                   type: "CollisionRainbowBehavior"
                 },
                 {
-                  type: "PlayerBehavior",
+                  type: "MovementBehavior",
                   values: [
                     {
                       key: "playerSpeed",

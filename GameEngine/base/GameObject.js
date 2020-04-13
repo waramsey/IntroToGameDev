@@ -4,6 +4,8 @@ import Point from "./Point.js";
 export default class GameObject extends NameableParent {
     x;
     y;
+    previousX;
+    previousY;
     scaleX;
     scaleY;
     rotation;
@@ -15,17 +17,21 @@ export default class GameObject extends NameableParent {
     components = [];
     pX;
     pY;
+    tag;
 
     get location() {
         return new Point(this.x, this.y);
     }
 
-    constructor(x=0, y=0, scaleX=1, scaleY=1, rotation=0, pX=0, pY=0) {
+    constructor(x=0, y=0, scaleX=1, scaleY=1, rotation=0, pX=0, pY=0, tag = "") {
         super();
         
-        [this.x, this.y, this.scaleX, this.scaleY, this.rotation, this.pX, this.pY] = [x, y, scaleX, scaleY, rotation, pX, pY];
+        [this.x, this.y, this.scaleX, this.scaleY, this.rotation, this.pX, this.pY, this.tag] = [x, y, scaleX, scaleY, rotation, pX, pY, tag];
         this.originPointX = this.x;
         this.originPointY = this.y;
+
+        this.previousX = this.originPointX;
+        this.previousY = this.originPointY;
     }
 
     addComponent(component) {
@@ -90,6 +96,9 @@ export default class GameObject extends NameableParent {
     }
 
     update() {
+        this.previousX = this.x;
+        this.previousY = this.y;
+        
         this.components.filter(i => i.update).forEach(i => i.update());
 
         this.children.forEach(i => i.update());

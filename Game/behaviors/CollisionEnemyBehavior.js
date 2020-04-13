@@ -7,7 +7,7 @@ import RGBFill from "./RGBFill.js";
 export default class CollisionCircleBehavior {
     
     start() {
-        console.log("Collision Enemy started");
+        //console.log("Collision Enemy started");
 
     }
     update() {
@@ -19,7 +19,7 @@ export default class CollisionCircleBehavior {
     }
 
     onCollisionStay(collisionObject){
-        collisionObject.gameObject.components.filter(i => i.fill).forEach(i => i.fill = "white");
+        //collisionObject.gameObject.components.filter(i => i.fill).forEach(i => i.fill = "white");
     }
 
 

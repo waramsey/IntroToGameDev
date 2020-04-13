@@ -9,9 +9,9 @@ import DotBehavior from "./behaviors/DotBehavior.js";
 import EmitParticles from "./behaviors/EmitParticles.js";
 import GrowShrink from "./behaviors/GrowShrink.js";
 import HealthBehavior from "./behaviors/HealthBehavior.js";
+import MovementBehavior from "./behaviors/MovementBehavior.js";
 import OrbitBehavior from "./behaviors/OrbitBehavior.js";
 import ParticleOut from "./behaviors/ParticleOut.js";
-import PlayerBehavior from "./behaviors/PlayerBehavior.js";
 import RGBFill from "./behaviors/RGBFill.js";
 import RGBStroke from "./behaviors/RGBStroke.js";
 import testblackcircle from "./behaviors/testblackcircle.js";
@@ -27,9 +27,9 @@ export default {
     EmitParticles,
     GrowShrink,
     HealthBehavior,
+    MovementBehavior,
     OrbitBehavior,
     ParticleOut,
-    PlayerBehavior,
     RGBFill,
     RGBStroke,
     testblackcircle,

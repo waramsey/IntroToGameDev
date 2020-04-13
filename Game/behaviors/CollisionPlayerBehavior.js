@@ -7,21 +7,23 @@ import HealthBehavior from "./HealthBehavior.js";
 export default class CollisionPlayerBehavior {
 
     start() {
-        console.log("Player Collision Started");
+        //console.log("Player Collision Started");
 
     }
     update() {
 
         
     }
+    
     onCollisionEnter(otherGameObject){
         console.log("in collision");
     }
 
     onCollisionStay(collisionObject){
         
-        // console.log("" + this.gameObject.health);
-
-        this.gameObject.components.filter(i => i.takeDamage).forEach(i => i.takeDamage(1));
+        if (collisionObject.gameObject.tag == "Enemy")
+        {
+            this.gameObject.components.filter(i => i.takeDamage).forEach(i => i.takeDamage(1));
+        }
     }
 }
