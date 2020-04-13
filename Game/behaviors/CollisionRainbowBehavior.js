@@ -4,10 +4,10 @@ import Point from "../../GameEngine/base/Point.js";
 import CollisionCircle from "../prefabs/CollisionCircle.js"
 import RGBFill from "./RGBFill.js";
 
-export default class CollisionCircleBehavior {
+export default class CollisionRainbowBehavior {
     
     start() {
-        console.log("Collision Enemy started");
+        console.log("Collision circle started");
 
     }
     update() {
@@ -19,8 +19,6 @@ export default class CollisionCircleBehavior {
     }
 
     onCollisionStay(collisionObject){
-        collisionObject.gameObject.components.filter(i => i.fill).forEach(i => i.fill = "white");
+        collisionObject.gameObject.addComponent(new RGBFill());
     }
-
-
 }

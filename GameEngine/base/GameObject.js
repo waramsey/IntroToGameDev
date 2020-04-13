@@ -13,15 +13,17 @@ export default class GameObject extends NameableParent {
     originPointY;
     delete = false;
     components = [];
+    pX;
+    pY;
 
     get location() {
         return new Point(this.x, this.y);
     }
 
-    constructor(x=0, y=0, scaleX=1, scaleY=1, rotation=0) {
+    constructor(x=0, y=0, scaleX=1, scaleY=1, rotation=0, pX=0, pY=0) {
         super();
         
-        [this.x, this.y, this.scaleX, this.scaleY, this.rotation] = [x, y, scaleX, scaleY, rotation];
+        [this.x, this.y, this.scaleX, this.scaleY, this.rotation, this.pX, this.pY] = [x, y, scaleX, scaleY, rotation, pX, pY];
         this.originPointX = this.x;
         this.originPointY = this.y;
     }

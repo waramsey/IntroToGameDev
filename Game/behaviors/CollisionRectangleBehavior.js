@@ -18,9 +18,7 @@ export default class CollisionRectangleBehavior extends Base.Component {
     }
 
     onCollisionStay(collisionObject){
-        console.log("on collision stay: rectangle");
-        collisionObject.gameObject.components.filter(i => i.stroke).forEach(i => i.stroke = "black");
-        collisionObject.gameObject.components.filter(i => i.fill).forEach(i => i.fill = "blue");
+        // console.log("on collision stay: rectangle");
     }
 
 

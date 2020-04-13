@@ -30,7 +30,7 @@ export default {
           value: "45"
         },
         {
-          key: "length",
+          key: "height",
           value: "45"
         }
       ]

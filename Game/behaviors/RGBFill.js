@@ -1,4 +1,4 @@
-class RGBFill {
+export default class RGBFill {
     time = 0;
     offset = 1.571;
 
@@ -11,5 +11,3 @@ class RGBFill {
         this.gameObject.components.filter(i => i.fill).forEach(i => i.fill = 'rgb(' + r + ',' + g + ',' + b + ')');
     }
 }
-
-export default RGBFill;

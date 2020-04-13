@@ -58,7 +58,7 @@ export default {
         {
             name: "Wallbit",
             location: {x:500,y:300},
-            type: "Wall"
+            type: "Wall",
         },
         {
             name: "Crystal",

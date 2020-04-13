@@ -12,10 +12,12 @@ Engine.Base.Scene.gameBehaviors = GameBehaviors;
 let gameScene = Engine.Base.Scene.parse(Scenes.GameScene);
 let pauseScene = Engine.Base.Scene.parse(Scenes.PauseScene);
 let startScene = Engine.Base.Scene.parse(Scenes.StartScene);
+let rainbowScene = Engine.Base.Scene.parse(Scenes.RainbowScene);
 
 SceneManager.addScene(gameScene);
 SceneManager.addScene(pauseScene);
 SceneManager.addScene(startScene);
+SceneManager.addScene(rainbowScene);
 SceneManager.currentScene = "StartScene";
 
 //Event Handling

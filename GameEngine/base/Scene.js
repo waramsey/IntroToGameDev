@@ -6,6 +6,8 @@ export default class Scene extends NameableParent {
   static gameObjects = [];
   static components = [];
   static gameBehaviors = [];
+  static pX = 0;
+  static pY = 0;
 
   constructor(name) {
     super(name);
@@ -28,7 +30,7 @@ export default class Scene extends NameableParent {
       this.children = [];
       for (let i = 0; i < this.objects.length; i++) {
         let obj = this.objects[i];
-        this.buildChild2(obj, this.children)
+        this.buildChild2(obj, this.children, this.pX, this.pY)
       }
     }
   }
@@ -42,12 +44,12 @@ export default class Scene extends NameableParent {
       this.children = [];
       for (let i = 0; i < this.objects.length; i++) {
         let obj = this.objects[i];
-        this.buildChild(obj, this.children)
+        this.buildChild(obj, this.children, this.pX, this.pY)
       }
     }
   }
 
-  buildChild2(obj, parent) {
+  buildChild2(obj, parent, pX, pY) {
     let gameObjectType = null;
     let keys = Object.keys(Scene.gameObjects)
     for (let i = 0; i < keys.length; i++) {
@@ -58,7 +60,7 @@ export default class Scene extends NameableParent {
       }
     }
     if (gameObjectType == null) throw "Could not find game object of type " + obj.type;
-    let gameObject = this.instantiate(gameObjectType, new Point(obj.location.x, obj.location.y), obj.rotation, parent);
+    let gameObject = this.instantiate(gameObjectType, new Point(obj.location.x, obj.location.y), obj.rotation, parent, pX, pY);
     gameObject.name = obj.name;
     this.buildIt(obj, gameObject);
   }
@@ -67,7 +69,7 @@ export default class Scene extends NameableParent {
     if (obj.children) {
       for (let i = 0; i < obj.children.length; i++) {
         let child = obj.children[i];
-        this.buildChild2(child, gameObject.children);
+        this.buildChild2(child, gameObject.children, gameObject.x, gameObject.y);
       }
     }
 
@@ -128,14 +130,14 @@ export default class Scene extends NameableParent {
     }
   }
 
-  buildChild(obj, parent) {
-    let gameObject = this.instantiate(obj.type, obj.location, obj.rotation, parent);
+  buildChild(obj, parent, pX, pY) {
+    let gameObject = this.instantiate(obj.type, obj.location, obj.rotation, parent, pX, pY);
     gameObject.name = obj.name;
 
     if (obj.children) {
       for (let i = 0; i < obj.children.length; i++) {
         let child = obj.children[i];
-        this.buildChild(child, gameObject.children);
+        this.buildChild(child, gameObject.children, gameObject.x, gameObject.y);
       }
 
     }
@@ -167,7 +169,7 @@ export default class Scene extends NameableParent {
     let tx, ty, sx, sy, r, hx, hy;
     let cameras = this.children.filter(i => i.hasComponent("CameraComponent"));
     if (cameras.length == 0) {
-      console.log ("You should add a camera to the scene.")
+      console.log("You should add a camera to the scene.")
       ctx.fillStyle = "cyan";
       ctx.fillRect(0,0,width,height);
       tx = 0;
@@ -268,8 +270,8 @@ export default class Scene extends NameableParent {
     this.children = this.children.filter(i => i != gameObject);
   }
 
-  instantiate(gameObjectType, location, rotation, parent) {
-    let gameObject = new GameObject(location.x, location.y, 1, 1, rotation); //SCALE AND ROTATION?
+  instantiate(gameObjectType, location, rotation, parent, pX, pY) {
+    let gameObject = new GameObject(location.x, location.y, 1, 1, rotation, pX, pY); //SCALE AND ROTATION?
     parent.push(gameObject);
     let prefab = Scene.gameObjects[gameObjectType.name];
     this.buildIt(prefab, gameObject);
