@@ -1,3 +1,5 @@
+import Player from "../prefabs/Player.js";
+
 export default {
     name: "GameScene",
     objects: [
@@ -35,7 +37,7 @@ export default {
                             values: [
                                 {
                                     key: "text",
-                                    value: "Test UI"
+                                    value: "yeet"
                                 }
                             ]
                         }

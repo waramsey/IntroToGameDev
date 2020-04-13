@@ -1,12 +1,13 @@
 import Base from "../../GameEngine/Base.js"
 import SceneManager from "../SceneManager.js"
 import Point from "../../GameEngine/base/Point.js";
-import CollisionRectangle from "../prefabs/CollisionRectangle.js"
+import CollisionCircle from "../prefabs/CollisionCircle.js"
+import RGBFill from "./RGBFill.js";
 
-export default class CollisionRectangleBehavior extends Base.Component {
+export default class CollisionCircleBehavior {
     
     start() {
-        console.log("Collision rectangle started");
+        console.log("Collision Enemy started");
 
     }
     update() {
@@ -18,7 +19,7 @@ export default class CollisionRectangleBehavior extends Base.Component {
     }
 
     onCollisionStay(collisionObject){
-        // console.log("on collision stay: rectangle");
+        collisionObject.gameObject.components.filter(i => i.fill).forEach(i => i.fill = "white");
     }
 
 

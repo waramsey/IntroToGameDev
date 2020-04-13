@@ -54,7 +54,18 @@ export default {
       ]
     },
     {
-      type: "CollisionCircleBehavior"
+      type: "CollisionPlayerBehavior",
+      values: [
+      ]
+    },
+    {
+      type: "HealthBehavior",
+      values: [
+        {
+          key: "health",
+          value: "100"
+        }
+      ]
     },
     {
       type: "PlayerBehavior",
@@ -62,7 +73,7 @@ export default {
         {
           key: "playerSpeed",
           value: "10"
-        }
+        },
       ]
     }
   ]
