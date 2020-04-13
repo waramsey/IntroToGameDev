@@ -6,7 +6,7 @@ import CollisionCircle from "../prefabs/CollisionCircle.js"
 export default class CollisionCircleBehavior {
     
     start() {
-        console.log("Collision circle started");
+        console.log("Collision Enemy started");
 
     }
     update() {
@@ -18,9 +18,9 @@ export default class CollisionCircleBehavior {
     }
 
     onCollisionStay(collisionObject){
-        console.log("on collision stay: Circle");
-        collisionObject.gameObject.components.filter(i => i.stroke).forEach(i => i.stroke = "blue");
-        collisionObject.gameObject.components.filter(i => i.fill).forEach(i => i.fill = "blue");
+        console.log("on collision stay: Enemy");
+        //collisionObject.gameObject.components.filter(i => i.stroke).forEach(i => i.stroke = "blue");
+        //collisionObject.gameObject.components.filter(i => i.fill).forEach(i => i.fill = "blue");
     }
 
 

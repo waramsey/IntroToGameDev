@@ -1,7 +1,8 @@
 //KEEP ALPHABETIZED
 
 import BossBehavior from "./behaviors/BossBehavior.js";
-import CollisionCircleBehavior from "./behaviors/CollisionCircleBehavior.js";
+import CollisionCircleBehavior from "./behaviors/CollisionEnemyBehavior.js";
+import CollisionPlayerBehavior from "./behaviors/CollisionPlayerBehavior.js";
 import CollisionRectangleBehavior from "./behaviors/CollisionRectangleBehavior.js";
 import DotBehavior from "./behaviors/DotBehavior.js";
 import EmitParticles from "./behaviors/EmitParticles.js";
@@ -17,6 +18,7 @@ import TextBehavior from "./behaviors/TextBehavior.js";
 export default {
     BossBehavior,
     CollisionCircleBehavior,
+    CollisionPlayerBehavior,
     CollisionRectangleBehavior,
     DotBehavior,
     EmitParticles,
