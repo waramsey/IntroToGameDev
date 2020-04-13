@@ -5,13 +5,7 @@ export default class HealthBehavior {
     MAXHEALTH;
     health;
 
-    /*
-    start() {
-
-    }
-    */
     update() {
-        console.log("" + this.health);
         
     }
     

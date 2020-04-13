@@ -43,7 +43,7 @@ document.getElementById('play').onclick = function startGame() {
 
 
 
-function keydown (event)
+function keydown(event)
 {  
     Input.keys[event.keyCode] = true;
     
@@ -70,8 +70,9 @@ function keyup(event)
     Input.keys[event.keyCode] = false;
 }
 
-
 function gameLoop() {
+    if (!SceneManager.currentScene.findByName("Player"))
+        window.location.reload();    
     destroyObjects();
     update();
     draw(ctx);
@@ -83,8 +84,6 @@ function destroyObjects() {
 
 function update() {    
     SceneManager.currentScene.update(Engine.Components.Collider, Engine.Components.CollisionHelper);
-    //console.log(SceneManager.currentScene.name)
-    //console.log(SceneManager.currentScene.children)
 }
 
 function draw(ctx) {

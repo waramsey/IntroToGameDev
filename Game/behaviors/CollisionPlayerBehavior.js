@@ -20,8 +20,6 @@ export default class CollisionPlayerBehavior {
 
     onCollisionStay(collisionObject){
         
-        // console.log("" + this.gameObject.health);
-
         this.gameObject.components.filter(i => i.takeDamage).forEach(i => i.takeDamage(1));
     }
 }

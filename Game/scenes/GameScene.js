@@ -1,5 +1,3 @@
-import Player from "../prefabs/Player.js";
-
 export default {
     name: "GameScene",
     objects: [
