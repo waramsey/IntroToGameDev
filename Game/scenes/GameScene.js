@@ -63,7 +63,7 @@ export default {
         {
             name: "Walls",
             location: {x:0,y:0},
-            type: "TRBL" //Change this to any combination of TRBL (in that order) to change walls
+            type: "R" //Change this to any combination of TRBL (in that order) to change walls
         },
         {
             name: "Player",
