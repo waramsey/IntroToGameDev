@@ -7,7 +7,6 @@ import SceneManager from "../SceneManager.js"
 export default class EmitParticles extends Component {
     fill;
     particleSize;
-    // scene;
     pCount = 0;
     colorArr = ["white","grey"];
 
@@ -22,8 +21,6 @@ export default class EmitParticles extends Component {
         let particle = new GameObject(this.gameObject.x,this.gameObject.y);
         particle.addComponent(new ParticleOut());
         particle.addComponent(new ParticleRenderer(this.fill,this.colorArr[this.pCount%this.colorArr.length],this.particleSize));
-        // this.gameObject.children.push(particle);
-        // console.log(SceneManager.currentScene)
         SceneManager.currentScene.children.push(particle);
         this.pCount++;
     }
