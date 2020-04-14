@@ -75,6 +75,19 @@ export default {
           value: "10"
         },
       ]
+    },
+    {
+      type: "EmitParticles",
+      values: [
+        {
+          key: "particleSize",
+          value: "10"
+        },
+        {
+          key: "fill",
+          value: "black"
+        }
+      ]
     }
   ]
 }

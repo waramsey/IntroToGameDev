@@ -7,8 +7,11 @@ export default class ParticleRenderer extends Base.Component {
     rotationSpeed = 0.01;
     lifespan = 20;
     
-    constructor() {
+    constructor(fill, stroke, size) {
         super();
+        this.fill = fill;
+        this.stroke = stroke;
+        this.size = size;
     }
 
     draw(ctx) {
