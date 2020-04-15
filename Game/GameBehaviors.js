@@ -12,6 +12,8 @@ import HealthBehavior from "./behaviors/HealthBehavior.js";
 import MovementBehavior from "./behaviors/MovementBehavior.js";
 import OrbitBehavior from "./behaviors/OrbitBehavior.js";
 import ParticleOut from "./behaviors/ParticleOut.js";
+import PlayerAttack from "./behaviors/PlayerAttack.js";
+import ProjectileBehavior from "./behaviors/ProjectileBehavior.js";
 import RGBFill from "./behaviors/RGBFill.js";
 import RGBStroke from "./behaviors/RGBStroke.js";
 import testblackcircle from "./behaviors/testblackcircle.js";
@@ -30,6 +32,8 @@ export default {
     MovementBehavior,
     OrbitBehavior,
     ParticleOut,
+    PlayerAttack,
+    ProjectileBehavior,
     RGBFill,
     RGBStroke,
     testblackcircle,
