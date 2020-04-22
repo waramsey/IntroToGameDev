@@ -14,7 +14,7 @@ export default {
           },
           {
             key: "stroke",
-            value: "white"
+            value: "blue"
           }
         ]
       },
