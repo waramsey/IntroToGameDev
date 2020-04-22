@@ -19,7 +19,7 @@ export default class Scene extends NameableParent {
     toReturn.objects = obj.objects;
     return toReturn;
   }
-
+ 
   start2() {
 
     this.children = [];
@@ -69,7 +69,7 @@ export default class Scene extends NameableParent {
     if (obj.children) {
       for (let i = 0; i < obj.children.length; i++) {
         let child = obj.children[i];
-        this.buildChild2(child, gameObject.children, gameObject.x, gameObject.y);
+        this.buildChild2(child, gameObject.children, gameObject.x + gameObject.pX, gameObject.y + gameObject.pY);
       }
     }
 

@@ -66,6 +66,26 @@ export default {
             type: "TRBL" //Change this to any combination of TRBL (in that order) to change walls
         },
         {
+            name: "Walls",
+            location: {x:0,y:450},
+            type: "T" //Change this to any combination of TRBL (in that order) to change walls
+        },
+        {
+            name: "Walls",
+            location: {x:-650,y:0},
+            type: "R" //Change this to any combination of TRBL (in that order) to change walls
+        },
+        {
+            name: "Walls",
+            location: {x:0,y:-450},
+            type: "B" //Change this to any combination of TRBL (in that order) to change walls
+        },
+        {
+            name: "Walls",
+            location: {x:650,y:0},
+            type: "L" //Change this to any combination of TRBL (in that order) to change walls
+        },
+        {
             name: "Player",
             location: {x:325,y:225},
             type: "Player"

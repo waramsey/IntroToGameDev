@@ -19,9 +19,12 @@ export default {
         ]
       },
       {
-        type: "PointCollider",
-        values: [
-          
+        type: "CircleCollider",
+        values:[
+          {
+            key:"radius",
+            value:"5"
+          }
         ]
       },
       {

@@ -7,6 +7,8 @@ import Point from "../../GameEngine/base/Point.js";
 
 export default class PlayerAttack
 {
+    rateOfFire = 10; //lower rate of fire is better
+    shootingCount = 0;
     start() {
 
     }
@@ -16,9 +18,12 @@ export default class PlayerAttack
         // up arrow
         if (Input.keys[38])
         {
-            let shot = SceneManager.currentScene.instantiate(Projectile, new Point(this.gameObject.x, this.gameObject.y - 25), 0, "projectile", SceneManager.currentScene.children); 
-
-            shot.velocityY = -10; 
+            if (this.shootingCount % this.rateOfFire == 0)
+            {
+                let shot = SceneManager.currentScene.instantiate(Projectile, new Point(this.gameObject.x, this.gameObject.y - 30), 0, "projectile", SceneManager.currentScene.children, SceneManager.currentScene.pX, SceneManager.currentScene.pY); 
+                shot.velocityY = -10;
+            }
+            this.shootingCount++;
         }
         // down arrow
         if (Input.keys[40])
