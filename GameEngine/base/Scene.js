@@ -169,7 +169,6 @@ export default class Scene extends NameableParent {
     let tx, ty, sx, sy, r, hx, hy;
     let cameras = this.children.filter(i => i.hasComponent("CameraComponent"));
     if (cameras.length == 0) {
-      console.log("You should add a camera to the scene.")
       ctx.fillStyle = "cyan";
       ctx.fillRect(0,0,width,height);
       tx = 0;
