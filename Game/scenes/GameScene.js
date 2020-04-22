@@ -70,5 +70,10 @@ export default {
             location: {x:325,y:225},
             type: "Player"
         },
+        // {
+        //     name: "Projectile",
+        //     location: {x:325,y:225},
+        //     type: "Projectile"
+        // }
     ]
 }

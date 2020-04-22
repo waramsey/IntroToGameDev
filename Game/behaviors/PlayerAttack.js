@@ -1,4 +1,9 @@
 import Input from "../../GameEngine/base/Input.js";
+import GameObject from "../../GameEngine/base/GameObject.js"
+import Component from "../../GameEngine/base/Component.js"
+import Projectile from "../prefabs/Projectile.js"
+import SceneManager from "../SceneManager.js"
+import Point from "../../GameEngine/base/Point.js";
 
 export default class PlayerAttack
 {
@@ -11,10 +16,9 @@ export default class PlayerAttack
         // up arrow
         if (Input.keys[38])
         {
-            //var shot = new Projectile();
-            //shot.x = Player.x;
-            //shot.y = Player.y;
-            //shot.velocityY = -10;
+            let shot = SceneManager.currentScene.instantiate(Projectile, new Point(this.gameObject.x, this.gameObject.y - 25), 0, "projectile", SceneManager.currentScene.children); 
+
+            shot.velocityY = -10; 
         }
         // down arrow
         if (Input.keys[40])
