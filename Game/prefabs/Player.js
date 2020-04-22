@@ -72,7 +72,7 @@ export default {
       values: [
         {
           key: "playerSpeed",
-          value: "5"
+          value: "10"
         },
       ]
     },
