@@ -72,22 +72,28 @@ export default {
       values: [
         {
           key: "playerSpeed",
-          value: "10"
+          value: "5"
         },
       ]
     },
     {
-      type: "EmitParticles",
-      values: [
-        {
-          key: "particleSize",
-          value: "10"
-        },
-        {
-          key: "fill",
-          value: "black"
-        }
+      type: "PlayerAttack",
+      values : [
+
       ]
-    }
+    },
+    // {
+    //   type: "EmitParticles",
+    //   values: [
+    //     {
+    //       key: "particleSize",
+    //       value: "10"
+    //     },
+    //     {
+    //       key: "fill",
+    //       value: "black"
+    //     }
+    //   ]
+    // }
   ]
 }

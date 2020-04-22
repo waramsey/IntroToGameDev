@@ -10,6 +10,7 @@ import Crystal from "./prefabs/Crystal.js";
 import EmptyGameObject from "./prefabs/EmptyGameObject.js";
 import Horizontal from "./prefabs/walls/Horizontal.js";
 import HorizontalDoor from "./prefabs/walls/HorizontalDoor.js";
+import Projectile from "./prefabs/Projectile.js";
 import Player from "./prefabs/Player.js";
 import ScreenText from "./prefabs/ScreenText.js";
 import TestRoom from "./prefabs/TestRoom.js";
@@ -48,6 +49,7 @@ export default {
     Horizontal,
     HorizontalDoor,
     Player,
+    Projectile,
     ScreenText,
     TestRoom,
     Tile,

@@ -6,7 +6,7 @@ export default class HealthBehavior {
     health;
 
     update() {
-
+        console.log(this.health);
     }
     
 
