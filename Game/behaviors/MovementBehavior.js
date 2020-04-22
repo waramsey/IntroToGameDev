@@ -26,21 +26,21 @@ export default class MovementBehavior {
 
 
         //Loops when going off the side of the map
-        if(this.gameObject.x < 10 + 650 * this.roomX) { //leaving left
+        if(this.gameObject.x < 5 + 650 * this.roomX) { //leaving left
             this.roomX--;
-            this.gameObject.x = 625 + 650 * this.roomX;
+            // this.gameObject.x = 625 + 650 * this.roomX;
             SceneManager.currentScene.findByName("Main Camera").x -= 650;
-        } else if (this.gameObject.x > 640 + 650 * this.roomX) { //leaving right
+        } else if (this.gameObject.x > 645 + 650 * this.roomX) { //leaving right
             this.roomX++;
-            this.gameObject.x = 25 + 650 * this.roomX;
+            // this.gameObject.x = 25 + 650 * this.roomX;
             SceneManager.currentScene.findByName("Main Camera").x += 650;
-        } else if (this.gameObject.y < 10 + 450 * this.roomY) { //leaving up
+        } else if (this.gameObject.y < 5 + 450 * this.roomY) { //leaving up
             this.roomY--;
-            this.gameObject.y = 425 + 450 * this.roomY;
+            // this.gameObject.y = 425 + 450 * this.roomY;
             SceneManager.currentScene.findByName("Main Camera").y -= 450;
-        } else if (this.gameObject.y > 440 + 450 * this.roomY) { //leaving down
+        } else if (this.gameObject.y > 445 + 450 * this.roomY) { //leaving down
             this.roomY++;
-            this.gameObject.y = 25 + 450 * this.roomY;
+            // this.gameObject.y = 25 + 450 * this.roomY;
             SceneManager.currentScene.findByName("Main Camera").y += 450;
         }
     }
