@@ -44,26 +44,9 @@ export default {
             ]
         },
         {
-            name: "Boss",
-            location: {x:300,y:100},
-            tag: "Enemy",
-            type: "Boss",
-            
-        },
-        {
-            name: "Wallbit",
-            location: {x:500,y:300},
-            type: "Wall",
-        },
-        {
-            name: "Crystal",
-            location: {x:400,y:200},
-            type: "Crystal"
-        },
-        {
-            name: "Walls",
+            name: "TestRoom",
             location: {x:0,y:0},
-            type: "TRBL" //Change this to any combination of TRBL (in that order) to change walls
+            type: "TestRoom"
         },
         {
             name: "Walls",
@@ -89,11 +72,6 @@ export default {
             name: "Player",
             location: {x:325,y:225},
             type: "Player"
-        },
-        // {
-        //     name: "Projectile",
-        //     location: {x:325,y:225},
-        //     type: "Projectile"
-        // }
+        }
     ]
 }

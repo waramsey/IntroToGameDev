@@ -40,6 +40,10 @@ export default {
             {
               key: "health",
               value: "100"
+            },
+            {
+              key: "MAXHEALTH",
+              value: "100"
             }
           ]
         },

@@ -80,6 +80,7 @@ function gameLoop() {
 
 function destroyObjects() {
     SceneManager.currentScene.children = SceneManager.currentScene.children.filter(checkDelete => !checkDelete.delete)
+    SceneManager.currentScene.children.forEach(child => child.destroyObjects());
 }
 
 function update() {    

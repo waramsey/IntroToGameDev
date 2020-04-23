@@ -13,7 +13,7 @@ import HorizontalDoor from "./prefabs/walls/HorizontalDoor.js";
 import Projectile from "./prefabs/Projectile.js";
 import Player from "./prefabs/Player.js";
 import ScreenText from "./prefabs/ScreenText.js";
-import TestRoom from "./prefabs/TestRoom.js";
+import TestRoom from "./prefabs/rooms/TestRoom.js";
 import Tile from "./prefabs/Tile.js";
 import Vertical from "./prefabs/walls/Vertical.js";
 import VerticalDoor from "./prefabs/walls/VerticalDoor.js";
@@ -51,7 +51,6 @@ export default {
     Player,
     Projectile,
     ScreenText,
-    TestRoom,
     Tile,
     Vertical,
     VerticalDoor,
@@ -71,5 +70,7 @@ export default {
     T,
     R,
     B,
-    L
+    L,
+
+    TestRoom,
 }

@@ -2,9 +2,16 @@ export default {
     name: "TestRoom",
     children: [
         {
-            name: "tile",
+            name: "Boss",
+            location: {x:300,y:100},
+            tag: "Enemy",
+            type: "Boss",
+            
+        },
+        {
+            name: "Wallbit",
             location: {x:500,y:300},
-            type: "Tile"
+            type: "Wall",
         },
         {
             name: "Crystal",
@@ -15,6 +22,6 @@ export default {
             name: "Walls",
             location: {x:0,y:0},
             type: "TRBL" //Change this to any combination of TRBL (in that order) to change walls
-        }
+        },
     ]
 }

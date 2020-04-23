@@ -134,6 +134,11 @@ export default class GameObject extends NameableParent {
         }
     }
 
+    destroyObjects() {
+        this.children = this.children.filter(checkDelete => !checkDelete.delete)
+        this.children.forEach(child => child.destroyObjects());
+    }
+
     recursiveCall(functionName){
         for(let i = 0; i < this.components.length; i++){
             let component = this.components[i];
