@@ -37,8 +37,10 @@ import L from "./prefabs/walls/L.js";
 
 //Wall Pattern Imports
 import PlusWallPattern from "./prefabs/wallpatterns/PlusWallPattern.js";
+import RoundedCornerPattern from "./prefabs/wallpatterns/RoundedCornerPattern.js";
 
 //Room Imports
+import MiniRoomRoom from "./prefabs/rooms/MiniRoomRoom.js";
 import TestRoom from "./prefabs/rooms/TestRoom.js";
 import VerticalSplitRoom from "./prefabs/rooms/VerticalSplitRoom.js";
 
@@ -78,7 +80,9 @@ export default {
     L,
 
     PlusWallPattern,
+    RoundedCornerPattern,
 
+    MiniRoomRoom,
     TestRoom,
     VerticalSplitRoom
 }

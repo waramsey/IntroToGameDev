@@ -78,9 +78,6 @@ export default {
     },
     {
       type: "PlayerAttack",
-      values : [
-
-      ]
     },
     // {
     //   type: "EmitParticles",

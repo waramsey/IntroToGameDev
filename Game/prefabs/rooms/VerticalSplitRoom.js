@@ -4,12 +4,17 @@ export default {
         {
             name: "Walls",
             location: {x:0,y:0},
-            type: "R" //Change this to any combination of TRBL (in that order) to change walls
+            type: "RL" //Change this to any combination of TRBL (in that order) to change walls
         },
         {
-            name: "VerticalDoor",
+            name: "Vertical",
             location: {x:325,y:25},
-            type: "VerticalDoor"
+            type: "Vertical"
+        },
+        {
+            name: "Crystal",
+            location: {x:175,y:225},
+            type: "Crystal"
         }
     ]
 }
