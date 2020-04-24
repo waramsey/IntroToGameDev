@@ -18,6 +18,7 @@ import RGBFill from "./behaviors/RGBFill.js";
 import RGBStroke from "./behaviors/RGBStroke.js";
 import testblackcircle from "./behaviors/testblackcircle.js";
 import TextBehavior from "./behaviors/TextBehavior.js";
+import UpdateUnderCamera from "./behaviors/UpdateUnderCamera.js";
 
 export default {
     BossBehavior,
@@ -37,5 +38,6 @@ export default {
     RGBFill,
     RGBStroke,
     testblackcircle,
-    TextBehavior
+    TextBehavior,
+    UpdateUnderCamera
 }

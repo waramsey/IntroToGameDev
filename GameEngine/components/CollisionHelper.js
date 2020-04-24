@@ -22,8 +22,8 @@ export default class CollisionHelper{
                 let TLy = one.gameObject.location.y - 0.5 * h;
                 let BRx = one.gameObject.location.x + 0.5 * w;
                 let BRy = one.gameObject.location.y + 0.5 * h;
-                let Px = two.gameObject.location.x;
-                let Py = two.gameObject.location.y;
+                let Px = two.gameObject.location.x + one.gameObject.pX;
+                let Py = two.gameObject.location.y + one.gameObject.pY;
 
                 if(TLx < Px && Px < BRx && TLy < Py && Py < BRy)
                     return true;
@@ -41,8 +41,8 @@ export default class CollisionHelper{
                 let TLy = two.gameObject.pY + two.gameObject.location.y - 0.5 * h - r;
                 let BRx = two.gameObject.pX + two.gameObject.location.x + 0.5 * w + r;
                 let BRy = two.gameObject.pY + two.gameObject.location.y + 0.5 * h + r;
-                let Px = one.gameObject.location.x;
-                let Py = one.gameObject.location.y;
+                let Px = one.gameObject.location.x + one.gameObject.pX;
+                let Py = one.gameObject.location.y + one.gameObject.pY;
 
                 if(TLx < Px && Px < BRx && TLy < Py && Py < BRy)
                     return true;

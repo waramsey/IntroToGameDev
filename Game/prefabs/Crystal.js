@@ -1,6 +1,6 @@
 export default {
     name: "Crystal",
-    children: [
+     children: [
         {
             name: "c1",
             location: {x:0,y:0},
@@ -28,6 +28,15 @@ export default {
                 },
                 {
                     type: "GrowShrink"
+                },
+                {
+                    type: "CircleCollider",
+                    values: [
+                        {
+                            key: "radius",
+                            value: "20"
+                        }
+                    ]
                 }
             ]
         },
@@ -59,6 +68,15 @@ export default {
                 },
                 {
                     type: "GrowShrink"
+                },
+                {
+                    type: "CircleCollider",
+                    values: [
+                        {
+                            key: "radius",
+                            value: "20"
+                        }
+                    ]
                 }
             ]
         },
@@ -89,6 +107,15 @@ export default {
                 },
                 {
                     type: "GrowShrink"
+                },
+                {
+                    type: "CircleCollider",
+                    values: [
+                        {
+                            key: "radius",
+                            value: "20"
+                        }
+                    ]
                 }
             ]
         },
@@ -120,6 +147,15 @@ export default {
                 },
                 {
                     type: "GrowShrink"
+                },
+                {
+                    type: "CircleCollider",
+                    values: [
+                        {
+                            key: "radius",
+                            value: "20"
+                        }
+                    ]
                 }
             ]
         },
@@ -150,6 +186,15 @@ export default {
                 },
                 {
                     type: "GrowShrink"
+                },
+                {
+                    type: "CircleCollider",
+                    values: [
+                        {
+                            key: "radius",
+                            value: "20"
+                        }
+                    ]
                 }
             ]
         },
@@ -181,6 +226,15 @@ export default {
                 },
                 {
                     type: "GrowShrink"
+                },
+                {
+                    type: "CircleCollider",
+                    values: [
+                        {
+                            key: "radius",
+                            value: "20"
+                        }
+                    ]
                 }
             ]
         },
