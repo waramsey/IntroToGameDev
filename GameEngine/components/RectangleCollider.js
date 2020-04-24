@@ -2,8 +2,8 @@ import Collider from "./Collider.js"
 
 
 export default class RectangleCollider extends Collider{
-    width = 0;
-    height = 0;
+    w = 0;
+    h = 0;
 
     constructor(){
         super();

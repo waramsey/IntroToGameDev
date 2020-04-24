@@ -54,9 +54,9 @@ export default {
             type: "T" //Change this to any combination of TRBL (in that order) to change walls
         },
         {
-            name: "Walls",
+            name: "VerticalSplitRoom",
             location: {x:-650,y:0},
-            type: "R" //Change this to any combination of TRBL (in that order) to change walls
+            type: "VerticalSplitRoom" //Change this to any combination of TRBL (in that order) to change walls
         },
         {
             name: "Walls",
@@ -70,7 +70,7 @@ export default {
         },
         {
             name: "Player",
-            location: {x:325,y:225},
+            location: {x:325,y:425},
             type: "Player"
         }
     ]

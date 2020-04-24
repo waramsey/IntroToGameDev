@@ -26,11 +26,11 @@ export default {
       type: "RectangleCollider",
       values: [
         {
-          key: "width",
+          key: "w",
           value: "50"
         },
         {
-          key: "height",
+          key: "h",
           value: "50"
         }
       ]

@@ -9,13 +9,8 @@ export default {
             
         },
         {
-            name: "Wallbit",
-            location: {x:500,y:300},
-            type: "Wall",
-        },
-        {
             name: "Crystal",
-            location: {x:400,y:200},
+            location: {x:525,y:225},
             type: "Crystal"
         },
         {
@@ -23,5 +18,10 @@ export default {
             location: {x:0,y:0},
             type: "TRBL" //Change this to any combination of TRBL (in that order) to change walls
         },
+        // {
+        //     name: "PlusWallPattern",
+        //     location: {x:0,y:0},
+        //     type: "PlusWallPattern"
+        // }
     ]
 }

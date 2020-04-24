@@ -13,7 +13,6 @@ import HorizontalDoor from "./prefabs/walls/HorizontalDoor.js";
 import Projectile from "./prefabs/Projectile.js";
 import Player from "./prefabs/Player.js";
 import ScreenText from "./prefabs/ScreenText.js";
-import TestRoom from "./prefabs/rooms/TestRoom.js";
 import Tile from "./prefabs/Tile.js";
 import Vertical from "./prefabs/walls/Vertical.js";
 import VerticalDoor from "./prefabs/walls/VerticalDoor.js";
@@ -36,6 +35,12 @@ import R from "./prefabs/walls/R.js";
 import B from "./prefabs/walls/B.js";
 import L from "./prefabs/walls/L.js";
 
+//Wall Pattern Imports
+import PlusWallPattern from "./prefabs/wallpatterns/PlusWallPattern.js";
+
+//Room Imports
+import TestRoom from "./prefabs/rooms/TestRoom.js";
+import VerticalSplitRoom from "./prefabs/rooms/VerticalSplitRoom.js";
 
 export default {
     Boss,
@@ -72,5 +77,8 @@ export default {
     B,
     L,
 
+    PlusWallPattern,
+
     TestRoom,
+    VerticalSplitRoom
 }
