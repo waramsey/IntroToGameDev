@@ -107,6 +107,7 @@ export default class GameObject extends NameableParent {
 
         this.x += this.velocityX;
         this.y += this.velocityY;
+        this.enabled = false;
     }
 
     getComponent(type) {

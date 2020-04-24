@@ -1,5 +1,7 @@
 export default class BossBehavior {
 
+    posX = 101;
+    speed = 2;
     start() {
         /*
         this.gameObject.x = 0;
@@ -12,14 +14,10 @@ export default class BossBehavior {
 
     update() {
         // would prefer to initialize this in start()
-        if (this.gameObject.velocityX == 0)
-        {
-            this.gameObject.velocityX = 5;
+        if (this.posX < -100 || this.posX > 100) {
+            this.speed *= -1;
         }
-
-        if (this.gameObject.x >= this.gameObject.originPointX + 100 || this.gameObject.x <= this.gameObject.originPointX - 100)
-        {
-            this.gameObject.velocityX *= -1;
-        }
+        this.gameObject.x += this.speed;
+        this.posX += this.speed;
     }
 }
