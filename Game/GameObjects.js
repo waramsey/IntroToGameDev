@@ -1,5 +1,5 @@
 //KEEP ALPHABETIZED
-
+import Bat from "./prefabs/Bat.js";
 import Boss from "./prefabs/Boss.js";
 import Camera from "./prefabs/Camera.js";
 import Canvas from "./prefabs/Canvas.js";
@@ -45,6 +45,7 @@ import TestRoom from "./prefabs/rooms/TestRoom.js";
 import VerticalSplitRoom from "./prefabs/rooms/VerticalSplitRoom.js";
 
 export default {
+    Bat,
     Boss,
     Camera,
     Canvas,

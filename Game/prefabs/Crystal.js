@@ -1,5 +1,6 @@
 export default {
     name: "Crystal",
+    tag: "Enemy",
      children: [
         {
             name: "c1",
@@ -238,5 +239,25 @@ export default {
                 }
             ]
         },
-    ]
+    ],
+    components: [
+        {
+            type: "HealthBehavior",
+            values: [
+                {
+                    key: "health",
+                    value: "50"
+                },
+                {
+                    key: "MAXHEALTH",
+                    value: "50"
+                }
+            ]
+        },
+        // not working?
+        {
+            type: "CollisionWallBehavior"
+        },
+    ],
+    
 }
