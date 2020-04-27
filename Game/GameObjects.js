@@ -36,6 +36,7 @@ import B from "./prefabs/walls/B.js";
 import L from "./prefabs/walls/L.js";
 
 //Wall Pattern Imports
+import InnerCirclePattern from "./prefabs/wallpatterns/InnerCirclePattern.js";
 import PlusWallPattern from "./prefabs/wallpatterns/PlusWallPattern.js";
 import RoundedCornerPattern from "./prefabs/wallpatterns/RoundedCornerPattern.js";
 
@@ -79,6 +80,7 @@ export default {
     B,
     L,
 
+    InnerCirclePattern,
     PlusWallPattern,
     RoundedCornerPattern,
 

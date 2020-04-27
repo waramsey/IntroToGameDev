@@ -16,13 +16,11 @@ export default class ProjectileBehavior
     }
 
     onCollisionStay(collisionObject){
-        
         // currently only serves as a player projectile
         if (collisionObject.gameObject.tag == "Enemy")
-        {
             collisionObject.gameObject.components.filter(i => i.takeDamage).forEach(i => i.takeDamage(5));
-        }
 
-        this.gameObject.delete = true;
+        if (collisionObject.gameObject.tag != "Camera")
+            this.gameObject.delete = true;
     }
 }

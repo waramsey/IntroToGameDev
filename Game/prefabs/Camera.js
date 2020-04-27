@@ -1,5 +1,6 @@
 export default {
     name: "Camera",
+    tag: "Camera",
     components: [
         {
             type:"CameraComponent"

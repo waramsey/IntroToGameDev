@@ -3,6 +3,7 @@ export default {
     objects: [
         {
             name: "Main Camera",
+            tag: "Camera",
             location: {x:325,y:225},
             type: "Camera"
         },
@@ -53,6 +54,11 @@ export default {
             name: "0/1",
             location: {x:-650,y:-900},
             type: "RBL" //Change this to any combination of TRBL (in that order) to change walls
+        },
+        {
+            name: "InnerCirclePattern",
+            location: {x:-650,y:-900},
+            type: "InnerCirclePattern"
         },
         {
             name: "0/2",

@@ -66,12 +66,5 @@ export default {
             location: {x:375,y:225},
             type: "Wall"
         },
-        {
-            name: "Boss",
-            location: {x:300,y:100},
-            tag: "Enemy",
-            type: "Boss",
-            
-        },
     ]
 }

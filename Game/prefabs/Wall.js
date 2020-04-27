@@ -1,5 +1,6 @@
 export default {
   name: "Wall",
+  tag: "Wall",
   components: [
     {
       type: "RectangleComponent",
