@@ -1,6 +1,6 @@
 import Component from "../../GameEngine/base/Component.js"
 
-class ParticleOut extends Component {
+export default class ParticleOut extends Component {
     maxSpeed = 10;
     xSpeed = Math.random() * this.maxSpeed - this.maxSpeed/2;
     ySpeed = Math.random() * this.maxSpeed - this.maxSpeed/2;
@@ -10,5 +10,3 @@ class ParticleOut extends Component {
         this.gameObject.velocityY = this.ySpeed;
     }
 }
-
-export default ParticleOut;

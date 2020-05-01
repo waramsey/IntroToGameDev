@@ -71,8 +71,9 @@ function keyup(event)
 }
 
 function gameLoop() {
+    Engine.Base.Time.updateTime();
     if (!SceneManager.currentScene.findByName("Player"))
-        window.location.reload();
+        // window.location.reload();
     destroyObjects();
     update();
     draw(ctx);

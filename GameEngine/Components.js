@@ -14,6 +14,7 @@ import RectangleComponent from "./components/RectangleComponent.js";
 import RectTransform from "./components/RectTransform.js";
 import TextComponent from "./components/TextComponent.js";
 import TileComponent from "./components/TileComponent.js";
+import TimerText from "./components/TimerText.js";
 
 export default {
     CameraComponent,
@@ -29,5 +30,6 @@ export default {
     RectangleComponent,
     RectTransform,
     TextComponent,
-    TileComponent
+    TileComponent,
+    TimerText
 }

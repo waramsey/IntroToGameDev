@@ -32,13 +32,13 @@ export default {
                             ]
                         },
                         {
-                            type: "TextComponent",
+                            type: "TimerText",
                             values: [
                                 {
                                     key: "text",
-                                    value: "yeet"
+                                    value: "0"
                                 }
-                            ]
+                            ],
                         }
                     ]
                 }

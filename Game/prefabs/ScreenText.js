@@ -5,7 +5,7 @@ export default {
             type:"RectTransform"
         },
         {
-            type:"TextComponent"
+            type:"TimerText"
         }
     ]
 }

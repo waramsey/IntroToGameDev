@@ -1,5 +1,7 @@
-class Time{
+export default class Time{
     static deltaTime = 0;
-}
 
-export default Time;
+    static updateTime() {
+        this.deltaTime += 0.033;
+    }
+}

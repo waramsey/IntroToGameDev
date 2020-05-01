@@ -159,7 +159,6 @@ export default class Scene extends NameableParent {
         let componentInfo = obj.components[i];
         let component = new componentInfo.type();
         gameObject.addComponent(component);
-
       }
     }
   }

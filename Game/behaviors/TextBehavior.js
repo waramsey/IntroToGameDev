@@ -1,21 +1,14 @@
 import TextComponent from "../../GameEngine/components/TextComponent.js"
+import Time from "../../GameEngine/base/Time.js";
 
-class TextBehavior {
-    time = 1800;
+export default class TextBehavior {
     
     update()
     {
-        if (this.time > 0)
-        {           
-            this.time -= 1;
-            this.gameObject.getComponent(TextComponent).text = Math.trunc(this.time/30);
-        }
-        else
-        {
+        if (Time.deltaTime < 60){
+            this.gameObject.getComponent(TextComponent).text = Math.trunc(Time.deltaTime);
+        } else {
             this.gameObject.getComponent(TextComponent).text = "TIME UP"
         }
-    
     }
 }
-
-export default TextBehavior;

@@ -26,19 +26,34 @@ export default class PlayerAttack
             this.shootingCount++;
         }
         // down arrow
-        if (Input.keys[40])
+        else if (Input.keys[40])
         {
-
+            if (this.shootingCount % this.fireDelay == 0)
+            {
+                let shot = SceneManager.currentScene.instantiate(Projectile, new Point(this.gameObject.x, this.gameObject.y + 30), 0, "projectile", SceneManager.currentScene.children, SceneManager.currentScene.pX, SceneManager.currentScene.pY); 
+                shot.velocityY = 10;
+            }
+            this.shootingCount++;
         }
         // left arrow
-        if (Input.keys[37])
+        else if (Input.keys[37])
         {
-
+            if (this.shootingCount % this.fireDelay == 0)
+            {
+                let shot = SceneManager.currentScene.instantiate(Projectile, new Point(this.gameObject.x - 30, this.gameObject.y), 0, "projectile", SceneManager.currentScene.children, SceneManager.currentScene.pX, SceneManager.currentScene.pY); 
+                shot.velocityX = -10;
+            }
+            this.shootingCount++;
         }
         // right arrow
-        if (Input.keys[39])
+        else if (Input.keys[39])
         {
-
+            if (this.shootingCount % this.fireDelay == 0)
+            {
+                let shot = SceneManager.currentScene.instantiate(Projectile, new Point(this.gameObject.x + 30, this.gameObject.y), 0, "projectile", SceneManager.currentScene.children, SceneManager.currentScene.pX, SceneManager.currentScene.pY); 
+                shot.velocityX = 10;
+            }
+            this.shootingCount++;
         }
     }
 }
