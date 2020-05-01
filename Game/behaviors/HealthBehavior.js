@@ -1,6 +1,3 @@
-import Base from "../../GameEngine/Base.js"
-import SceneManager from "../SceneManager.js"
-
 export default class HealthBehavior {
     MAXHEALTH;
     health;

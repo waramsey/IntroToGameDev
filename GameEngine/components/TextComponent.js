@@ -8,6 +8,7 @@ export default class TextComponent extends Base.Component{
     constructor(){
         super();
     }
+    
     draw(ctx){
         ctx.save();
         {
@@ -17,6 +18,7 @@ export default class TextComponent extends Base.Component{
         }
         ctx.restore();
     }
+
     update() {
         
     }

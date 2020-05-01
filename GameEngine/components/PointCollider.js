@@ -4,5 +4,4 @@ export default class PointCollider extends Collider{
     constructor(){
         super();
     }
-    
 }
