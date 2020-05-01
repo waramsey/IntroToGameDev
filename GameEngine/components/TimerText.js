@@ -9,6 +9,7 @@ export default class TimerText extends Base.Component{
     constructor(){
         super();
     }
+
     draw(ctx){
         this.timeIncr()
         ctx.save();
@@ -24,8 +25,8 @@ export default class TimerText extends Base.Component{
         }
         ctx.restore();
     }
-    timeIncr()
-    {
+
+    timeIncr(){
         if (Time.deltaTime < 60)
             this.text = 60 - Math.trunc(Time.deltaTime);
         else

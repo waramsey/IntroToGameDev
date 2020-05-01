@@ -1,7 +1,7 @@
 import Component from "../../GameEngine/base/Component.js"
 import Time from "../../GameEngine/base/Time.js"
 
-class GrowShrink extends Component {
+export default class GrowShrink extends Component {
     scaleChange = 0.2;
 
     update() {
@@ -9,5 +9,3 @@ class GrowShrink extends Component {
         this.gameObject.scaleY = (this.scaleChange*Math.sin(Time.deltaTime) + 2)/2;
     }
 }
-
-export default GrowShrink;

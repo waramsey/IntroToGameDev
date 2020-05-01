@@ -41,6 +41,7 @@ import CupNorthPattern from "./prefabs/wallpatterns/CupNorthPattern.js";
 import FourInnerWallPattern from "./prefabs/wallpatterns/FourInnerWallPattern.js";
 import FourCornersPattern from "./prefabs/wallpatterns/FourCornersPattern.js";
 import InnerCirclePattern from "./prefabs/wallpatterns/InnerCirclePattern.js";
+import OWallPattern from "./prefabs/wallpatterns/OWallPattern.js";
 import PlusWallPattern from "./prefabs/wallpatterns/PlusWallPattern.js";
 import RoundedCornerPattern from "./prefabs/wallpatterns/RoundedCornerPattern.js";
 import SideIPattern from "./prefabs/wallpatterns/SideIPattern.js";
@@ -88,6 +89,7 @@ export default {
     FourInnerWallPattern,
     FourCornersPattern,
     InnerCirclePattern,
+    OWallPattern,
     PlusWallPattern,
     RoundedCornerPattern,
     SideIPattern,

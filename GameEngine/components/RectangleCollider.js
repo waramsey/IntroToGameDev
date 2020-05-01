@@ -8,5 +8,4 @@ export default class RectangleCollider extends Collider{
     constructor(){
         super();
     }
-
 }

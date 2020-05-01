@@ -1,6 +1,4 @@
 import Input from "../../GameEngine/base/Input.js";
-import GameObject from "../../GameEngine/base/GameObject.js"
-import Component from "../../GameEngine/base/Component.js"
 import Projectile from "../prefabs/Projectile.js"
 import SceneManager from "../SceneManager.js"
 import Point from "../../GameEngine/base/Point.js";

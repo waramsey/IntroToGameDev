@@ -5,9 +5,11 @@ export default class RectangleComponent extends Base.Component{
     height;
     fill;
     stroke;
+    
     constructor(){
         super();
     }
+
     draw(ctx){
         ctx.save();
         {
@@ -19,6 +21,7 @@ export default class RectangleComponent extends Base.Component{
         }
         ctx.restore();
     }
+
     update() {
 
     }
