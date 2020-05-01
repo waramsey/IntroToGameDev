@@ -8,6 +8,7 @@ import CollisionDot from "./prefabs/CollisionDot.js";
 import CollisionRectangle from "./prefabs/CollisionRectangle.js";
 import Crystal from "./prefabs/Crystal.js";
 import EmptyGameObject from "./prefabs/EmptyGameObject.js";
+import FalseWall from "./prefabs/FalseWall.js";
 import Horizontal from "./prefabs/walls/Horizontal.js";
 import HorizontalDoor from "./prefabs/walls/HorizontalDoor.js";
 import Projectile from "./prefabs/Projectile.js";
@@ -36,17 +37,15 @@ import B from "./prefabs/walls/B.js";
 import L from "./prefabs/walls/L.js";
 
 //Wall Pattern Imports
+import CupNorthPattern from "./prefabs/wallpatterns/CupNorthPattern.js";
 import FourInnerWallPattern from "./prefabs/wallpatterns/FourInnerWallPattern.js";
 import FourCornersPattern from "./prefabs/wallpatterns/FourCornersPattern.js";
 import InnerCirclePattern from "./prefabs/wallpatterns/InnerCirclePattern.js";
 import PlusWallPattern from "./prefabs/wallpatterns/PlusWallPattern.js";
 import RoundedCornerPattern from "./prefabs/wallpatterns/RoundedCornerPattern.js";
 import SideIPattern from "./prefabs/wallpatterns/SideIPattern.js";
+import WallMazePattern from "./prefabs/wallpatterns/WallMazePattern.js";
 
-//Room Imports
-import MiniRoomRoom from "./prefabs/rooms/MiniRoomRoom.js";
-import TestRoom from "./prefabs/rooms/TestRoom.js";
-import VerticalSplitRoom from "./prefabs/rooms/VerticalSplitRoom.js";
 
 export default {
     Bat,
@@ -58,6 +57,7 @@ export default {
     CollisionRectangle,
     Crystal,
     EmptyGameObject,
+    FalseWall,
     Horizontal,
     HorizontalDoor,
     Player,
@@ -84,14 +84,12 @@ export default {
     B,
     L,
 
+    CupNorthPattern,
     FourInnerWallPattern,
     FourCornersPattern,
     InnerCirclePattern,
     PlusWallPattern,
     RoundedCornerPattern,
     SideIPattern,
-
-    MiniRoomRoom,
-    TestRoom,
-    VerticalSplitRoom
+    WallMazePattern,
 }

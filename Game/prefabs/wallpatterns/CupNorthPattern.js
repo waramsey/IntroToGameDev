@@ -1,16 +1,6 @@
-export default {
-    name: "MiniRoomRoom",
+export default{
+    name: "CupNorthPattern",
     children: [
-        {
-            name: "Crystal",
-            location: {x:325,y:125},
-            type: "Crystal"
-        },
-        {
-            name: "Walls",
-            location: {x:0,y:0},
-            type: "TRBL" //Change this to any combination of TRBL (in that order) to change walls
-        },
         {
             name: "w1",
             location: {x:225,y:75},
@@ -68,3 +58,4 @@ export default {
         },
     ]
 }
+
