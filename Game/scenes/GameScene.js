@@ -56,14 +56,19 @@ export default {
             type: "RBL" //Change this to any combination of TRBL (in that order) to change walls
         },
         {
-            name: "InnerCirclePattern",
+            name: "RoundedCornerPattern",
             location: {x:-650,y:-900},
-            type: "InnerCirclePattern"
+            type: "RoundedCornerPattern"
         },
         {
             name: "0/2",
             location: {x:0,y:-900},
             type: "RBL" //Change this to any combination of TRBL (in that order) to change walls
+        },
+        {
+            name: "FourInnerWallPattern",
+            location: {x:0,y:-900},
+            type: "FourInnerWallPattern"
         },
         {
             name: "0/3",
@@ -76,9 +81,19 @@ export default {
             type: "TB" //Change this to any combination of TRBL (in that order) to change walls
         },
         {
+            name: "HorizontalDoor",
+            location: {x:-1275,y:-225},
+            type: "HorizontalDoor"
+        },
+        {
             name: "1/1",
             location: {x:-650,y:-450},
             type: "TR" //Change this to any combination of TRBL (in that order) to change walls
+        },
+        {
+            name: "SideIPattern",
+            location: {x:-650,y:-450},
+            type: "SideIPattern"
         },
         {
             name: "1/2",
@@ -96,6 +111,16 @@ export default {
             type: "TRB" //Change this to any combination of TRBL (in that order) to change walls
         },
         {
+            name: "InnerCirclePattern",
+            location: {x:-1300,y:0},
+            type: "InnerCirclePattern"
+        },
+        {
+            name: "FourCornersPattern",
+            location: {x:-1300,y:0},
+            type: "FourCornersPattern"
+        },
+        {
             name: "2/1",
             location: {x:-650,y:0},
             type: "VerticalSplitRoom"
@@ -104,6 +129,11 @@ export default {
             name: "2/2",
             location: {x:0,y:0},
             type: "TestRoom"
+        },
+        {
+            name: "FourCornersPattern",
+            location: {x:0,y:0},
+            type: "FourCornersPattern"
         },
         {
             name: "2/3",
@@ -121,20 +151,26 @@ export default {
             type: "TR" //Change this to any combination of TRBL (in that order) to change walls
         },
         {
-            name: "3/0",
+            name: "3/1",
             location: {x:-650,y:450},
             type: "RL" //Change this to any combination of TRBL (in that order) to change walls
         },
         {
-            name: "3/0",
+            name: "VerticalDoor",
+            location: {x:-325,y:475},
+            type: "VerticalDoor"
+        },
+        {
+            name: "3/2",
             location: {x:0,y:450},
             type: "TRL" //Change this to any combination of TRBL (in that order) to change walls
         },
         {
-            name: "3/0",
+            name: "3/3",
             location: {x:650,y:450},
             type: "TL" //Change this to any combination of TRBL (in that order) to change walls
         },
+        
 
         //PLAYER IS LAST
         {

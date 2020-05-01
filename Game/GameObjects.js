@@ -36,9 +36,12 @@ import B from "./prefabs/walls/B.js";
 import L from "./prefabs/walls/L.js";
 
 //Wall Pattern Imports
+import FourInnerWallPattern from "./prefabs/wallpatterns/FourInnerWallPattern.js";
+import FourCornersPattern from "./prefabs/wallpatterns/FourCornersPattern.js";
 import InnerCirclePattern from "./prefabs/wallpatterns/InnerCirclePattern.js";
 import PlusWallPattern from "./prefabs/wallpatterns/PlusWallPattern.js";
 import RoundedCornerPattern from "./prefabs/wallpatterns/RoundedCornerPattern.js";
+import SideIPattern from "./prefabs/wallpatterns/SideIPattern.js";
 
 //Room Imports
 import MiniRoomRoom from "./prefabs/rooms/MiniRoomRoom.js";
@@ -81,9 +84,12 @@ export default {
     B,
     L,
 
+    FourInnerWallPattern,
+    FourCornersPattern,
     InnerCirclePattern,
     PlusWallPattern,
     RoundedCornerPattern,
+    SideIPattern,
 
     MiniRoomRoom,
     TestRoom,
