@@ -108,6 +108,7 @@ export default {
             {
                 name: "Crystal",
                 location: {x:325,y:-325},
+                tag: "Enemy",
                 type: "Crystal"
             },
         {
@@ -143,6 +144,7 @@ export default {
             {
                 name: "Crystal",
                 location: {x:-475,y:225},
+                tag: "Enemy",
                 type: "Crystal"
             },
         {
@@ -150,11 +152,17 @@ export default {
             location: {x:0,y:0},
             type: "TRBL"
         },
+            // {
+            //     name: "Boss",
+            //     location: {x:425,y:100},
+            //     tag: "Enemy",
+            //     type: "Boss",
+            // },
             {
-                name: "Boss",
-                location: {x:425,y:100},
+                name: "Bat",
+                location: {x:425, y:100},
                 tag: "Enemy",
-                type: "Boss",
+                type: "Bat",
             },
             {
                 name: "FourCornersPattern",
@@ -179,6 +187,7 @@ export default {
             {
                 name: "Crystal",
                 location: {x:1825,y:225},
+                tag: "Enemy",
                 type: "Crystal"
             },
         {

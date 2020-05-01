@@ -8,6 +8,10 @@ export default class TrackingBehavior {
     }
 
     update() {
-        
+        //if()
+        {
+
+        }
+
     }
 }

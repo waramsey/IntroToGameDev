@@ -7,22 +7,45 @@ export default class MovementBehavior {
     roomY = 0;
 
     update() {
-        if (Input.keys[68])
+        // diagonals
+        if (Input.keys[68] && Input.keys[87])
+        {
+            this.gameObject.x += Math.sqrt((this.playerSpeed * this.playerSpeed) / 2);
+            this.gameObject.y -= Math.sqrt((this.playerSpeed * this.playerSpeed) / 2);
+        }
+        else if (Input.keys[68] && Input.keys[83])
+        {
+            this.gameObject.x += Math.sqrt((this.playerSpeed * this.playerSpeed) / 2);
+            this.gameObject.y += Math.sqrt((this.playerSpeed * this.playerSpeed) / 2);
+        }
+        else if (Input.keys[65] && Input.keys[87])
+        {
+            this.gameObject.x -= Math.sqrt((this.playerSpeed * this.playerSpeed) / 2);
+            this.gameObject.y -= Math.sqrt((this.playerSpeed * this.playerSpeed) / 2);
+        }
+        else if (Input.keys[65] && Input.keys[83])
+        {
+            this.gameObject.x -= Math.sqrt((this.playerSpeed * this.playerSpeed) / 2);
+            this.gameObject.y += Math.sqrt((this.playerSpeed * this.playerSpeed) / 2);
+        }
+        // cardinals
+        else if (Input.keys[68])
         {
             this.gameObject.x -= -this.playerSpeed;
         }
-        if (Input.keys[65])
+        else if (Input.keys[65])
         {
             this.gameObject.x += -this.playerSpeed;
         }
-        if (Input.keys[87])
+        else if (Input.keys[87])
         {
             this.gameObject.y += -this.playerSpeed;
         }
-        if (Input.keys[83])
+        else if (Input.keys[83])
         {
             this.gameObject.y -= -this.playerSpeed;
         }
+        
 
 
         //Loops when going off the side of the map

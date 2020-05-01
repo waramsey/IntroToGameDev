@@ -28,9 +28,10 @@ export default {
             }
           ]
         },
-        {
-          type: "CollisionEnemyBehavior"
-        },
+        // doesn't do anything
+        // {
+        //   type: "CollisionEnemyBehavior"
+        // },
         {
             type: "BossBehavior"
         },

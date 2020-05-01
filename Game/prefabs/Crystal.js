@@ -1,7 +1,7 @@
 export default {
     name: "Crystal",
     tag: "Enemy",
-     children: [
+    children: [
         {
             name: "c1",
             location: {x:0,y:0},
@@ -38,7 +38,7 @@ export default {
                             value: "20"
                         }
                     ]
-                }
+                },
             ]
         },
         {
@@ -78,7 +78,7 @@ export default {
                             value: "20"
                         }
                     ]
-                }
+                },
             ]
         },
         {
@@ -117,7 +117,7 @@ export default {
                             value: "20"
                         }
                     ]
-                }
+                },
             ]
         },
         {
@@ -157,7 +157,7 @@ export default {
                             value: "20"
                         }
                     ]
-                }
+                },
             ]
         },
         {
@@ -196,7 +196,7 @@ export default {
                             value: "20"
                         }
                     ]
-                }
+                },
             ]
         },
         {
@@ -236,28 +236,28 @@ export default {
                             value: "20"
                         }
                     ]
-                }
+                },
             ]
         },
     ],
     components: [
         {
-            type: "HealthBehavior",
+            type: "CircleCollider",
             values: [
                 {
-                    key: "health",
-                    value: "50"
-                },
-                {
-                    key: "MAXHEALTH",
-                    value: "50"
+                    key: "radius",
+                    value: "20"
                 }
             ]
         },
-        // not working?
         {
-            type: "CollisionWallBehavior"
+            type: "HealthBehavior",
+            values: [
+              {
+                key: "health",
+                value: "25"
+              }
+            ]
         },
-    ],
-    
+    ]
 }
