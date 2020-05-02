@@ -275,6 +275,7 @@ export default {
         {
             name: "Crystal",
             location: {x:2275,y:-675},
+            tag: "Crystal",
             type: "Crystal"
         },
 

@@ -7,6 +7,7 @@ import CircleComponent from "./components/CircleComponent.js";
 import Collider from "./components/Collider.js";
 import CollisionHelper from "./components/CollisionHelper.js";
 import CrystalComponent from "./components/CrystalComponent.js";
+import DisplayText from "./components/DisplayText.js";
 import ParticleRenderer from "./components/ParticleRenderer.js";
 import PointCollider from "./components/PointCollider.js";
 import RectangleCollider from "./components/RectangleCollider.js";
@@ -24,6 +25,7 @@ export default {
     Collider,
     CollisionHelper,
     CrystalComponent,
+    DisplayText,
     ParticleRenderer,
     PointCollider,
     RectangleCollider,

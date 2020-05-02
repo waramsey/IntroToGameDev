@@ -18,6 +18,7 @@ import ScreenText from "./prefabs/ScreenText.js";
 import Tile from "./prefabs/Tile.js";
 import Vertical from "./prefabs/walls/Vertical.js";
 import VerticalDoor from "./prefabs/walls/VerticalDoor.js";
+import VictoryText from "./prefabs/VictoryText.js";
 import Wall from "./prefabs/Wall.js";
 
 //Wall imports
@@ -69,6 +70,7 @@ export default {
     Tile,
     Vertical,
     VerticalDoor,
+    VictoryText,
     Wall,
     
     TRBL,

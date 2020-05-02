@@ -3,6 +3,7 @@ import SceneManager from "./Game/SceneManager.js";
 import Engine from "./GameEngine/Engine.js";
 import GameBehaviors from "./Game/GameBehaviors.js";
 import GameObjects from "./Game/GameObjects.js";
+import Coordinates from "./GameEngine/base/Coordinates.js";
 
 Engine.Base.Scene.gameObjects = GameObjects;
 Engine.Base.Scene.components = Engine.Components;
@@ -86,6 +87,11 @@ function gameLoop() {
 function destroyObjects() {
     SceneManager.currentScene.children = SceneManager.currentScene.children.filter(checkDelete => !checkDelete.delete)
     SceneManager.currentScene.children.forEach(child => child.destroyObjects());
+
+    if (Coordinates.coords[3] == 0)
+    {
+        SceneManager.currentScene = "VictoryScene";
+    }
 }
 
 function update() {    
