@@ -30,8 +30,8 @@ export default class TimerText extends Base.Component{
     }
 
     timeIncr(){
-        if (Time.deltaTime < 10)
-            this.text = 10 - Math.trunc(Time.deltaTime);
+        if (Time.deltaTime < 60)
+            this.text = 60 - Math.trunc(Time.deltaTime);
         else
         {
             this.font = "50px serif";
@@ -43,7 +43,7 @@ export default class TimerText extends Base.Component{
 
         }
 
-        if (Coordinates.coords[2] == 0 || (this.text == "TIME UP" && Time.deltaTime > 12))
+        if (Coordinates.coords[2] == 0 || (this.text == "TIME UP" && Time.deltaTime > 62))
         {
             SceneManager.currentScene = "BossScene";
         }

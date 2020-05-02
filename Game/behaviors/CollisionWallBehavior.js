@@ -15,7 +15,12 @@ export default class CollisionWallBehavior extends Base.Component {
     }
 
     onCollisionStay(collisionObject) {
-        collisionObject.gameObject.x = collisionObject.gameObject.previousX;
-        collisionObject.gameObject.y = collisionObject.gameObject.previousY;
+        
+        //testing purposes
+        //if (collisionObject.gameObject.tag == "Player")
+        //{
+            collisionObject.gameObject.x = collisionObject.gameObject.previousX;
+            collisionObject.gameObject.y = collisionObject.gameObject.previousY;
+        //}
     }
 }

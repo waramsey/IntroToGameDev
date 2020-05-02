@@ -157,6 +157,24 @@ export default {
                 tag: "Crystal",
                 type: "Crystal"
             },
+            {
+                name: "Bat",
+                location: {x:-275, y:100},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:-275, y:200},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:-275, y:300},
+                tag: "Enemy",
+                type: "Bat",
+            },
         {
             name: "2/2", //Start Room
             location: {x:0,y:0},
@@ -168,12 +186,6 @@ export default {
             //     tag: "Enemy",
             //     type: "Boss",
             // },
-            {
-                name: "Bat",
-                location: {x:425, y:100},
-                tag: "Enemy",
-                type: "Bat",
-            },
             {
                 name: "FourCornersPattern",
                 location: {x:0,y:0},

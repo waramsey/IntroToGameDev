@@ -32,9 +32,6 @@ export default {
           type: "CollisionEnemyBehavior"
         },
         {
-            type: "TrackingBehavior"
-        },
-        {
           type: "HealthBehavior",
           values: [
             {
@@ -49,6 +46,12 @@ export default {
         },
         {
           type: "TrackingBehavior",
-        }
+          values: [
+            {
+              key: "enemySpeed",
+              value: "4"
+            }
+          ]
+        },
     ]
 }
