@@ -41,6 +41,35 @@ export default {
                             ],
                         }
                     ]
+                },
+                {
+                    name: "PlayerHealthText",
+                    location: {x:250,y:85},
+                    type: "HPText",
+                    componentValues: [
+                        {
+                            type: "RectTransform",
+                            values: [
+                                {
+                                    key: "anchorHorizontal",
+                                    value:"center"
+                                },
+                                {
+                                    key: "anchorVertical",
+                                    value:"top"
+                                }
+                            ]
+                        },
+                        {
+                            type: "HealthText",
+                            values: [
+                                {
+                                    key: "text",
+                                    value: "0"
+                                }
+                            ],
+                        }
+                    ]
                 }
             ]
         },
@@ -296,6 +325,7 @@ export default {
         {
             name: "Player",
             location: {x:325,y:425},
+            tag: "Player",
             type: "Player"
         }
     ]

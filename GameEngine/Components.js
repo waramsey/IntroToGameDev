@@ -8,6 +8,7 @@ import Collider from "./components/Collider.js";
 import CollisionHelper from "./components/CollisionHelper.js";
 import CrystalComponent from "./components/CrystalComponent.js";
 import DisplayText from "./components/DisplayText.js";
+import HealthText from "./components/HealthText.js";
 import ParticleRenderer from "./components/ParticleRenderer.js";
 import PointCollider from "./components/PointCollider.js";
 import RectangleCollider from "./components/RectangleCollider.js";
@@ -26,6 +27,7 @@ export default {
     CollisionHelper,
     CrystalComponent,
     DisplayText,
+    HealthText,
     ParticleRenderer,
     PointCollider,
     RectangleCollider,

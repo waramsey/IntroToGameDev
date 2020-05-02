@@ -1,11 +1,17 @@
 import Coordinates from "../../GameEngine/base/Coordinates.js";
+import HealthDrop from "../prefabs/HealthDrop.js"
+import Point from "../../GameEngine/base/Point.js";
+import SceneManager from "../SceneManager.js"
 
 export default class HealthBehavior {
     MAXHEALTH;
     health;
 
     update() {
-        //console.log(this.health);
+        if (this.gameObject.tag == "Player")
+        {
+            Coordinates.coords[4] = this.health;
+        }
     }
 
     takeDamage(x)
@@ -27,18 +33,43 @@ export default class HealthBehavior {
             }
             
             this.gameObject.delete = true;
-            
+
+            this.randomHealthDrop();
+
         }
     }
 
     takeThisMedKit(x)
     {
-        if (this.health + x > MAXHEALTH)
+        this.health = parseInt(this.health);
+        
+        if (x > 5)
         {
-            this.health = MAXHEALTH;
+            x = this.MAXHEALTH / 4;
+        }
+
+        if (this.health + x > this.MAXHEALTH)
+        {
+            this.health = this.MAXHEALTH;
         }
         else{
             this.health += x;
+        }
+    }
+
+    randomHealthDrop()
+    {
+        let luck = (Math.floor(Math.random() * 100));
+
+        // could use a switch here if we wanted more depth
+        if (this.health < 50)
+        {
+            luck += 20;
+        }
+
+        if (luck >= 90 && luck <= 100)
+        {
+            let drop = SceneManager.currentScene.instantiate(HealthDrop, new Point(this.gameObject.x, this.gameObject.y), 0, "pickup", SceneManager.currentScene.children, SceneManager.currentScene.pX, SceneManager.currentScene.pY); 
         }
     }
 }

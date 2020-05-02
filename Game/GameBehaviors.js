@@ -9,6 +9,7 @@ import DotBehavior from "./behaviors/DotBehavior.js";
 import EmitParticles from "./behaviors/EmitParticles.js";
 import GrowShrink from "./behaviors/GrowShrink.js";
 import HealthBehavior from "./behaviors/HealthBehavior.js";
+import HealthDropBehavior from "./behaviors/HealthDropBehavior.js";
 import MovementBehavior from "./behaviors/MovementBehavior.js";
 import OrbitBehavior from "./behaviors/OrbitBehavior.js";
 import ParticleOut from "./behaviors/ParticleOut.js";
@@ -31,6 +32,7 @@ export default {
     EmitParticles,
     GrowShrink,
     HealthBehavior,
+    HealthDropBehavior,
     MovementBehavior,
     OrbitBehavior,
     ParticleOut,

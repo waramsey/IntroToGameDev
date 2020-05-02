@@ -9,16 +9,18 @@ import CollisionRectangle from "./prefabs/CollisionRectangle.js";
 import Crystal from "./prefabs/Crystal.js";
 import EmptyGameObject from "./prefabs/EmptyGameObject.js";
 import FalseWall from "./prefabs/FalseWall.js";
+import HealthDrop from "./prefabs/HealthDrop.js";
 import HintBlocks from "./prefabs/HintBlocks.js";
 import Horizontal from "./prefabs/walls/Horizontal.js";
 import HorizontalDoor from "./prefabs/walls/HorizontalDoor.js";
+import HPText from "./prefabs/HPText.js";
 import Projectile from "./prefabs/Projectile.js";
 import Player from "./prefabs/Player.js";
+import SampleText from "./prefabs/SampleText.js";
 import ScreenText from "./prefabs/ScreenText.js";
 import Tile from "./prefabs/Tile.js";
 import Vertical from "./prefabs/walls/Vertical.js";
 import VerticalDoor from "./prefabs/walls/VerticalDoor.js";
-import VictoryText from "./prefabs/VictoryText.js";
 import Wall from "./prefabs/Wall.js";
 
 //Wall imports
@@ -61,16 +63,18 @@ export default {
     Crystal,
     EmptyGameObject,
     FalseWall,
+    HealthDrop,
     HintBlocks,
     Horizontal,
     HorizontalDoor,
+    HPText,
     Player,
     Projectile,
+    SampleText,
     ScreenText,
     Tile,
     Vertical,
     VerticalDoor,
-    VictoryText,
     Wall,
     
     TRBL,

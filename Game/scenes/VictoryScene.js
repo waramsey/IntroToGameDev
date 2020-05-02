@@ -16,7 +16,7 @@ export default {
                 {
                     name: "Text1",
                     location: {x:325,y:100},
-                    type: "VictoryText",
+                    type: "SampleText",
                     componentValues: [
                         {
                             type: "RectTransform",
@@ -49,7 +49,7 @@ export default {
                 {
                     name: "Text2",
                     location: {x:325,y:150},
-                    type: "VictoryText",
+                    type: "SampleText",
                     componentValues: [
                         {
                             type: "RectTransform",
@@ -82,7 +82,7 @@ export default {
                 {
                     name: "Text3",
                     location: {x:325,y:200},
-                    type: "VictoryText",
+                    type: "SampleText",
                     componentValues: [
                         {
                             type: "RectTransform",

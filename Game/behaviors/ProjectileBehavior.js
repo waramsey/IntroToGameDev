@@ -20,7 +20,7 @@ export default class ProjectileBehavior
         if (collisionObject.gameObject.tag == "Enemy" || collisionObject.gameObject.tag == "Crystal" || collisionObject.gameObject.tag == "Boss")
             collisionObject.gameObject.components.filter(i => i.takeDamage).forEach(i => i.takeDamage(5));
 
-        if (collisionObject.gameObject.tag != "Camera")
+        if (collisionObject.gameObject.tag != "Camera" && collisionObject.gameObject.tag != "pickup")
             this.gameObject.delete = true;
     }
 }

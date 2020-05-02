@@ -1,11 +1,11 @@
 export default {
-    name:"VictoryText",
+    name:"HPText",
     components:[
         {
             type:"RectTransform"
         },
         {
-            type:"DisplayText"
+            type:"HealthText"
         }
     ]
 }
