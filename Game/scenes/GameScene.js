@@ -45,15 +45,15 @@ export default {
             ]
         },
         //ROOMS GO BELOW
-        {
-            name: "0/0",
-            location: {x:-1300,y:-900},
-            type: "RB" //Change this to any combination of TRBL (in that order) to change walls
-        },
+        // {
+        //     name: "0/0",
+        //     location: {x:-1300,y:-900},
+        //     type: "RB" //Change this to any combination of TRBL (in that order) to change walls
+        // },
         {
             name: "0/1",
             location: {x:-650,y:-900},
-            type: "RBL" //Change this to any combination of TRBL (in that order) to change walls
+            type: "RB" //Change this to any combination of TRBL (in that order) to change walls
         },
             {
                 name: "CupNorthPattern",
@@ -68,28 +68,28 @@ export default {
         {
             name: "0/2",
             location: {x:0,y:-900},
-            type: "RBL" //Change this to any combination of TRBL (in that order) to change walls
+            type: "BL" //Change this to any combination of TRBL (in that order) to change walls
         },
             {
                 name: "FourInnerWallPattern",
                 location: {x:0,y:-900},
                 type: "FourInnerWallPattern"
             },
-        {
-            name: "0/3",
-            location: {x:650,y:-900},
-            type: "BL" //Change this to any combination of TRBL (in that order) to change walls
-        },
-        {
-            name: "1/0",
-            location: {x:-1300,y:-450},
-            type: "TB" //Change this to any combination of TRBL (in that order) to change walls
-        },
-            {
-                name: "HorizontalDoor",
-                location: {x:-1275,y:-225},
-                type: "HorizontalDoor"
-            },
+        // {
+        //     name: "0/3",
+        //     location: {x:650,y:-900},
+        //     type: "BL" //Change this to any combination of TRBL (in that order) to change walls
+        // },
+        // {
+        //     name: "1/0",
+        //     location: {x:-1300,y:-450},
+        //     type: "TB" //Change this to any combination of TRBL (in that order) to change walls
+        // },
+        //     {
+        //         name: "HorizontalDoor",
+        //         location: {x:-1275,y:-225},
+        //         type: "HorizontalDoor"
+        //     },
         {
             name: "1/1",
             location: {x:-650,y:-450},
@@ -119,7 +119,7 @@ export default {
         {
             name: "1/3",
             location: {x:650,y:-450},
-            type: "TL" //Change this to any combination of TRBL (in that order) to change walls
+            type: "L" //Change this to any combination of TRBL (in that order) to change walls
         },
             {
                 name: "RoundedCornerPattern",
@@ -129,7 +129,7 @@ export default {
         {
             name: "2/0",
             location: {x:-1300,y:0},
-            type: "TRB" //Change this to any combination of TRBL (in that order) to change walls
+            type: "RB" //Change this to any combination of TRBL (in that order) to change walls
         },
             {
                 name: "InnerCirclePattern",
@@ -194,22 +194,22 @@ export default {
                 location: {x:650,y:0},
                 type: "PlusWallPattern"
             },
-        {
-            name: "2/4",
-            location: {x:1300,y:0},
-            type: "L" //Change this to any combination of TRBL (in that order) to change walls
-        },
-            // {
-            //     name: "WallMazePattern",
-            //     location: {x:1300,y:0},
-            //     type: "WallMazePattern"
-            // },
-            {
-                name: "Crystal",
-                location: {x:1825,y:225},
-                tag: "Crystal",
-                type: "Crystal"
-            },
+        // {
+        //     name: "2/4",
+        //     location: {x:1300,y:0},
+        //     type: "L" //Change this to any combination of TRBL (in that order) to change walls
+        // },
+        //     // {
+        //     //     name: "WallMazePattern",
+        //     //     location: {x:1300,y:0},
+        //     //     type: "WallMazePattern"
+        //     // },
+        //     {
+        //         name: "Crystal",
+        //         location: {x:1825,y:225},
+        //         tag: "Crystal",
+        //         type: "Crystal"
+        //     },
         {
             name: "3/0",
             location: {x:-1300,y:450},
@@ -265,7 +265,19 @@ export default {
                 location: {x:650,y:450},
                 type: "RoundedCornerPattern"
             },
-        
+
+        //MAZE HINT BLOCKS
+        {
+            name: "HintBlocks",
+            location: {x:0,y:0},
+            type: "HintBlocks"
+        },
+        {
+            name: "Crystal",
+            location: {x:2275,y:-675},
+            type: "Crystal"
+        },
+
 
         //PLAYER IS LAST
         {
