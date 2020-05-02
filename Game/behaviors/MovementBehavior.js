@@ -1,3 +1,4 @@
+import Coordinates from "../../GameEngine/base/Coordinates.js";
 import Input from "../../GameEngine/base/Input.js";
 import SceneManager from "../SceneManager.js";
 
@@ -62,5 +63,8 @@ export default class MovementBehavior {
             this.roomY++;
             SceneManager.currentScene.findByName("Main Camera").y += 450;
         }
+
+        Coordinates.coords[0] = this.gameObject.x;
+        Coordinates.coords[1] = this.gameObject.y;  
     }
 }

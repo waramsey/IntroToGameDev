@@ -1,6 +1,6 @@
 export default {
     name: "Crystal",
-    tag: "Enemy",
+    tag: "Crystal",
     children: [
         {
             name: "c1",

@@ -47,5 +47,8 @@ export default {
             }
           ]
         },
+        {
+          type: "TrackingBehavior",
+        }
     ]
 }

@@ -13,11 +13,15 @@ let gameScene = Engine.Base.Scene.parse(Scenes.GameScene);
 // let pauseScene = Engine.Base.Scene.parse(Scenes.PauseScene);
 let startScene = Engine.Base.Scene.parse(Scenes.StartScene);
 let rainbowScene = Engine.Base.Scene.parse(Scenes.RainbowScene);
+let bossScene = Engine.Base.Scene.parse(Scenes.BossScene);
+let victoryScene = Engine.Base.Scene.parse(Scenes.VictoryScene);
 
 SceneManager.addScene(gameScene);
 // SceneManager.addScene(pauseScene);
 SceneManager.addScene(startScene);
 SceneManager.addScene(rainbowScene);
+SceneManager.addScene(bossScene);
+SceneManager.addScene(victoryScene);
 SceneManager.currentScene = "StartScene";
 
 //Event Handling

@@ -113,7 +113,7 @@ export default {
             {
                 name: "Crystal",
                 location: {x:325,y:-325},
-                tag: "Enemy",
+                tag: "Crystal",
                 type: "Crystal"
             },
         {
@@ -154,7 +154,7 @@ export default {
             {
                 name: "Crystal",
                 location: {x:-475,y:225},
-                tag: "Enemy",
+                tag: "Crystal",
                 type: "Crystal"
             },
         {
@@ -199,15 +199,15 @@ export default {
             location: {x:1300,y:0},
             type: "L" //Change this to any combination of TRBL (in that order) to change walls
         },
-            {
-                name: "WallMazePattern",
-                location: {x:1300,y:0},
-                type: "WallMazePattern"
-            },
+            // {
+            //     name: "WallMazePattern",
+            //     location: {x:1300,y:0},
+            //     type: "WallMazePattern"
+            // },
             {
                 name: "Crystal",
                 location: {x:1825,y:225},
-                tag: "Enemy",
+                tag: "Crystal",
                 type: "Crystal"
             },
         {

@@ -1,3 +1,6 @@
+import Coordinates from "../base/Coordinates.js";
+import Scenes from "../../Game/Scenes.js";
+import SceneManager from "../../Game/SceneManager.js";
 import Base from "../Base.js";
 import Time from "../base/Time.js"
 
@@ -38,6 +41,11 @@ export default class TimerText extends Base.Component{
             // would like it to hang for a few seconds
             // also tp you to boss room
 
+        }
+
+        if (Coordinates.coords[2] == 0 || (this.text == "TIME UP" && Time.deltaTime > 62))
+        {
+            SceneManager.currentScene = "BossScene";
         }
     }
 }
