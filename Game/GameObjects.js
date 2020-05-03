@@ -20,6 +20,7 @@ import Projectile from "./prefabs/Projectile.js";
 import Player from "./prefabs/Player.js";
 import SampleText from "./prefabs/SampleText.js";
 import ScreenText from "./prefabs/ScreenText.js";
+import SlidingTrap from "./prefabs/SlidingTrap.js";
 import Tile from "./prefabs/Tile.js";
 import Vertical from "./prefabs/walls/Vertical.js";
 import VerticalDoor from "./prefabs/walls/VerticalDoor.js";
@@ -76,6 +77,7 @@ export default {
     Projectile,
     SampleText,
     ScreenText,
+    SlidingTrap,
     Tile,
     Vertical,
     VerticalDoor,

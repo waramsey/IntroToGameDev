@@ -18,6 +18,7 @@ import PlayerAttack from "./behaviors/PlayerAttack.js";
 import ProjectileBehavior from "./behaviors/ProjectileBehavior.js";
 import RGBFill from "./behaviors/RGBFill.js";
 import RGBStroke from "./behaviors/RGBStroke.js";
+import SlidingTrapBehavior from "./behaviors/SlidingTrapBehavior.js";
 import testblackcircle from "./behaviors/testblackcircle.js";
 import TextBehavior from "./behaviors/TextBehavior.js";
 import TrackingBehavior from "./behaviors/TrackingBehavior.js";
@@ -42,6 +43,7 @@ export default {
     ProjectileBehavior,
     RGBFill,
     RGBStroke,
+    SlidingTrapBehavior,
     testblackcircle,
     TextBehavior,
     TrackingBehavior,
