@@ -100,6 +100,7 @@ export default {
         {
             name: "Player",
             location: {x:325,y:325},
+            tag: "Player",
             type: "Player"
         }
     ]

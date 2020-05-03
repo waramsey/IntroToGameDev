@@ -7,6 +7,7 @@ import CollisionEnemyBehavior from "./behaviors/CollisionEnemyBehavior.js";
 import CollisionWallBehavior from "./behaviors/CollisionWallBehavior.js";
 import DotBehavior from "./behaviors/DotBehavior.js";
 import EmitParticles from "./behaviors/EmitParticles.js";
+import EnemyProjectileBehavior from "./behaviors/EnemyProjectileBehavior.js";
 import GrowShrink from "./behaviors/GrowShrink.js";
 import HealthBehavior from "./behaviors/HealthBehavior.js";
 import HealthDropBehavior from "./behaviors/HealthDropBehavior.js";
@@ -30,6 +31,7 @@ export default {
     CollisionWallBehavior,
     DotBehavior,
     EmitParticles,
+    EnemyProjectileBehavior,
     GrowShrink,
     HealthBehavior,
     HealthDropBehavior,

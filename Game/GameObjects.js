@@ -9,6 +9,7 @@ import CollisionDot from "./prefabs/CollisionDot.js";
 import CollisionRectangle from "./prefabs/CollisionRectangle.js";
 import Crystal from "./prefabs/Crystal.js";
 import EmptyGameObject from "./prefabs/EmptyGameObject.js";
+import EnemyProjectile from "./prefabs/EnemyProjectile.js";
 import FalseWall from "./prefabs/FalseWall.js";
 import HealthDrop from "./prefabs/HealthDrop.js";
 import HintBlocks from "./prefabs/HintBlocks.js";
@@ -64,6 +65,7 @@ export default {
     CollisionRectangle,
     Crystal,
     EmptyGameObject,
+    EnemyProjectile,
     FalseWall,
     HealthDrop,
     HintBlocks,

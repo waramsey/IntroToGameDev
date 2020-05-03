@@ -8,6 +8,7 @@ export default class HealthBehavior {
     health;
 
     update() {
+
         if (this.gameObject.tag == "Player")
         {
             Coordinates.coords[4] = this.health;
@@ -34,6 +35,7 @@ export default class HealthBehavior {
         if (this.health > 0)
         {
             this.health -= x;
+
         }
         else {
             
@@ -44,16 +46,21 @@ export default class HealthBehavior {
                 Coordinates.coords[5] -= 250;
                 
             }
-            
-            if (this.gameObject.tag == "Boss")
+            else if (this.gameObject.tag == "Boss")
             {
+                // this line might be redundant now
                 Coordinates.coords[3]--;
+                
+                //if (Coordinates.coords[3] == 0)
+                //{
+                    SceneManager.currentScene = "VictoryScene";
+                //}
             }
-            
-            this.gameObject.delete = true;
+            else {
+                this.gameObject.delete = true;
 
-            this.randomHealthDrop();
-
+                this.randomHealthDrop();
+            }
         }
     }
 

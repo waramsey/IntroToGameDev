@@ -42,7 +42,7 @@ document.getElementById('play').onclick = function startGame() {
     ctx = canv.getContext('2d');
     setInterval(gameLoop, 33);
 
-    SceneManager.currentScene = "BossScene";
+    SceneManager.currentScene = "GameScene";
 }
 
 
@@ -87,11 +87,6 @@ function gameLoop() {
 function destroyObjects() {
     SceneManager.currentScene.children = SceneManager.currentScene.children.filter(checkDelete => !checkDelete.delete)
     SceneManager.currentScene.children.forEach(child => child.destroyObjects());
-
-    if (Coordinates.coords[3] == 0)
-    {
-        SceneManager.currentScene = "VictoryScene";
-    }
 }
 
 function update() {    
