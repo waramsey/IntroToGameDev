@@ -43,6 +43,7 @@ export default class HealthBehavior {
             {
                 Coordinates.coords[2] -= 1;
                 Coordinates.coords[5] -= 250;
+                Coordinates.coords[8] += 20;
                 this.gameObject.delete = true;
                 
             }

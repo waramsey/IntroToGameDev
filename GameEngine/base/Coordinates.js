@@ -6,8 +6,10 @@ class Coordinates {
     // player health is 4
     // boss maxhealth is 5
     // boss health is 6
+    // timer is 7
+    // time bonus is 8
 
-    static coords = [0, 0, 3, 1, 100, 1000, 1000];
+    static coords = [0, 0, 3, 1, 100, 1000, 1000, 60, 0];
 }
 
 export default Coordinates;

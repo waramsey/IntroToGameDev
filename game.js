@@ -79,6 +79,8 @@ function gameLoop() {
     Engine.Base.Time.updateTime();
     if (!SceneManager.currentScene.findByName("Player"))
         window.location.reload();
+    if (Input.keys[27])
+        window.location.reload();
     destroyObjects();
     update();
     draw(ctx);
