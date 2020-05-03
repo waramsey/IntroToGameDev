@@ -18,6 +18,7 @@ export default class CollisionEnemyBehavior {
     }
 
     onCollisionStay(collisionObject){
+        console.log("in collision");
 
     }
 }

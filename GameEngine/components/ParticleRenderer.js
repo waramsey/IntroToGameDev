@@ -5,7 +5,7 @@ export default class ParticleRenderer extends Base.Component {
     fill;
     stroke;
     rotationSpeed = 0.01;
-    lifespan = 20;
+    lifespan = 10;
     
     constructor(fill, stroke, size) {
         super();
@@ -17,11 +17,17 @@ export default class ParticleRenderer extends Base.Component {
     draw(ctx) {
         ctx.save();
         {
-            ctx.translate(-this.size/2,-this.size/2)
+            // ctx.translate(-this.size/2,-this.size/2)
+            // ctx.fillStyle = this.fill;
+            // ctx.strokeStyle = this.stroke;
+            // ctx.fillRect(0, 0, this.size, this.size);
+            // ctx.strokeRect(0, 0, this.size, this.size);
             ctx.fillStyle = this.fill;
             ctx.strokeStyle = this.stroke;
-            ctx.fillRect(0, 0, this.size, this.size);
-            ctx.strokeRect(0, 0, this.size, this.size);
+            ctx.beginPath();
+            ctx.arc(0,0,this.size,0,2*Math.PI);
+            ctx.fill();
+            ctx.stroke();
         }
         ctx.restore();
     }

@@ -259,5 +259,14 @@ export default {
               }
             ]
         },
+        {
+            type: "EmitParticles",
+            values: [
+                {
+                    key: "particleSize",
+                    value: "3"
+                }
+            ]
+        }
     ]
 }

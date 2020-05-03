@@ -8,13 +8,10 @@ export default class SlidingTrapBehavior {
     }
 
     update() {
-        
-        console.log("check");
-        
+                
         if (Coordinates.coords[0] < (this.gameObject.x + 25) && Coordinates.coords[0] > (this.gameObject.x - 25))
         {
             this.gameObject.velocityY = 20;
-            console.log("test");
         }
         // return to original position
         else
@@ -22,4 +19,4 @@ export default class SlidingTrapBehavior {
             this.gameObject.velocityY = -3;
         }
     }
-}
+} 

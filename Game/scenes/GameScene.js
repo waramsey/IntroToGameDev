@@ -278,30 +278,30 @@ export default {
             },
             // behavior doesn't ever execute and lags the game
             
-            // {
-            //     name: "SlidingTrap",
-            //     location: {x:-270,y:530},
-            //     tag: "Enemy",
-            //     type: "SlidingTrap"
-            // },
-            // {
-            //     name: "SlidingTrap",
-            //     location: {x:-80,y:530},
-            //     tag: "Enemy",
-            //     type: "SlidingTrap"
-            // },
-            // {
-            //     name: "SlidingTrap",
-            //     location: {x:-380,y:820},
-            //     tag: "Enemy",
-            //     type: "SlidingTrap"
-            // },
-            // {
-            //     name: "SlidingTrap",
-            //     location: {x:-570,y:820},
-            //     tag: "Enemy",
-            //     type: "SlidingTrap"
-            // },
+            {
+                name: "SlidingTrap",
+                location: {x:-270,y:530},
+                tag: "Enemy",
+                type: "SlidingTrap"
+            },
+            {
+                name: "SlidingTrap",
+                location: {x:-80,y:530},
+                tag: "Enemy",
+                type: "SlidingTrap"
+            },
+            {
+                name: "SlidingTrap",
+                location: {x:-380,y:820},
+                tag: "Enemy",
+                type: "SlidingTrap"
+            },
+            {
+                name: "SlidingTrap",
+                location: {x:-570,y:820},
+                tag: "Enemy",
+                type: "SlidingTrap"
+            },
         {
             name: "3/2",
             location: {x:0,y:450},
