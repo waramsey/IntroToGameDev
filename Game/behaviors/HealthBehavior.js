@@ -42,8 +42,8 @@ export default class HealthBehavior {
             if (this.gameObject.tag == "Crystal")
             {
                 Coordinates.coords[2] -= 1;
-
                 Coordinates.coords[5] -= 250;
+                this.gameObject.delete = true;
                 
             }
             else if (this.gameObject.tag == "Boss")
