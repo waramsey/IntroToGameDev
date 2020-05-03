@@ -319,8 +319,7 @@ export default {
             tag: "Crystal",
             type: "Crystal"
         },
-
-
+        
         //PLAYER IS LAST
         {
             name: "Player",

@@ -28,10 +28,6 @@ export default {
             }
           ]
         },
-        // doesn't do anything
-        // {
-        //   type: "CollisionEnemyBehavior"
-        // },
         {
             type: "BossBehavior"
         },
@@ -40,11 +36,11 @@ export default {
           values: [
             {
               key: "health",
-              value: "100"
+              value: "1000"
             },
             {
               key: "MAXHEALTH",
-              value: "100"
+              value: "1000"
             }
           ]
         },

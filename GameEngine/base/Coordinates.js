@@ -3,9 +3,11 @@ class Coordinates {
     // PlayerY is 1
     // crystals left is 2
     // boss alive is 3 (1 is true, 0 is dead)
-    // health is 4
+    // player health is 4
+    // boss maxhealth is 5
+    // boss health is 6
 
-    static coords = [0, 0, 3, 1, 100];
+    static coords = [0, 0, 3, 1, 100, 1000, 1000];
 }
 
 export default Coordinates;

@@ -37,12 +37,8 @@ export default class TimerText extends Base.Component{
             this.font = "50px serif";
             this.fill = "red";
             this.text = "TIME UP";
-
-            // would like it to hang for a few seconds
-            // also tp you to boss room
-
         }
-
+             
         if (Coordinates.coords[2] == 0 || (this.text == "TIME UP" && Time.deltaTime > 62))
         {
             SceneManager.currentScene = "BossScene";

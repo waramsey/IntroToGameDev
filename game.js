@@ -42,7 +42,7 @@ document.getElementById('play').onclick = function startGame() {
     ctx = canv.getContext('2d');
     setInterval(gameLoop, 33);
 
-    SceneManager.currentScene = "GameScene";
+    SceneManager.currentScene = "BossScene";
 }
 
 

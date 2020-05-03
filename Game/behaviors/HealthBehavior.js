@@ -12,6 +12,21 @@ export default class HealthBehavior {
         {
             Coordinates.coords[4] = this.health;
         }
+        if(this.gameObject.tag == "Boss")
+        {
+            if (this.MAXHEALTH > Coordinates.coords[5])
+            {
+                this.MAXHEALTH = Coordinates.coords[5];
+            }
+            
+            if (this.health > this.MAXHEALTH)
+            {
+                this.health = this.MAXHEALTH;
+            }
+            
+            Coordinates.coords[6] = this.health;
+
+        }
     }
 
     takeDamage(x)
@@ -24,7 +39,10 @@ export default class HealthBehavior {
             
             if (this.gameObject.tag == "Crystal")
             {
-                Coordinates.coords[2] -= 1; 
+                Coordinates.coords[2] -= 1;
+
+                Coordinates.coords[5] -= 250;
+                
             }
             
             if (this.gameObject.tag == "Boss")

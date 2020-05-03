@@ -1,6 +1,7 @@
 //KEEP ALPHABETIZED
 import Bat from "./prefabs/Bat.js";
 import Boss from "./prefabs/Boss.js";
+import BossHealthbar from "./prefabs/BossHealthbar.js";
 import Camera from "./prefabs/Camera.js";
 import Canvas from "./prefabs/Canvas.js";
 import CollisionCircle from "./prefabs/CollisionCircle.js";
@@ -55,6 +56,7 @@ import WallMazePattern from "./prefabs/wallpatterns/WallMazePattern.js";
 export default {
     Bat,
     Boss,
+    BossHealthbar,
     Camera,
     Canvas,
     CollisionCircle,

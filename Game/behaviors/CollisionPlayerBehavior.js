@@ -13,7 +13,7 @@ export default class CollisionPlayerBehavior {
 
     onCollisionStay(collisionObject){
         
-        if (collisionObject.gameObject.tag == "Enemy")
+        if (collisionObject.gameObject.tag == "Enemy" || collisionObject.gameObject.tag == "Boss")
         {
             this.gameObject.components.filter(i => i.takeDamage).forEach(i => i.takeDamage(1));
         }
