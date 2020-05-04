@@ -14,11 +14,11 @@ export default class CollisionEnemyBehavior {
         
     }
     onCollisionEnter(otherGameObject){
-        console.log("in collision");
+        //console.log("in collision");
     }
 
     onCollisionStay(collisionObject){
-        console.log("in collision");
+        //console.log("in collision");
 
     }
 }

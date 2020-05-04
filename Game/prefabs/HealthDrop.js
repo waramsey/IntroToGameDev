@@ -7,15 +7,15 @@ export default {
         values: [
           {
             key: "radius",
-            value: "4"
+            value: "7"
           },
           {
             key: "fill",
-            value: "green"
+            value: "rgba(0,255,0,.7)"
           },
           {
             key: "stroke",
-            value: "green"
+            value: "rgba(0,255,0,.7)"
           }
         ]
       },
@@ -24,12 +24,15 @@ export default {
         values:[
           {
             key:"radius",
-            value:"4"
+            value:"7"
           }
         ]
       },
       {
           type: "HealthDropBehavior",
       },
+      {
+        type: "GrowShrink",
+      }
     ]
   }

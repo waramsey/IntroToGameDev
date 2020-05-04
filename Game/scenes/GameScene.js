@@ -179,6 +179,54 @@ export default {
                 location: {x:650,y:-450},
                 type: "RoundedCornerPattern"
             },
+            {
+                name: "Bat",
+                location: {x:1050, y:-350},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:1060, y:-300},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:1080, y:-250},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:1100, y:-200},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:1060, y:-200},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:1120, y:-200},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:1080, y:-150},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:1050, y:-100},
+                tag: "Enemy",
+                type: "Bat",
+            },
         {
             name: "2/0",
             location: {x:-1300,y:0},
@@ -212,7 +260,7 @@ export default {
             },
             {
                 name: "Bat",
-                location: {x:-275, y:100},
+                location: {x:-275, y:75},
                 tag: "Enemy",
                 type: "Bat",
             },
@@ -224,7 +272,7 @@ export default {
             },
             {
                 name: "Bat",
-                location: {x:-275, y:300},
+                location: {x:-275, y:350},
                 tag: "Enemy",
                 type: "Bat",
             },
@@ -299,9 +347,7 @@ export default {
                 name: "VerticalDoor",
                 location: {x:-325,y:475},
                 type: "VerticalDoor"
-            },
-            // behavior doesn't ever execute and lags the game
-            
+            },            
             {
                 name: "SlidingTrap",
                 location: {x:-270,y:530},
