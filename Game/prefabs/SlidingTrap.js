@@ -7,15 +7,15 @@ export default {
         values: [
             {
               key: "radius",
-              value: "25"
+              value: "15"
             },
             {
               key: "fill",
-              value: "red"
+              value: "grey"
             },
             {
               key: "stroke",
-              value: "red"
+              value: "grey"
             }
         ]
       },
@@ -24,7 +24,7 @@ export default {
         values: [
           {
             key: "radius",
-            value: "25"
+            value: "15"
           }
         ]
       },

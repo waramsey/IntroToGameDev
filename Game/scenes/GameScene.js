@@ -129,6 +129,30 @@ export default {
                 location: {x:-650,y:-450},
                 type: "SideIPattern"
             },
+            {
+                name: "SlidingTrap",
+                location: {x:-125,y:-295},
+                tag: "Enemy",
+                type: "SlidingTrap"
+            },
+            {
+                name: "SlidingTrap",
+                location: {x:-525,y:-295},
+                tag: "Enemy",
+                type: "SlidingTrap"
+            },
+            {
+                name: "SlidingTrap",
+                location: {x:-420,y:-100},
+                tag: "Enemy",
+                type: "SlidingTrap"
+            },
+            {
+                name: "SlidingTrap",
+                location: {x:-230,y:-100},
+                tag: "Enemy",
+                type: "SlidingTrap"
+            },
         {
             name: "1/2",
             location: {x:0,y:-450},
@@ -348,7 +372,7 @@ export default {
         //PLAYER IS LAST
         {
             name: "Player",
-            location: {x:325,y:425},
+            location: {x:325,y:225},
             tag: "Player",
             type: "Player"
         }
