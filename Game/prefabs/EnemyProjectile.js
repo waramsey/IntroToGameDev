@@ -1,16 +1,13 @@
 export default {
     name: "EnemyProjectile",
+    tag: "Projectile",
     components: [
       {
-        type: "RectangleComponent",
+        type: "CircleComponent",
         values: [
           {
-            key: "width",
+            key: "radius",
             value: "30"
-          },
-          {
-            key: "height",
-            value: "60"
           },
           {
             key: "fill",
@@ -23,16 +20,12 @@ export default {
         ]
       },
       {
-        type: "RectangleCollider",
+        type: "CircleCollider",
         values:[
           {
-            key:"width",
+            key:"radius",
             value:"30"
           },
-          {
-            key: "height",
-            value: "60"
-          }
         ]
       },
       {

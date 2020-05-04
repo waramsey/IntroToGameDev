@@ -1,5 +1,6 @@
 export default {
     name: "Projectile",
+    tag: "Projectile",
     components: [
       {
         type: "CircleComponent",

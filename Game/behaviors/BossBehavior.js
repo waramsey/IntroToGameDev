@@ -73,7 +73,7 @@ export default class BossBehavior {
         if((Math.floor(Math.trunc(Time.deltaTime)) + 1)  % 10 == 0)
         {
             // probably wanna make a giant projectile blast rather than the enemy projectiles
-            let wallBlast = SceneManager.currentScene.instantiate(EnemyProjectile, new Point(45, Coordinates.coords[1]), 0, "projectile", SceneManager.currentScene.children, SceneManager.currentScene.pX, SceneManager.currentScene.pY); 
+            let wallBlast = SceneManager.currentScene.instantiate(EnemyProjectile, new Point(78, Coordinates.coords[1]-10), 0, "projectile", SceneManager.currentScene.children, SceneManager.currentScene.pX, SceneManager.currentScene.pY); 
             wallBlast.velocityX = 15;
         }
 
