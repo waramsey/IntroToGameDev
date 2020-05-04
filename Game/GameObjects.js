@@ -18,9 +18,12 @@ import HorizontalDoor from "./prefabs/walls/HorizontalDoor.js";
 import HPText from "./prefabs/HPText.js";
 import Projectile from "./prefabs/Projectile.js";
 import Player from "./prefabs/Player.js";
+import RotatingTrap from "./prefabs/RotatingTrap.js";
 import SampleText from "./prefabs/SampleText.js";
 import ScreenText from "./prefabs/ScreenText.js";
+import ShootingEnemy from "./prefabs/ShootingEnemy.js";
 import SlidingTrap from "./prefabs/SlidingTrap.js";
+import SmallEnemyProjectile from "./prefabs/SmallEnemyProjectile.js";
 import Tile from "./prefabs/Tile.js";
 import Vertical from "./prefabs/walls/Vertical.js";
 import VerticalDoor from "./prefabs/walls/VerticalDoor.js";
@@ -75,9 +78,12 @@ export default {
     HPText,
     Player,
     Projectile,
+    RotatingTrap,
     SampleText,
     ScreenText,
+    ShootingEnemy,
     SlidingTrap,
+    SmallEnemyProjectile,
     Tile,
     Vertical,
     VerticalDoor,

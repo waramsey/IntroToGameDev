@@ -19,6 +19,7 @@ import ProjectileBehavior from "./behaviors/ProjectileBehavior.js";
 import RGBFill from "./behaviors/RGBFill.js";
 import RGBStroke from "./behaviors/RGBStroke.js";
 import SlidingTrapBehavior from "./behaviors/SlidingTrapBehavior.js";
+import SocialDistancing from "./behaviors/SocialDistancing.js";
 import testblackcircle from "./behaviors/testblackcircle.js";
 import TextBehavior from "./behaviors/TextBehavior.js";
 import TrackingBehavior from "./behaviors/TrackingBehavior.js";
@@ -44,6 +45,7 @@ export default {
     RGBFill,
     RGBStroke,
     SlidingTrapBehavior,
+    SocialDistancing,
     testblackcircle,
     TextBehavior,
     TrackingBehavior,

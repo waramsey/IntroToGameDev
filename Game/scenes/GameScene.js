@@ -104,6 +104,30 @@ export default {
                 location: {x:0,y:-900},
                 type: "FourInnerWallPattern"
             },
+            {
+                name: "SlidingTrap",
+                location: {x:125,y:-625},
+                tag: "Enemy",
+                type: "SlidingTrap"
+            },
+            {
+                name: "SlidingTrap",
+                location: {x:525,y:-625},
+                tag: "Enemy",
+                type: "SlidingTrap"
+            },
+            {
+                name: "Shooting Enemy",
+                location: {x:175,y:-575},
+                tag: "Enemy",
+                type: "ShootingEnemy",
+            },
+            {
+                name: "Shooting Enemy",
+                location: {x:475,y:-575},
+                tag: "Enemy",
+                type: "ShootingEnemy",
+            },
         // {
         //     name: "0/3",
         //     location: {x:650,y:-900},
@@ -152,6 +176,30 @@ export default {
                 location: {x:-230,y:-100},
                 tag: "Enemy",
                 type: "SlidingTrap"
+            },
+            {
+                name: "Bat",
+                location: {x:-275, y:-345},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:-375, y:-345},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:-275, y:-100},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:-375, y:-100},
+                tag: "Enemy",
+                type: "Bat",
             },
         {
             name: "1/2",
@@ -242,6 +290,54 @@ export default {
                 location: {x:-1300,y:0},
                 type: "FourCornersPattern"
             },
+            {
+                name: "Shooting Enemy",
+                location: {x:-1225,y:150},
+                tag: "Enemy",
+                type: "ShootingEnemy",
+            },
+            {
+                name: "Shooting Enemy",
+                location: {x:-800,y:325},
+                tag: "Enemy",
+                type: "ShootingEnemy",
+            },
+            {
+                name: "Bat",
+                location: {x:-1200, y:150},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:-1200, y:200},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:-1200, y:250},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:-750, y:150},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:-700, y:200},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:-650, y:250},
+                tag: "Enemy",
+                type: "Bat",
+            },
         {
             name: "2/1",
             location: {x:-650,y:0},
@@ -282,10 +378,10 @@ export default {
             type: "TRBL"
         },
             // {
-            //     name: "Boss",
-            //     location: {x:425,y:100},
+            //     name: "Shooting Enemy",
+            //     location: {x:425,y:325},
             //     tag: "Enemy",
-            //     type: "Boss",
+            //     type: "ShootingEnemy",
             // },
             {
                 name: "FourCornersPattern",
