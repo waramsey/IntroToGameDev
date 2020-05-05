@@ -94,6 +94,30 @@ export default {
                 location: {x:-650,y:-900},
                 type: "FourCornersPattern"
             },
+            {
+                name: "Bat",
+                location: {x:-525, y:-800},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:-575, y:-700},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:-175, y:-800},
+                tag: "Enemy",
+                type: "Bat",
+            },
+            {
+                name: "Bat",
+                location: {x:-175, y:-700},
+                tag: "Enemy",
+                type: "Bat",
+            },
         {
             name: "0/2",
             location: {x:0,y:-900},
@@ -229,12 +253,6 @@ export default {
             },
             {
                 name: "Bat",
-                location: {x:1050, y:-350},
-                tag: "Enemy",
-                type: "Bat",
-            },
-            {
-                name: "Bat",
                 location: {x:1060, y:-300},
                 tag: "Enemy",
                 type: "Bat",
@@ -301,12 +319,6 @@ export default {
                 location: {x:-800,y:325},
                 tag: "Enemy",
                 type: "ShootingEnemy",
-            },
-            {
-                name: "Bat",
-                location: {x:-1200, y:150},
-                tag: "Enemy",
-                type: "Bat",
             },
             {
                 name: "Bat",
@@ -403,6 +415,30 @@ export default {
                 location: {x:650,y:0},
                 type: "PlusWallPattern"
             },
+            {
+                name: "Shooting Enemy",
+                location: {x:75,y:625},
+                tag: "Enemy",
+                type: "ShootingEnemy",
+            },
+            {
+                name: "Shooting Enemy",
+                location: {x:75,y:725},
+                tag: "Enemy",
+                type: "ShootingEnemy",
+            },
+            {
+                name: "Shooting Enemy",
+                location: {x:475,y:625},
+                tag: "Enemy",
+                type: "ShootingEnemy",
+            },
+            {
+                name: "Shooting Enemy",
+                location: {x:475,y:725},
+                tag: "Enemy",
+                type: "ShootingEnemy",
+            },
         // {
         //     name: "2/4",
         //     location: {x:1300,y:0},
@@ -433,6 +469,30 @@ export default {
                 name: "FourInnerWallPattern",
                 location: {x:-1300,y:450},
                 type: "FourInnerWallPattern"
+            },
+            {
+                name: "SlidingTrap",
+                location: {x:-1175,y:625},
+                tag: "Enemy",
+                type: "SlidingTrap"
+            },
+            {
+                name: "SlidingTrap",
+                location: {x:-775,y:625},
+                tag: "Enemy",
+                type: "SlidingTrap"
+            },
+            {
+                name: "Shooting Enemy",
+                location: {x:-975,y:500},
+                tag: "Enemy",
+                type: "ShootingEnemy",
+            },
+            {
+                name: "Shooting Enemy",
+                location: {x:-975,y:825},
+                tag: "Enemy",
+                type: "ShootingEnemy",
             },
         {
             name: "3/1",
@@ -497,6 +557,30 @@ export default {
                 name: "RoundedCornerPattern",
                 location: {x:650,y:450},
                 type: "RoundedCornerPattern"
+            },
+            {
+                name: "Shooting Enemy",
+                location: {x:950,y:550},
+                tag: "Enemy",
+                type: "ShootingEnemy",
+            },
+            {
+                name: "Shooting Enemy",
+                location: {x:1050,y:550},
+                tag: "Enemy",
+                type: "ShootingEnemy",
+            },
+            {
+                name: "SlidingTrap",
+                location: {x:925,y:775},
+                tag: "Enemy",
+                type: "SlidingTrap"
+            },
+            {
+                name: "SlidingTrap",
+                location: {x:1025,y:775},
+                tag: "Enemy",
+                type: "SlidingTrap"
             },
 
         //MAZE HINT BLOCKS
