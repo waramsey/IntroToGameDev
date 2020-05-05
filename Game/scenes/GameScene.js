@@ -346,7 +346,7 @@ export default {
             },
             {
                 name: "Bat",
-                location: {x:-650, y:250},
+                location: {x:-675, y:250},
                 tag: "Enemy",
                 type: "Bat",
             },
